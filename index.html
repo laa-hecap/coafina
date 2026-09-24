@@ -92,6 +92,16 @@ ol.steps .when{display:block;color:var(--muted);font-size:.92rem;margin-top:.3re
 .aud3 p{font-size:1.02rem}
 @media (max-width:860px){.aud3{grid-template-columns:1fr}}
 
+/* Recursos (se cargan desde README.md, la fuente única) */
+.res-intro{max-width:64ch}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem 2rem;margin-top:1.5rem}
+.res h3{font-size:1.1rem;border-top:3px solid var(--sea);padding-top:.6rem;margin-bottom:.5rem}
+.res ul{list-style:none;padding:0;margin:0}
+.res li{margin:0 0 .5rem;font-size:.98rem;line-height:1.4}
+.res li a{font-weight:600}
+.res li span{color:var(--muted)}
+.res-foot{margin-top:1.5rem;color:var(--muted);font-size:.95rem}
+
 /* Redes */
 .social{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
 .social a{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;padding:.6rem 1rem;border-radius:999px}
@@ -119,6 +129,7 @@ footer p{max-width:none;margin:0}
   <nav class="main" aria-label="Secciones">
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#participa">Participa</a>
+    <a href="#recursos">Recursos</a>
     <a href="#redes">Redes</a>
     <a class="pill" data-href="discord" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
   </nav>
@@ -183,7 +194,7 @@ footer p{max-width:none;margin:0}
       <a class="btn" data-href="formHacker" href="#">Inscribirme</a>
       <p class="note" data-c="dl3Note"></p>
       <p class="note">¿Sin equipo? Entra a Discord y te ayudamos a encontrar uno.</p>
-      <p class="note">Herramientas gratuitas recomendadas: <a data-href="resources" href="#">CoAfina-resources</a>.</p>
+      <p class="note">Herramientas gratuitas recomendadas: <a href="#recursos">recursos para hackers</a>.</p>
     </div>
     <div style="--c:var(--sun)">
       <h2>Patrocinadores</h2>
@@ -194,7 +205,14 @@ footer p{max-width:none;margin:0}
   </div>
 </section>
 
-<section class="wrap" id="redes">
+<section class="wrap" id="recursos">
+  <h2>Recursos para hackers</h2>
+  <p class="res-intro">Herramientas gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución durante el hackathon. La lista vive en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README de este repositorio</a>; edítala allí y aparece aquí.</p>
+  <div class="res" id="res-grid"><p class="note">Cargando la lista…</p></div>
+  <p class="res-foot">¿Falta una herramienta? Abre un <em>pull request</em> en el repositorio o propónla en Discord.</p>
+</section>
+
+<section class="wrap band" id="redes">
   <h2>Síguenos</h2>
   <p>Las convocatorias, los plazos y los ganadores se anuncian primero en Discord y después en el resto de redes. Para preguntas, escríbenos en el servidor.</p>
   <div class="social">
@@ -209,7 +227,7 @@ footer p{max-width:none;margin:0}
   </div>
 </section>
 
-<section class="wrap band" id="organizan">
+<section class="wrap" id="organizan">
   <div class="orgs">
     <div><h3>Organizan</h3><ul><li>LA-CoNGA physics</li><li>Creative Commons Venezuela</li><li>RedCLARA</li><li>CEDIA</li></ul></div>
     <div><h3>Ediciones</h3><ul><li>2022 · 2023 · 2024 · 2025 · 2026</li><li style="font-weight:400;color:var(--muted)">Quinta edición. En 2024, 80 estudiantes de 44 universidades.</li></ul></div>
@@ -249,8 +267,7 @@ footer p{max-width:none;margin:0}
     "youtube": "",
     "github": "https://github.com/laa-hecap",
     "website": "https://laconga.redclara.net/hackathon/",
-    "resources": "https://github.com/laa-hecap/CoAfina-resources",
-    "repo": "https://github.com/laa-hecap/CoAfina-resources"
+    "repo": "https://github.com/laa-hecap/coafina"
   }
 }
 </script>
@@ -278,6 +295,35 @@ footer p{max-width:none;margin:0}
     else if (a.closest('.social')) { a.hidden = true; }
     else { a.setAttribute('aria-disabled','true'); a.title = 'Enlace ' + tbc; a.addEventListener('click', e => e.preventDefault()); }
   });
+})();
+</script>
+<script>
+(async function(){
+  const grid = document.getElementById('res-grid');
+  try {
+    const r = await fetch('README.md', {cache:'no-cache'});
+    if (!r.ok) throw new Error(r.status);
+    const md = await r.text();
+    const lines = md.split('\n');
+    const groups = []; let g = null; let started = false;
+    for (const raw of lines) {
+      const line = raw.trim();
+      if (line.startsWith('## ')) { started = true; g = {title: line.slice(3).replace(/^[^\p{L}\p{N}]+/u,'').trim(), items: []}; groups.push(g); continue; }
+      if (started && line.startsWith('# ')) break;            // notas de mantenimiento u otra parte
+      if (g && line.startsWith('- ')) {
+        const m = line.match(/^- \[([^\]]+)\]\(([^)]+)\)\s*:?\s*(.*)$/);
+        if (m) g.items.push({name:m[1], url:m[2], desc:m[3]});
+      }
+    }
+    const esc = t => t.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    grid.innerHTML = groups.filter(x => x.items.length).map(x =>
+      '<div><h3>' + esc(x.title) + '</h3><ul>' +
+      x.items.map(i => '<li><a href="' + esc(i.url) + '" target="_blank" rel="noopener">' + esc(i.name) + '</a>' + (i.desc ? ' <span>' + esc(i.desc) + '</span>' : '') + '</li>').join('') +
+      '</ul></div>').join('');
+    if (!groups.length) throw new Error('empty');
+  } catch (e) {
+    grid.innerHTML = '<p class="note">No se pudo cargar la lista. Está en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README del repositorio</a>.</p>';
+  }
 })();
 </script>
 </body>
