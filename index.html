@@ -47,7 +47,10 @@ nav.main a:hover{text-decoration:underline}
 .pill:hover{text-decoration:none!important;filter:brightness(1.1)}
 .pill svg{width:1.1em;height:1.1em;fill:currentColor}
 
-.tagline{padding:1.1rem var(--gutter);font-family:var(--display);font-size:clamp(1.05rem,1.9vw,1.35rem);font-weight:500;border-bottom:1px solid var(--line);color:var(--muted)}
+.tagline{display:flex;align-items:center;gap:clamp(1rem,3vw,3rem);padding:1.1rem var(--gutter);font-family:var(--display);font-size:clamp(1.05rem,1.9vw,1.35rem);font-weight:500;border-bottom:1px solid var(--line);color:var(--muted)}
+.tagline-text{flex:1}
+.tagline .equipo{width:clamp(150px,18vw,240px);height:auto;flex:none;display:block}
+@media (max-width:760px){.tagline{flex-direction:column;align-items:flex-start}.tagline .equipo{width:min(70%,260px);align-self:center}}
 .tagline strong{color:var(--ink);font-weight:600}
 
 /* Tres puertas */
@@ -62,6 +65,11 @@ nav.main a:hover{text-decoration:underline}
 .door.hackers{background:var(--sea);color:var(--paper)}
 .door.patrocinadores{background:var(--sun);color:var(--ink)}
 @media (max-width:760px){.doors{grid-template-columns:1fr;min-height:0}.door{min-height:34vh}}
+
+/* Banner de convocatoria (pieza de las diseñadoras) */
+.banner{display:block;background:#2B2E7A}
+.banner img{display:block;width:100%;height:auto;max-width:1600px;margin:0 auto}
+.banner:hover img{filter:brightness(1.05)}
 
 /* Discord: el lugar donde pasa todo */
 .discord{background:var(--discord);color:#fff;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1rem,3vw,2.5rem);align-items:center;padding:clamp(1.75rem,4vw,3rem) var(--gutter)}
@@ -79,6 +87,9 @@ nav.main a:hover{text-decoration:underline}
 .note{color:var(--muted);font-size:.95rem;margin-top:.6rem}
 
 /* Cómo funciona: es una secuencia, por eso va numerada */
+.how{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.9fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.how .fases{width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(20,54,66,.12)}
+@media (max-width:860px){.how{grid-template-columns:1fr}.how .fases{max-width:420px;margin:0 auto}}
 ol.steps{list-style:none;padding:0;margin:1.5rem 0 0;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.25rem 1.5rem}
 ol.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:.7rem}
 ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--sea);display:block}
@@ -90,7 +101,18 @@ ol.steps .when{display:block;color:var(--muted);font-size:.92rem;margin-top:.3re
 .aud3 > div{border-top:6px solid var(--c);padding-top:1rem}
 .aud3 h2{font-size:1.7rem;margin-bottom:.6rem}
 .aud3 p{font-size:1.02rem}
+.aud3 .pieza{display:block;width:100%;max-width:340px;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 12px rgba(20,54,66,.12)}
 @media (max-width:860px){.aud3{grid-template-columns:1fr}}
+
+/* Recursos (se cargan desde README.md, la fuente única) */
+.res-intro{max-width:64ch}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem 2rem;margin-top:1.5rem}
+.res h3{font-size:1.1rem;border-top:3px solid var(--sea);padding-top:.6rem;margin-bottom:.5rem}
+.res ul{list-style:none;padding:0;margin:0}
+.res li{margin:0 0 .5rem;font-size:.98rem;line-height:1.4}
+.res li a{font-weight:600}
+.res li span{color:var(--muted)}
+.res-foot{margin-top:1.5rem;color:var(--muted);font-size:.95rem}
 
 /* Redes */
 .social{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
@@ -98,6 +120,14 @@ ol.steps .when{display:block;color:var(--muted);font-size:.92rem;margin-top:.3re
 .social a:hover{background:var(--ink);color:var(--paper)}
 .social a[hidden]{display:none}
 .social svg{width:1.15em;height:1.15em;fill:currentColor}
+
+/* Con el apoyo de */
+.main-sponsor{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.25rem,3vw,2.5rem);align-items:center;margin:1.5rem 0 2rem;padding:1.5rem;background:var(--paper);border-radius:8px;max-width:60rem}
+.main-sponsor .wm img{height:clamp(3.5rem,7vw,5.5rem);width:auto;display:block}
+.main-sponsor .wm-text{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--ink);white-space:nowrap}
+.main-sponsor p{margin:0;max-width:52ch}
+@media (max-width:640px){.main-sponsor{grid-template-columns:1fr}}
+.sponsors{display:block;width:100%;max-width:1100px;height:auto;background:var(--paper);padding:.75rem 1rem;border-radius:8px}
 
 /* Organizan + pie */
 .orgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem 2rem;margin-top:1rem}
@@ -119,12 +149,18 @@ footer p{max-width:none;margin:0}
   <nav class="main" aria-label="Secciones">
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#participa">Participa</a>
+    <a href="#recursos">Recursos</a>
     <a href="#redes">Redes</a>
     <a class="pill" data-href="discord" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
   </nav>
 </header>
 
-<div class="tagline"><strong>Hackathon latinoamericano de datos abiertos.</strong> Tres días, en línea, para convertir datos abiertos en soluciones científicas y educativas. <span data-c="datesLong"></span></div>
+<div class="tagline"><div class="tagline-text"><strong>Hackathon latinoamericano de datos abiertos.</strong> Tres días, en línea, para convertir datos abiertos en soluciones científicas y educativas. <span data-c="datesLong"></span><br><span style="font-weight:400;font-size:.9em">Esta es la página de acción de CoAfina: cómo participar y dónde encontrarnos. La información completa de la edición está en el <a data-href="website" href="#">sitio oficial de CoAfina</a>.</span></div>
+  <video class="equipo" autoplay muted loop playsinline poster="hackathon-2026.png" aria-label="Hackathon 2026: los cinco personajes de CoAfina">
+    <source src="hackathon-2026.webm" type="video/webm">
+    <source src="hackathon-2026.mp4" type="video/mp4">
+    <img src="hackathon-2026.png" alt="Hackathon 2026: los cinco personajes de CoAfina">
+  </video></div>
 
 <div class="doors" aria-label="Formas de participar">
   <a class="door retadores" href="#participa">
@@ -147,6 +183,10 @@ footer p{max-width:none;margin:0}
   </a>
 </div>
 
+<a class="banner" data-href="formChallenge" href="#" aria-label="Envíanos tu reto, del 27 de septiembre al 23 de octubre de 2026">
+  <img src="banner-retos-2026.jpg" alt="¿Tienes una idea? ¡Envíanos tu reto! Del 27 de septiembre al 23 de octubre de 2026" loading="lazy">
+</a>
+
 <div class="discord" id="discord">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
   <div>
@@ -157,6 +197,8 @@ footer p{max-width:none;margin:0}
 </div>
 
 <section class="wrap" id="como-funciona">
+  <div class="how">
+  <div>
   <h2>Cómo funciona una edición</h2>
   <ol class="steps">
     <li><b>Convocatoria de retos</b>Organizaciones y profesionales envían problemas resolubles con datos abiertos.<span class="when" data-c="dl1"></span></li>
@@ -166,6 +208,9 @@ footer p{max-width:none;margin:0}
     <li><b>Hackathon</b>Tres días remotos con mentorías, charlas y visitas virtuales a laboratorios.<span class="when" data-c="dl4"></span></li>
     <li><b>Evaluación y premios</b>Jurado, demo de cinco minutos y soluciones publicadas en abierto.<span class="when" data-c="dl5"></span></li>
   </ol>
+  </div>
+  <img class="fases" src="fases-2026.jpg" alt="Las tres fases de CoAfina 2026: llamado a retos del 27 de septiembre al 23 de octubre, llamado a estudiantes del 11 de octubre al 4 de noviembre, hackathon 27, 28 y 29 de noviembre" loading="lazy">
+  </div>
 </section>
 
 <section class="wrap band" id="participa">
@@ -176,6 +221,7 @@ footer p{max-width:none;margin:0}
       <a class="btn" data-href="formChallenge" href="#">Proponer un reto</a>
       <p class="note" data-c="dl1Note"></p>
       <p class="note">¿Dudas sobre si tu idea sirve como reto? Pregunta en Discord antes de llenar el formulario.</p>
+      <a data-href="formChallenge" href="#"><img class="pieza" src="llamado-retos-2026.jpg" alt="Datos abiertos + problema = retos. ¡Envíanos tu idea!" loading="lazy"></a>
     </div>
     <div style="--c:var(--sea)">
       <h2>Hackers</h2>
@@ -183,18 +229,25 @@ footer p{max-width:none;margin:0}
       <a class="btn" data-href="formHacker" href="#">Inscribirme</a>
       <p class="note" data-c="dl3Note"></p>
       <p class="note">¿Sin equipo? Entra a Discord y te ayudamos a encontrar uno.</p>
-      <p class="note">Herramientas gratuitas recomendadas: <a data-href="resources" href="#">CoAfina-resources</a>.</p>
+      <p class="note">Herramientas gratuitas recomendadas: <a href="#recursos">recursos para hackers</a>.</p>
     </div>
     <div style="--c:var(--sun)">
       <h2>Patrocinadores</h2>
-      <p>CoAfina se financia con aportes de instituciones científicas, redes académicas y empresas: premios, créditos de cómputo, acceso a datos, mentores, jurado o una charla desde tus laboratorios. A cambio, presencia en el sitio y las comunicaciones de LA-CoNGA physics y RedCLARA, contacto directo con estudiantes de toda la región y la opción de proponer tu propio reto.</p>
+      <p>CoAfina se financia con aportes de instituciones científicas, redes académicas y empresas: premios, créditos de cómputo, acceso a datos, mentores, jurado o una charla desde tus laboratorios. A cambio, presencia en el sitio y las comunicaciones de CoAfina, EL-BONGÓ physics, Creative Commons Venezuela y RedCLARA, contacto directo con estudiantes de toda la región y la opción de proponer tu propio reto.</p>
       <a class="btn" data-href="discord" href="#">Hablar con el comité en Discord</a>
-      <p class="note">Han apoyado: ICTP / Physics Without Frontiers, Open Research Funders Group, Software Sustainability Institute, Open Life Science, INAIT SA.</p>
+      <p class="note">Apoyan la edición 2026: Wikimedia CH (patrocinador principal), INAIT y Software Sustainability Institute, junto a RedCLARA, Creative Commons Venezuela y EL-BONGÓ physics. En ediciones anteriores: ICTP / Physics Without Frontiers, Open Research Funders Group y Open Life Science.</p>
     </div>
   </div>
 </section>
 
-<section class="wrap" id="redes">
+<section class="wrap" id="recursos">
+  <h2>Recursos para hackers</h2>
+  <p class="res-intro">Herramientas gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución durante el hackathon. La lista vive en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README de este repositorio</a>; edítala allí y aparece aquí.</p>
+  <div class="res" id="res-grid"><p class="note">Cargando la lista…</p></div>
+  <p class="res-foot">¿Falta una herramienta? Abre un <em>pull request</em> en el repositorio o propónla en Discord.</p>
+</section>
+
+<section class="wrap band" id="redes">
   <h2>Síguenos</h2>
   <p>Las convocatorias, los plazos y los ganadores se anuncian primero en Discord y después en el resto de redes. Para preguntas, escríbenos en el servidor.</p>
   <div class="social">
@@ -209,16 +262,29 @@ footer p{max-width:none;margin:0}
   </div>
 </section>
 
-<section class="wrap band" id="organizan">
+<section class="wrap band" id="apoyo">
+  <h2>Con el apoyo de</h2>
+  <div class="main-sponsor">
+    <a href="https://wikimedia.ch" target="_blank" rel="noopener" class="wm">
+      <img src="wikimedia-ch.png" alt="Wikimedia CH" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wm-text',textContent:'Wikimedia CH'}))">
+    </a>
+    <p>Wikimedia CH, la asociación suiza para el avance del conocimiento libre, es el patrocinador principal de la edición 2026. Su apoyo financia los premios a los proyectos y la participación de estudiantes de toda la región.</p>
+  </div>
+  <img class="sponsors" src="patrocinadores-2026.png" alt="RedCLARA, Creative Commons Venezuela, EL-BONGÓ physics, INAIT, Software Sustainability Institute" loading="lazy">
+</section>
+
+<section class="wrap" id="organizan">
   <div class="orgs">
-    <div><h3>Organizan</h3><ul><li>LA-CoNGA physics</li><li>Creative Commons Venezuela</li><li>RedCLARA</li><li>CEDIA</li></ul></div>
+    <div><h3>Sitio oficial</h3><ul><li><a data-href="website" href="#">laconga.redclara.net/hackathon</a></li><li style="font-weight:400;color:var(--muted)">Programa, retos, bases y resultados de cada edición.</li></ul></div>
+    <div><h3>Organizan</h3><ul><li>EL-BONGÓ physics</li><li>Creative Commons Venezuela</li><li>RedCLARA</li></ul></div>
+    <div><h3>Apoyan 2026</h3><ul><li>Wikimedia CH (patrocinador principal)</li><li>INAIT</li><li>Software Sustainability Institute</li></ul></div>
     <div><h3>Ediciones</h3><ul><li>2022 · 2023 · 2024 · 2025 · 2026</li><li style="font-weight:400;color:var(--muted)">Quinta edición. En 2024, 80 estudiantes de 44 universidades.</li></ul></div>
     <div><h3>Contacto</h3><ul><li><a data-href="discord" href="#">Nuestro servidor de Discord</a></li><li style="font-weight:400;color:var(--muted)">Preguntas, bienvenidas y guías, casi 24/7.</li></ul></div>
   </div>
 </section>
 
 <footer>
-  <p>CoAfina es una iniciativa de LA-CoNGA physics. Contacto: <a data-href="discord" href="#">Discord</a>. Sitio publicado con licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; el código está en <a data-href="repo" href="#">GitHub</a>.</p>
+  <p>CoAfina es una iniciativa de EL-BONGÓ physics (antes LA-CoNGA physics), Creative Commons Venezuela y RedCLARA. Esta página complementa el <a data-href="website" href="#">sitio oficial</a>. Contacto: <a data-href="discord" href="#">Discord</a>. Sitio publicado con licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; el código está en <a data-href="repo" href="#">GitHub</a>.</p>
 </footer>
 
 <!-- ============================================================
@@ -249,8 +315,7 @@ footer p{max-width:none;margin:0}
     "youtube": "",
     "github": "https://github.com/laa-hecap",
     "website": "https://laconga.redclara.net/hackathon/",
-    "resources": "https://github.com/laa-hecap/CoAfina-resources",
-    "repo": "https://github.com/laa-hecap/CoAfina-resources"
+    "repo": "https://github.com/laa-hecap/coafina"
   }
 }
 </script>
@@ -278,6 +343,35 @@ footer p{max-width:none;margin:0}
     else if (a.closest('.social')) { a.hidden = true; }
     else { a.setAttribute('aria-disabled','true'); a.title = 'Enlace ' + tbc; a.addEventListener('click', e => e.preventDefault()); }
   });
+})();
+</script>
+<script>
+(async function(){
+  const grid = document.getElementById('res-grid');
+  try {
+    const r = await fetch('README.md', {cache:'no-cache'});
+    if (!r.ok) throw new Error(r.status);
+    const md = await r.text();
+    const lines = md.split('\n');
+    const groups = []; let g = null; let started = false;
+    for (const raw of lines) {
+      const line = raw.trim();
+      if (line.startsWith('## ')) { started = true; g = {title: line.slice(3).replace(/^[^\p{L}\p{N}]+/u,'').trim(), items: []}; groups.push(g); continue; }
+      if (started && line.startsWith('# ')) break;            // notas de mantenimiento u otra parte
+      if (g && line.startsWith('- ')) {
+        const m = line.match(/^- \[([^\]]+)\]\(([^)]+)\)\s*:?\s*(.*)$/);
+        if (m) g.items.push({name:m[1], url:m[2], desc:m[3]});
+      }
+    }
+    const esc = t => t.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    grid.innerHTML = groups.filter(x => x.items.length).map(x =>
+      '<div><h3>' + esc(x.title) + '</h3><ul>' +
+      x.items.map(i => '<li><a href="' + esc(i.url) + '" target="_blank" rel="noopener">' + esc(i.name) + '</a>' + (i.desc ? ' <span>' + esc(i.desc) + '</span>' : '') + '</li>').join('') +
+      '</ul></div>').join('');
+    if (!groups.length) throw new Error('empty');
+  } catch (e) {
+    grid.innerHTML = '<p class="note">No se pudo cargar la lista. Está en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README del repositorio</a>.</p>';
+  }
 })();
 </script>
 </body>
