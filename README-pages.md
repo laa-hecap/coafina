@@ -19,3 +19,7 @@ Todo lo que cambia está en el bloque `<script id="config" type="application/jso
 - `datesLong` y `deadlines`: fechas de la edición 2026 ya cargadas (retos hasta el 23 de octubre, inscripciones hasta el 4 de noviembre, hackathon 27–29 de noviembre). Las prórrogas al 31 de octubre y al 14 de noviembre se cambian aquí cuando se anuncien.
 
 
+
+## Retos 2026
+
+La sección "Retos 2026" se genera desde `retos.json`. Cada reto lleva título, organización, resumen, entregable, perfiles buscados, fuente de datos con licencia, ilustración y plano (en la carpeta `retos/`). Para añadir un reto seleccionado, copie un bloque del archivo, cambie los textos y suba sus dos imágenes a `retos/`. El enlace al formulario de retos está en el bloque de configuración de `index.html` (`formChallenge`).

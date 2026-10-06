@@ -1,0 +1,56 @@
+[
+  {
+    "n": "01",
+    "org": "INAIT SA",
+    "titulo": "Clúster Sur: un observatorio sísmico que muestra cómo se recupera de una falla",
+    "resumen": "Un observatorio público en GitHub Pages con un catálogo sísmico histórico del USGS: mapa, gráficos y filtros, más una vista que muestra cómo dos computadoras se repartieron el trabajo y qué pasó cuando una se desconectó. No es monitoreo en tiempo real ni predicción.",
+    "entregable": "Una URL pública con mapa, filtros, gráficos y registro de la falla, con un resultado igual al del cálculo de referencia.",
+    "perfiles": ["Ingeniería y datos", "Periodismo", "Docencia", "Diseño"],
+    "datos": {
+      "nombre": "USGS ComCat, consulta de 2025 (CSV)",
+      "url": "https://earthquake.usgs.gov/data/comcat/",
+      "licencia": "Dominio público (EE. UU.), con los créditos de las redes sísmicas"
+    },
+    "imagen": "retos/reto-01-ilustracion.jpg",
+    "alt": "Estudiantes revisan sismogramas y mapas mientras computadoras repartidas por América Latina se pasan tareas, una de ellas desconectada",
+    "plano": "retos/reto-01-plano.png",
+    "altPlano": "Plano del reto Clúster Sur: datos, distribuir, recuperar y mostrar",
+    "color": "var(--sea)"
+  },
+  {
+    "n": "02",
+    "org": "Creative Commons Venezuela y Creative Commons Switzerland",
+    "titulo": "Mapa vivo: descubrir y mejorar espacios educativos dentro de Wikimedia",
+    "resumen": "Un mapa interactivo y una tabla compartibles, hechos con Wikidata Query Service, de los museos de ciencias y planetarios de un país o zona de América Latina. Una página de trabajo en Wikidata los reúne con entre 5 y 10 mejoras propuestas, cada una con su QID y una fuente independiente.",
+    "entregable": "Mapa y tabla compartibles, página de entrada en Wikidata y 5 a 10 propuestas verificables; los lugares sin coordenadas siguen visibles en la tabla.",
+    "perfiles": ["Conocimiento local", "Bibliotecas y archivos", "Periodismo", "Docencia", "Diseño", "Código"],
+    "datos": {
+      "nombre": "Wikidata Query Service",
+      "url": "https://query.wikidata.org/",
+      "licencia": "CC0"
+    },
+    "imagen": "retos/reto-02-ilustracion.jpg",
+    "alt": "Personas con mapas, libros y laptops marcan museos y planetarios en un mapa de América Latina, con fichas incompletas por completar",
+    "plano": "retos/reto-02-plano.png",
+    "altPlano": "Plano del reto Mapa vivo: consultar, verificar, visualizar y conectar",
+    "color": "var(--sun)"
+  },
+  {
+    "n": "03",
+    "org": "CoAfina",
+    "titulo": "Archivo Abierto: rescatar patrimonio científico y cultural con OCR y revisión humana",
+    "resumen": "Una pequeña exposición digital a partir de 5 a 10 páginas de las Memorias de la Sociedad Científica «Antonio Alzate» (México, 1887–1888, dominio público): OCR con Tesseract en GitHub Actions, revisión humana de al menos dos páginas, búsqueda, lectura lado a lado y un paquete descargable con su procedencia. Los equipos pueden proponer otra fuente si prueban que sus derechos son abiertos.",
+    "entregable": "Un sitio buscable con imagen, OCR y texto corregido lado a lado, más un paquete versionado de imágenes, textos y metadatos.",
+    "perfiles": ["Archivos y bibliotecas", "Traducción", "Periodismo", "Docencia", "Diseño", "Código"],
+    "datos": {
+      "nombre": "Memorias de la Sociedad Científica «Antonio Alzate», tomo 1 (Wikimedia Commons)",
+      "url": "https://commons.wikimedia.org/wiki/File:Memorias_de_la_Sociedad_Cientica_%22Antonio_Alzate.%22_(IA_memoriasdelasoci8788soci).pdf",
+      "licencia": "Dominio público"
+    },
+    "imagen": "retos/reto-03-ilustracion.jpg",
+    "alt": "Tres estudiantes comparan un libro antiguo con su texto reconocido en pantalla; al fondo, flechas de imagen a OCR y a sitio web",
+    "plano": "retos/reto-03-plano.png",
+    "altPlano": "Plano del reto Archivo Abierto: elegir, reconocer, revisar y publicar",
+    "color": "#E8664A"
+  }
+]

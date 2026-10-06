@@ -104,6 +104,27 @@ ol.steps .when{display:block;color:var(--muted);font-size:.92rem;margin-top:.3re
 .aud3 .pieza{display:block;width:100%;max-width:340px;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 12px rgba(20,54,66,.12)}
 @media (max-width:860px){.aud3{grid-template-columns:1fr}}
 
+/* Retos 2026 (se cargan desde retos.json) */
+.retos-intro{max-width:64ch}
+.reto{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(1.25rem,3vw,3rem);align-items:center;padding:clamp(1.25rem,3vw,2rem) 0;margin-top:1.5rem;border-top:6px solid var(--c)}
+.reto:nth-of-type(even) .reto-img{order:2}
+.reto-img img{display:block;width:100%;height:auto;border-radius:10px}
+.reto .kicker{font-weight:600;color:var(--muted);font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem}
+.reto h3{font-size:clamp(1.5rem,2.8vw,2.1rem);margin-bottom:.8rem;max-width:26ch}
+.reto .chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.25rem 0 1rem;max-width:none}
+.reto .chips span{border:1.5px solid var(--ink);border-radius:999px;padding:.2rem .7rem;font-size:.9rem;font-weight:600}
+.reto .datos{font-size:.95rem;color:var(--muted)}
+.reto .acts{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.1rem}
+button.btn{border:0;cursor:pointer;font:inherit;font-weight:600}
+button.btn.light{border:2px solid var(--ink)}
+.reto-cta{margin-top:2.5rem;padding:1.5rem;background:var(--mist);border-radius:8px;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.reto-cta p{margin:0;font-family:var(--display);font-size:1.3rem;font-weight:600;max-width:34ch}
+@media (max-width:860px){.reto{grid-template-columns:1fr}.reto:nth-of-type(even) .reto-img{order:0}}
+dialog#plano{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);width:100%}
+dialog#plano::backdrop{background:rgba(8,29,48,.82)}
+dialog#plano img{display:block;width:100%;height:auto;border-radius:8px}
+dialog#plano .close{position:absolute;top:.5rem;right:.5rem;width:2.5rem;height:2.5rem;border-radius:50%;border:0;background:var(--paper);color:var(--ink);font-size:1.5rem;line-height:1;cursor:pointer}
+
 /* Recursos (se cargan desde README.md, la fuente única) */
 .res-intro{max-width:64ch}
 .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem 2rem;margin-top:1.5rem}
@@ -149,6 +170,7 @@ footer p{max-width:none;margin:0}
   <nav class="main" aria-label="Secciones">
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#participa">Participa</a>
+    <a href="#retos">Retos</a>
     <a href="#recursos">Recursos</a>
     <a href="#redes">Redes</a>
     <a class="pill" data-href="discord" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
@@ -240,14 +262,29 @@ footer p{max-width:none;margin:0}
   </div>
 </section>
 
-<section class="wrap" id="recursos">
+<section class="wrap" id="retos">
+  <h2>Retos 2026</h2>
+  <p class="retos-intro">Tres retos propuestos por el equipo organizador. Sirven también de ejemplo de cómo plantear uno: una pregunta concreta, datos abiertos con licencia clara y un resultado que se pueda ver y probar en tres días. Los retos seleccionados de la convocatoria se publicarán aquí.</p>
+  <div id="retos-list"><p class="note">Cargando los retos…</p></div>
+  <div class="reto-cta">
+    <p>¿Tienes un problema que pueda resolverse con datos abiertos?</p>
+    <a class="btn" data-href="formChallenge" href="#">Enviar mi reto</a>
+  </div>
+</section>
+
+<dialog id="plano" aria-label="Plano del reto">
+  <button class="close" type="button" aria-label="Cerrar">×</button>
+  <img alt="">
+</dialog>
+
+<section class="wrap band" id="recursos">
   <h2>Recursos para hackers</h2>
   <p class="res-intro">Herramientas gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución durante el hackathon. La lista vive en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README de este repositorio</a>; edítala allí y aparece aquí.</p>
   <div class="res" id="res-grid"><p class="note">Cargando la lista…</p></div>
   <p class="res-foot">¿Falta una herramienta? Abre un <em>pull request</em> en el repositorio o propónla en Discord.</p>
 </section>
 
-<section class="wrap band" id="redes">
+<section class="wrap" id="redes">
   <h2>Síguenos</h2>
   <p>Las convocatorias, los plazos y los ganadores se anuncian primero en Discord y después en el resto de redes. Para preguntas, escríbenos en el servidor.</p>
   <div class="social">
@@ -306,7 +343,7 @@ footer p{max-width:none;margin:0}
   },
   "links": {
     "discord": "https://discord.gg/g4k9DnSGZs",
-    "formChallenge": "",
+    "formChallenge": "https://forms.gle/1kFML9vd5JsM4vfS8",
     "formHacker": "",
     "x": "https://x.com/CoAfina",
     "instagram": "",
@@ -372,6 +409,42 @@ footer p{max-width:none;margin:0}
   } catch (e) {
     grid.innerHTML = '<p class="note">No se pudo cargar la lista. Está en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README del repositorio</a>.</p>';
   }
+})();
+</script>
+<script>
+(async function(){
+  const list = document.getElementById('retos-list');
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  try {
+    const r = await fetch('retos.json', {cache:'no-cache'});
+    if (!r.ok) throw new Error(r.status);
+    const retos = await r.json();
+    const discord = JSON.parse(document.getElementById('config').textContent).links.discord || '';
+    list.innerHTML = retos.map(x =>
+      '<article class="reto" style="--c:' + esc(x.color) + '">' +
+        '<div class="reto-img"><img src="' + esc(x.imagen) + '" alt="' + esc(x.alt) + '" loading="lazy"></div>' +
+        '<div>' +
+          '<p class="kicker">Reto ' + esc(x.n) + ' · ' + esc(x.org) + '</p>' +
+          '<h3>' + esc(x.titulo) + '</h3>' +
+          '<p>' + esc(x.resumen) + '</p>' +
+          '<p><strong>Entregable.</strong> ' + esc(x.entregable) + '</p>' +
+          '<div class="chips" aria-label="Perfiles buscados">' + x.perfiles.map(p => '<span>' + esc(p) + '</span>').join('') + '</div>' +
+          '<p class="datos">Datos: <a href="' + esc(x.datos.url) + '" target="_blank" rel="noopener">' + esc(x.datos.nombre) + '</a>. Licencia: ' + esc(x.datos.licencia) + '.</p>' +
+          '<div class="acts">' +
+            '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">Ver el plano del reto</button>' +
+            (discord ? '<a class="btn" href="' + esc(discord) + '" target="_blank" rel="noopener">Preguntar en Discord</a>' : '') +
+          '</div>' +
+        '</div>' +
+      '</article>').join('');
+  } catch (e) {
+    list.innerHTML = '<p class="note">No se pudieron cargar los retos. Escríbenos en Discord.</p>';
+  }
+  const dlg = document.getElementById('plano'); const img = dlg.querySelector('img');
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-plano]');
+    if (b) { img.src = b.dataset.plano; img.alt = b.dataset.alt || ''; dlg.showModal(); return; }
+    if (e.target === dlg || e.target.closest('#plano .close')) dlg.close();
+  });
 })();
 </script>
 </body>
