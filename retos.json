@@ -5,7 +5,12 @@
     "titulo": "Clúster Sur: un observatorio sísmico que muestra cómo se recupera de una falla",
     "resumen": "Un observatorio público en GitHub Pages con un catálogo sísmico histórico del USGS: mapa, gráficos y filtros, más una vista que muestra cómo dos computadoras se repartieron el trabajo y qué pasó cuando una se desconectó. No es monitoreo en tiempo real ni predicción.",
     "entregable": "Una URL pública con mapa, filtros, gráficos y registro de la falla, con un resultado igual al del cálculo de referencia.",
-    "perfiles": ["Ingeniería y datos", "Periodismo", "Docencia", "Diseño"],
+    "perfiles": [
+      "Ingeniería y datos",
+      "Periodismo",
+      "Docencia",
+      "Diseño"
+    ],
     "datos": {
       "nombre": "USGS ComCat, consulta de 2025 (CSV)",
       "url": "https://earthquake.usgs.gov/data/comcat/",
@@ -19,11 +24,18 @@
   },
   {
     "n": "02",
-    "org": "Creative Commons Venezuela y Creative Commons Switzerland",
+    "org": "Creative Commons Venezuela",
     "titulo": "Mapa vivo: descubrir y mejorar espacios educativos dentro de Wikimedia",
     "resumen": "Un mapa interactivo y una tabla compartibles, hechos con Wikidata Query Service, de los museos de ciencias y planetarios de un país o zona de América Latina. Una página de trabajo en Wikidata los reúne con entre 5 y 10 mejoras propuestas, cada una con su QID y una fuente independiente.",
     "entregable": "Mapa y tabla compartibles, página de entrada en Wikidata y 5 a 10 propuestas verificables; los lugares sin coordenadas siguen visibles en la tabla.",
-    "perfiles": ["Conocimiento local", "Bibliotecas y archivos", "Periodismo", "Docencia", "Diseño", "Código"],
+    "perfiles": [
+      "Conocimiento local",
+      "Bibliotecas y archivos",
+      "Periodismo",
+      "Docencia",
+      "Diseño",
+      "Código"
+    ],
     "datos": {
       "nombre": "Wikidata Query Service",
       "url": "https://query.wikidata.org/",
@@ -41,7 +53,14 @@
     "titulo": "Archivo Abierto: rescatar patrimonio científico y cultural con OCR y revisión humana",
     "resumen": "Una pequeña exposición digital a partir de 5 a 10 páginas de las Memorias de la Sociedad Científica «Antonio Alzate» (México, 1887–1888, dominio público): OCR con Tesseract en GitHub Actions, revisión humana de al menos dos páginas, búsqueda, lectura lado a lado y un paquete descargable con su procedencia. Los equipos pueden proponer otra fuente si prueban que sus derechos son abiertos.",
     "entregable": "Un sitio buscable con imagen, OCR y texto corregido lado a lado, más un paquete versionado de imágenes, textos y metadatos.",
-    "perfiles": ["Archivos y bibliotecas", "Traducción", "Periodismo", "Docencia", "Diseño", "Código"],
+    "perfiles": [
+      "Archivos y bibliotecas",
+      "Traducción",
+      "Periodismo",
+      "Docencia",
+      "Diseño",
+      "Código"
+    ],
     "datos": {
       "nombre": "Memorias de la Sociedad Científica «Antonio Alzate», tomo 1 (Wikimedia Commons)",
       "url": "https://commons.wikimedia.org/wiki/File:Memorias_de_la_Sociedad_Cientica_%22Antonio_Alzate.%22_(IA_memoriasdelasoci8788soci).pdf",
@@ -51,6 +70,31 @@
     "alt": "Tres estudiantes comparan un libro antiguo con su texto reconocido en pantalla; al fondo, flechas de imagen a OCR y a sitio web",
     "plano": "retos/reto-03-plano.png",
     "altPlano": "Plano del reto Archivo Abierto: elegir, reconocer, revisar y publicar",
+    "color": "#E8664A"
+  },
+  {
+    "n": "04",
+    "org": "Creative Commons Venezuela",
+    "titulo": "Del kit al impacto: datos abiertos para ampliar una iniciativa educativa",
+    "resumen": "Una iniciativa real preparó 600 kits educativos en Caracas y La Guaira. Al 10 de octubre había entregado 509 y recibido 60 dibujos. El equipo convertirá un resumen público verificable en un panel móvil de inventario, entregas agregadas e informes, con una frontera clara entre datos abiertos y registros privados. Las entregas detalladas se incorporarán solo tras verificación.",
+    "entregable": "Panel público reproducible con conciliación de kits, indicadores con fecha, exportación y una plantilla para nuevas tandas; galería solo si existen permisos explícitos.",
+    "perfiles": [
+      "Educación",
+      "Trabajo comunitario",
+      "Periodismo",
+      "Diseño y accesibilidad",
+      "Datos y código",
+      "Archivos"
+    ],
+    "datos": {
+      "nombre": "600 kits para crear: datos públicos",
+      "url": "https://github.com/venezuela-org/donate/tree/main/data",
+      "licencia": "CC0 para datos estructurados; imágenes según permiso individual"
+    },
+    "imagen": "retos/reto-04-ilustracion.jpg",
+    "alt": "Voluntariado universitario prepara kits de arte y revisa indicadores agregados y un mapa general, sin mostrar niñas ni niños",
+    "plano": "retos/reto-04-plano.png",
+    "altPlano": "Plano del reto Del kit al impacto: datos públicos, inventario, verificación, visualización y privacidad",
     "color": "#E8664A"
   }
 ]
