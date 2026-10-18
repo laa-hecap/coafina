@@ -24,7 +24,7 @@
   },
   {
     "n": "02",
-    "org": "Creative Commons Venezuela",
+    "org": "Creative Commons Venezuela y Creative Commons Switzerland",
     "titulo": "Mapa vivo: descubrir y mejorar espacios educativos dentro de Wikimedia",
     "resumen": "Un mapa interactivo y una tabla compartibles, hechos con Wikidata Query Service, de los museos de ciencias y planetarios de un país o zona de América Latina. Una página de trabajo en Wikidata los reúne con entre 5 y 10 mejoras propuestas, cada una con su QID y una fuente independiente.",
     "entregable": "Mapa y tabla compartibles, página de entrada en Wikidata y 5 a 10 propuestas verificables; los lugares sin coordenadas siguen visibles en la tabla.",
@@ -76,8 +76,8 @@
     "n": "04",
     "org": "Creative Commons Venezuela",
     "titulo": "Del kit al impacto: datos abiertos para ampliar una iniciativa educativa",
-    "resumen": "Una iniciativa real preparó 600 kits educativos en Caracas y La Guaira. Al 10 de octubre había entregado 509 y recibido 60 dibujos. El equipo convertirá un resumen público verificable en un panel móvil de inventario, entregas agregadas e informes, con una frontera clara entre datos abiertos y registros privados. Las entregas detalladas se incorporarán solo tras verificación.",
-    "entregable": "Panel público reproducible con conciliación de kits, indicadores con fecha, exportación y una plantilla para nuevas tandas; galería solo si existen permisos explícitos.",
+    "resumen": "Una iniciativa real preparó 600 kits educativos en Caracas y La Guaira. Al 10 de octubre había entregado 509 y recibido 60 dibujos. Crea un panel móvil con inventario, entregas verificadas, mapa a escala segura y fotografías autorizadas. Propón además cómo un jurado humano podría valorar dibujos anónimos y elegir diez para recibir un kit ampliado. El registro sensible queda privado; el prototipo de jurado usa ejemplos sintéticos.",
+    "entregable": "Panel público con cifras fechadas, conciliación, mapa de entregas publicables e informe exportable; prototipo restringido del flujo de jurado, con rúbrica y decisiones trazables.",
     "perfiles": [
       "Educación",
       "Trabajo comunitario",
@@ -94,7 +94,32 @@
     "imagen": "retos/reto-04-ilustracion.jpg",
     "alt": "Voluntariado universitario prepara kits de arte y revisa indicadores agregados y un mapa general, sin mostrar niñas ni niños",
     "plano": "retos/reto-04-plano.png",
-    "altPlano": "Plano del reto Del kit al impacto: datos públicos, inventario, verificación, visualización y privacidad",
+    "altPlano": "Plano del reto Del kit al impacto: entregas, mapa público, fotografías autorizadas, jurado restringido y privacidad",
     "color": "#E8664A"
+  },
+  {
+    "n": "05",
+    "org": "Dirección de Ambiente · Municipalidad de Villa Yacanto de Calamuchita",
+    "titulo": "AmbientIA: descubrí el match ambiental entre comunidades de América Latina y el Caribe",
+    "resumen": "¿Y si una comunidad encontrara otra, en un país distinto, con un paisaje o desafío ambiental comparable? Elige una localidad y explora matches explicables: cuenca, clima, población, expansión urbana o cobertura del suelo, según los datos disponibles. El prototipo mostrará en un mapa por qué se parecen, qué las diferencia y qué información falta. Ambiente y conocimiento local orientan las preguntas; educación, periodismo y diseño hacen útiles las comparaciones; los perfiles técnicos construyen el método.",
+    "entregable": "Una aplicación o dashboard público para elegir una comunidad y explorar matches de otro país, con mapa, comparación visual, método reproducible y fuentes; basta una muestra bien documentada.",
+    "perfiles": [
+      "Ambiente y territorio",
+      "Gestión pública",
+      "Educación",
+      "Periodismo",
+      "Diseño y accesibilidad",
+      "Datos y código"
+    ],
+    "datos": {
+      "nombre": "BasinATLAS v1.0 (base ambiental; combinar con GeoNames y GHSL)",
+      "url": "https://doi.org/10.6084/m9.figshare.9890531",
+      "licencia": "CC BY 4.0; atribuir cada fuente utilizada"
+    },
+    "imagen": "retos/reto-05-ilustracion.jpg",
+    "alt": "Equipo interdisciplinario compara en mapas dos comunidades latinoamericanas: ríos, montañas, bosques, población y diferencias locales",
+    "plano": "retos/reto-05-plano.png",
+    "altPlano": "Plano del reto AmbientIA: acotar comunidades, perfilar indicadores, comparar afinidades y explicar diferencias y datos faltantes",
+    "color": "var(--sea)"
   }
 ]
