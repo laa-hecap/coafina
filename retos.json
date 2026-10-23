@@ -20,7 +20,9 @@
     "alt": "Estudiantes revisan sismogramas y mapas mientras computadoras repartidas por América Latina se pasan tareas, una de ellas desconectada",
     "plano": "retos/reto-01-plano.png",
     "altPlano": "Plano del reto Clúster Sur: datos, distribuir, recuperar y mostrar",
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "nombre": "Clúster Sur",
+    "bajada": "Explora datos sísmicos y muestra cómo un sistema se recupera de una falla."
   },
   {
     "n": "02",
@@ -45,7 +47,9 @@
     "alt": "Personas con mapas, libros y laptops marcan museos y planetarios en un mapa de América Latina, con fichas incompletas por completar",
     "plano": "retos/reto-02-plano.png",
     "altPlano": "Plano del reto Mapa vivo: consultar, verificar, visualizar y conectar",
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "nombre": "Mapa vivo",
+    "bajada": "Ayuda a descubrir museos y planetarios de América Latina con Wikidata."
   },
   {
     "n": "03",
@@ -70,7 +74,9 @@
     "alt": "Tres estudiantes comparan un libro antiguo con su texto reconocido en pantalla; al fondo, flechas de imagen a OCR y a sitio web",
     "plano": "retos/reto-03-plano.png",
     "altPlano": "Plano del reto Archivo Abierto: elegir, reconocer, revisar y publicar",
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "nombre": "Archivo Abierto",
+    "bajada": "Convierte patrimonio científico digitalizado en una exposición que se pueda buscar y leer."
   },
   {
     "n": "04",
@@ -95,7 +101,9 @@
     "alt": "Voluntariado universitario prepara kits de arte y revisa indicadores agregados y un mapa general, sin mostrar niñas ni niños",
     "plano": "retos/reto-04-plano.png",
     "altPlano": "Plano del reto Del kit al impacto: entregas, mapa público, fotografías autorizadas, jurado restringido y privacidad",
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "nombre": "Del kit al impacto",
+    "bajada": "Haz visible el alcance de una iniciativa educativa con datos claros y verificables."
   },
   {
     "n": "05",
@@ -120,6 +128,8 @@
     "alt": "Equipo interdisciplinario compara en mapas dos comunidades latinoamericanas: ríos, montañas, bosques, población y diferencias locales",
     "plano": "retos/reto-05-plano.png",
     "altPlano": "Plano del reto AmbientIA: acotar comunidades, perfilar indicadores, comparar afinidades y explicar diferencias y datos faltantes",
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "nombre": "AmbientIA",
+    "bajada": "Conecta comunidades de distintos países a través de sus paisajes y desafíos ambientales."
   }
 ]

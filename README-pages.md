@@ -1,25 +1,43 @@
 # Sitio de acción de CoAfina (GitHub Pages)
 
-Un solo archivo, `index.html`, sin build. No sustituye al sitio de la edición en laconga.redclara.net: es la puerta de entrada que manda a cada persona a donde tiene que ir (retos, inscripción, patrocinio) y, sobre todo, a Discord.
+Sitio estático sin build: `index.html`, `retos.json`, `README.md` y los recursos gráficos. Complementa el [sitio oficial](https://laconga.redclara.net/hackathon/): permite explorar retos, encontrar la inscripción y entrar a la comunidad de Discord.
 
 ## Publicar
 
-1. Copie `index.html`, `logo.png` y los recursos gráficos (`hackathon-2026.webm/.mp4/.png`, `banner-retos-2026.jpg`, `fases-2026.jpg`, `llamado-retos-2026.jpg`, `patrocinadores-2026.png`, `wikimedia-ch.png`) a la raíz del repositorio.
-2. Settings → Pages → Deploy from a branch → `main`, carpeta `/`.
-3. En unos minutos queda en `https://laa-hecap.github.io/<repo>/`.
+En GitHub, Settings → Pages → Deploy from a branch → `main`, carpeta `/`. Publica el repositorio completo para conservar los datos y las imágenes. La dirección es `https://laa-hecap.github.io/coafina/`.
 
-## Actualizar
+Para revisar localmente, ejecuta `python3 -m http.server 8000` en la raíz y abre `http://localhost:8000`. Los retos y recursos necesitan HTTP; abrir `index.html` directamente como archivo no permite cargarlos.
 
-Todo lo que cambia está en el bloque `<script id="config" type="application/json">` al final de `index.html`:
+## Actualizar la edición
 
-- `discord`: enlace de invitación permanente al servidor. Es el enlace más importante del sitio; aparece en la cabecera, en la franja azul y en redes.
-- `formChallenge`, `formHacker`: formularios de retos e inscripción.
-- El contacto es Discord en todo el sitio (retadores, hackers, patrocinadores, pie); no hay correo.
-- `x`, `instagram`, `linkedin`, `facebook`, `youtube`, `github`, `website`: redes. Las que queden en `""` no se muestran.
-- `datesLong` y `deadlines`: fechas de la edición 2026 ya cargadas (retos hasta el 23 de octubre, inscripciones hasta el 4 de noviembre, hackathon 27–29 de noviembre). Las prórrogas al 31 de octubre y al 14 de noviembre se cambian aquí cuando se anuncien.
+El bloque `<script id="config" type="application/json">` de `index.html` contiene:
 
+- `edition` y `datesLong`: año y texto principal de las fechas.
+- `deadlines`: fechas ISO `YYYY-MM-DD`. Cada fase tiene `start` y, cuando corresponda, `end`. La publicación de retos solo tiene `start`.
+- `links.discord`: invitación al servidor, usada en toda la página.
+- `links.formChallenge` y `links.formHacker`: formularios oficiales.
+- `links.website`, `links.repo` y las redes sociales. Una red con valor `""` se oculta.
 
+Las notas de convocatoria, las fechas de la secuencia y las etiquetas «En curso» se generan desde `deadlines`. Los intervalos incluyen ambos días y se comparan en UTC para mostrar el mismo estado a todas las personas. Son indicaciones de calendario, no una hora límite oficial: los formularios siguen bajo control del comité. Fuera del intervalo de inscripción, el botón dice «Consultar inscripción» y conserva el enlace al formulario.
+
+Los enlaces de acción y la fecha de inscripción también tienen un respaldo en HTML para quienes no ejecutan JavaScript. Cuando cambies enlaces o fechas, actualiza esos respaldos en la misma edición. Los afiches originales se conservan como archivos, pero las piezas con plazos antiguos ya no se muestran en la página.
+
+Fechas y enlaces contrastados con el sitio oficial el 23 de octubre de 2026: retos hasta el 31 de octubre, inscripciones hasta el 14 de noviembre, taller el 23 de noviembre y hackathon del 27 al 29 de noviembre.
 
 ## Retos 2026
 
-La sección "Retos 2026" se genera desde `retos.json`. Cada reto lleva título, organización, resumen, entregable, perfiles buscados, fuente de datos con licencia, ilustración y plano (en la carpeta `retos/`). Para añadir un reto seleccionado, copie un bloque del archivo, cambie los textos y suba sus dos imágenes a `retos/`. El enlace al formulario de retos está en el bloque de configuración de `index.html` (`formChallenge`).
+La galería se genera desde `retos.json`. Cada reto incluye `nombre` (título breve), `bajada` (descripción de la tarjeta), `titulo` (título completo), organización, resumen, entregable, perfiles, fuente y licencia de datos, ilustración y plano. El título completo y la ficha permanecen disponibles en «Explorar reto»; el plano se abre en un diálogo que se cierra con el botón o Escape.
+
+Para añadir un reto, copia un bloque del JSON, asigna un número único y sube su ilustración y plano a `retos/`. Comprueba las rutas y el texto alternativo de ambas imágenes.
+
+## Recursos
+
+La lista de herramientas se mantiene en las secciones `##` de `README.md`. Cada recurso usa `- [Nombre](https://…)` seguido de una descripción. Un encabezado de nivel uno termina la lista, separándola de las instrucciones de mantenimiento. Comprueba las condiciones actuales de cada herramienta antes de recomendarla como gratuita.
+
+## Comprobación antes de publicar
+
+- Revisar escritorio y móvil, sin desplazamiento horizontal.
+- Abrir las cinco fichas y sus planos; comprobar Escape y navegación con teclado.
+- Comprobar enlaces de inscripción, retos, sitio oficial y Discord.
+- Verificar las fechas y estados antes, durante y después de las convocatorias.
+- Comprobar la página con movimiento reducido y JavaScript desactivado.
