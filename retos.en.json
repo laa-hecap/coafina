@@ -1,0 +1,125 @@
+[
+  {
+    "n": "01",
+    "org": "INAIT SA",
+    "titulo": "Clúster Sur: a seismic observatory that shows how it recovers from a failure",
+    "resumen": "A public observatory on GitHub Pages using a historical USGS earthquake catalog: a map, charts and filters, plus a view showing how two computers shared the work and what happened when one disconnected. This is not real-time monitoring or prediction.",
+    "entregable": "A public URL with a map, filters, charts and a failure log, producing the same result as the reference calculation.",
+    "perfiles": [
+      "Engineering and data",
+      "Journalism",
+      "Teaching",
+      "Design"
+    ],
+    "datos": {
+      "nombre": "USGS ComCat, 2025 query (CSV)",
+      "url": "https://earthquake.usgs.gov/data/comcat/",
+      "licencia": "Public domain (United States), with credits to the seismic networks"
+    },
+    "imagen": "retos/reto-01-ilustracion.jpg",
+    "alt": "Students review seismograms and maps while computers across Latin America share tasks, with one computer disconnected",
+    "plano": "retos/reto-01-plano.png",
+    "altPlano": "Clúster Sur blueprint: data, distribution, recovery and presentation",
+    "color": "var(--sea)"
+  },
+  {
+    "n": "02",
+    "org": "Creative Commons Venezuela y Creative Commons Switzerland",
+    "titulo": "Mapa vivo: discover and improve educational spaces within Wikimedia",
+    "resumen": "A shareable interactive map and table, built with Wikidata Query Service, of science museums and planetariums in a country or area of Latin America. A Wikidata work page brings them together with 5 to 10 proposed improvements, each with its QID and an independent source.",
+    "entregable": "A shareable map and table, a Wikidata entry page and 5 to 10 verifiable proposals; places without coordinates remain visible in the table.",
+    "perfiles": [
+      "Local knowledge",
+      "Libraries and archives",
+      "Journalism",
+      "Teaching",
+      "Design",
+      "Coding"
+    ],
+    "datos": {
+      "nombre": "Wikidata Query Service",
+      "url": "https://query.wikidata.org/",
+      "licencia": "CC0"
+    },
+    "imagen": "retos/reto-02-ilustracion.jpg",
+    "alt": "People with maps, books and laptops mark museums and planetariums on a map of Latin America, with incomplete records to fill in",
+    "plano": "retos/reto-02-plano.png",
+    "altPlano": "Mapa vivo blueprint: query, verify, visualize and connect",
+    "color": "var(--sun)"
+  },
+  {
+    "n": "03",
+    "org": "CoAfina",
+    "titulo": "Archivo Abierto: recover scientific and cultural heritage using OCR and human review",
+    "resumen": "A small digital exhibition based on 5 to 10 pages from Memorias de la Sociedad Científica «Antonio Alzate» (Mexico, 1887–1888, public domain): OCR with Tesseract in GitHub Actions, human review of at least two pages, search, side-by-side reading and a downloadable package documenting its provenance. Teams may propose another source if they demonstrate that its rights are open.",
+    "entregable": "A searchable website with the image, OCR and corrected text side by side, plus a versioned package of images, texts and metadata.",
+    "perfiles": [
+      "Archives and libraries",
+      "Translation",
+      "Journalism",
+      "Teaching",
+      "Design",
+      "Coding"
+    ],
+    "datos": {
+      "nombre": "Memorias de la Sociedad Científica «Antonio Alzate», volume 1 (Wikimedia Commons)",
+      "url": "https://commons.wikimedia.org/wiki/File:Memorias_de_la_Sociedad_Cientica_%22Antonio_Alzate.%22_(IA_memoriasdelasoci8788soci).pdf",
+      "licencia": "Public domain"
+    },
+    "imagen": "retos/reto-03-ilustracion.jpg",
+    "alt": "Three students compare an old book with its recognized text on screen; arrows in the background lead from image to OCR to website",
+    "plano": "retos/reto-03-plano.png",
+    "altPlano": "Archivo Abierto blueprint: select, recognize, review and publish",
+    "color": "#E8664A"
+  },
+  {
+    "n": "04",
+    "org": "Creative Commons Venezuela",
+    "titulo": "Del kit al impacto: open data to expand an educational initiative",
+    "resumen": "A real initiative prepared 600 educational kits in Caracas and La Guaira. By October 10, it had delivered 509 and received 60 drawings. Create a mobile dashboard with inventory, verified deliveries, a map at a safe scale and authorized photographs. Also propose how a human jury could assess anonymous drawings and select ten to receive an expanded kit. Sensitive records remain private; the jury prototype uses synthetic examples.",
+    "entregable": "A public dashboard with dated figures, reconciliation, a map of publishable deliveries and an exportable report; a restricted jury workflow prototype with a rubric and traceable decisions.",
+    "perfiles": [
+      "Education",
+      "Community work",
+      "Journalism",
+      "Design and accessibility",
+      "Data and coding",
+      "Archives"
+    ],
+    "datos": {
+      "nombre": "600 kits para crear: public data",
+      "url": "https://github.com/venezuela-org/donate/tree/main/data",
+      "licencia": "CC0 for structured data; images subject to individual permission"
+    },
+    "imagen": "retos/reto-04-ilustracion.jpg",
+    "alt": "University volunteers prepare art kits and review aggregate indicators and a general map, without showing children",
+    "plano": "retos/reto-04-plano.png",
+    "altPlano": "Del kit al impacto blueprint: deliveries, public map, authorized photographs, restricted jury and privacy",
+    "color": "#E8664A"
+  },
+  {
+    "n": "05",
+    "org": "Dirección de Ambiente · Municipalidad de Villa Yacanto de Calamuchita",
+    "titulo": "AmbientIA: discover environmental matches between communities in Latin America and the Caribbean",
+    "resumen": "What if a community could find another, in a different country, with a comparable landscape or environmental challenge? Choose a locality and explore explainable matches: watershed, climate, population, urban expansion or land cover, depending on available data. The prototype will show on a map why they are similar, how they differ and what information is missing. Environmental and local knowledge guide the questions; education, journalism and design make comparisons useful; technical skills build the method.",
+    "entregable": "A public app or dashboard to select a community and explore matches in another country, with a map, visual comparison, reproducible method and sources; a well-documented sample is enough.",
+    "perfiles": [
+      "Environment and territory",
+      "Public administration",
+      "Education",
+      "Journalism",
+      "Design and accessibility",
+      "Data and coding"
+    ],
+    "datos": {
+      "nombre": "BasinATLAS v1.0 (environmental baseline; combine with GeoNames and GHSL)",
+      "url": "https://doi.org/10.6084/m9.figshare.9890531",
+      "licencia": "CC BY 4.0; attribute every source used"
+    },
+    "imagen": "retos/reto-05-ilustracion.jpg",
+    "alt": "An interdisciplinary team compares maps of two Latin American communities: rivers, mountains, forests, population and local differences",
+    "plano": "retos/reto-05-plano.png",
+    "altPlano": "AmbientIA blueprint: scope communities, profile indicators, compare similarities and explain differences and missing data",
+    "color": "var(--sea)"
+  }
+]

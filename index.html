@@ -7,196 +7,277 @@
 <meta name="description" content="Propón un reto, participa como hacker o apoya la edición. Todo pasa en nuestro Discord.">
 <meta property="og:title" content="CoAfina — Hackathon latinoamericano de datos abiertos">
 <meta property="og:description" content="Propón un reto, participa como hacker o apoya la edición. Todo pasa en nuestro Discord.">
-<meta property="og:image" content="https://laa-hecap.github.io/coafina/hackathon-2026.png">
-<meta property="og:image:alt" content="Los personajes de CoAfina 2026">
+<meta property="og:image" content="logo.png">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-
 :root{
- --ink:#143642;--sea:#087779;--sun:#F2C14E;--paper:#FFFCF5;--mist:#EDF2EF;--line:#CCD8D4;--muted:#4A6572;--discord:#4854D9;
- --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif;
- --gutter:clamp(1.25rem,4vw,3.5rem);--page:1200px;
+  --ink:#143642; --sea:#0F8B8D; --sun:#F2C14E; --paper:#FFFFFF; --mist:#E9EFF1; --line:#C9D6DA; --muted:#4A6572;
+  --discord:#5865F2;
+  --display:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"Source Sans 3", system-ui, sans-serif;
+  --gutter:clamp(1.25rem, 4vw, 3.5rem);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.55}
-a{color:var(--sea);text-underline-offset:.2em}
-:focus-visible{outline:3px solid var(--ink);outline-offset:4px;box-shadow:0 0 0 6px var(--sun)}
-img,video{max-width:100%;height:auto}
-h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.025em;overflow-wrap:anywhere}
-h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:600;margin-bottom:1rem}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+body{margin:0;background:#FFFCF5;color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.55}
+a{color:var(--sea)}
+a:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-0.01em}
+h2{font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:600}
 h3{font-size:1.3rem;font-weight:600}
-p{margin:0 0 1rem;max-width:64ch}
-.wrap{padding-inline:max(var(--gutter),calc((100% - var(--page))/2))}
-section{padding-block:clamp(3rem,6vw,5.5rem)}
+p{margin:0 0 1rem;max-width:60ch}
+.wrap{padding-inline:var(--gutter)}
+section{padding-block:clamp(2.5rem,6vw,4.5rem)}
 .band{background:var(--mist)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
-.skip{position:absolute;top:1rem;left:1rem;z-index:10;transform:translateY(-200%);background:var(--ink);color:#fff;padding:.7rem 1rem}
-.skip:focus{transform:none}
-header.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.1rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink);font-family:var(--display);font-size:1.3rem}
-.brand img{width:200px;height:auto;display:block}
-.brand span{font-weight:400}
-nav.main{display:flex;align-items:center;gap:.25rem 1rem;flex-wrap:wrap}
-nav.main a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;padding-block:.65rem}
+
+/* Cabecera */
+header.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem var(--gutter);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.5rem}
+.brand img{height:3rem;width:auto;display:block}
+.brand span{font-weight:300}
+@media(max-width:360px){.brand img{height:2.5rem}}
+nav.main{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+nav.main a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
 nav.main a:hover{text-decoration:underline}
-.pill{background:var(--discord);color:#fff!important;padding:.6rem 1rem!important;border-radius:999px;display:inline-flex;align-items:center;gap:.5rem;text-decoration:none}
-.pill:hover{background:var(--ink)}
-.pill svg,.social svg{width:1.1em;height:1.1em;fill:currentColor}
-.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:clamp(3rem,6vw,5rem)}
-.eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-bottom:1rem}
-h1{font-size:clamp(2.8rem,5.4vw,4.8rem);font-weight:700;max-width:14ch}
-h1 em{font-style:normal;color:var(--sea)}
-.hero .lead{font-size:1.2rem;color:var(--muted);margin-top:1.5rem;max-width:46ch}
-.event-date{font-weight:600;margin:1.25rem 0 .35rem}
-.event-facts{display:flex;flex-wrap:wrap;gap:.4rem .65rem;list-style:none;padding:0;margin:0 0 1.5rem;color:var(--muted);font-size:.95rem}
-.event-facts li+li:before{content:'·';margin-right:.65rem}
-.acts{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
-.hero-art{position:relative;background:#F7EBCB;border:1px solid #EADBB4;border-radius:48% 48% 1.5rem 1.5rem;padding:2rem 1.5rem 1.25rem;transform:rotate(2deg)}
-.hero-art img,.hero-art video{width:100%;display:block;transform:rotate(-2deg)}
-.hero-art figcaption{text-align:center;font-family:var(--display);font-weight:600;margin-top:1rem}
-.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding-bottom:3rem}
-.door{display:flex;flex-direction:column;align-items:flex-start;padding:1.5rem;text-decoration:none;border-radius:12px;transition:transform .2s;min-width:0}
-.door:hover{transform:translateY(-4px)}
-.door small{font-size:.9rem;font-weight:600}
-.door .h{font-family:var(--display);font-size:1.6rem;font-weight:600;line-height:1.1;margin:.7rem 0}
-.door p{font-size:1rem;margin-bottom:1rem}
-.door .go{margin-top:auto;font-weight:600;text-decoration:underline;text-underline-offset:.3em}
-.door.retadores{background:var(--ink);color:#fff}
-.door.hackers{background:var(--sea);color:#fff}
+nav.main .language{font-size:.85rem;padding:.3rem .5rem;border:1px solid var(--line);border-radius:4px}
+nav.main .language[aria-current="page"]{background:var(--ink);color:#fff}
+.pill{background:var(--discord);color:#fff!important;padding:.55rem 1rem;border-radius:999px;display:inline-flex;align-items:center;gap:.5rem}
+.pill:hover{text-decoration:none!important;filter:brightness(1.1)}
+.pill svg{width:1.1em;height:1.1em;fill:currentColor}
+
+.tagline{display:flex;align-items:center;gap:clamp(1rem,3vw,3rem);padding:1.1rem var(--gutter);font-family:var(--display);font-size:clamp(1.05rem,1.9vw,1.35rem);font-weight:500;border-bottom:1px solid var(--line);color:var(--muted)}
+.tagline-text{flex:1}
+.tagline .equipo{width:clamp(150px,18vw,240px);height:auto;flex:none;display:block}
+@media (max-width:760px){.tagline{flex-direction:column;align-items:flex-start}.tagline .equipo{width:min(70%,260px);align-self:center}}
+.tagline strong{color:var(--ink);font-weight:600}
+
+/* Tres puertas */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);min-height:min(68vh,620px)}
+.door{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,2.5vw,2.25rem);text-decoration:none;transition:filter .2s}
+.door:hover{filter:brightness(1.06)}
+.door small{font-size:1rem;font-weight:600;opacity:.85}
+.door .h{font-family:var(--display);font-size:clamp(2.1rem,4.8vw,4.2rem);font-weight:700;line-height:.95;letter-spacing:-0.02em;margin:1rem 0}
+.door p{font-size:1.08rem;max-width:30ch;margin:0}
+.door .go{margin-top:1.25rem;font-weight:600;border-bottom:2px solid currentColor;align-self:flex-start;padding-bottom:.15rem}
+.door.retadores{background:var(--ink);color:var(--paper)}
+.door.hackers{background:var(--sea);color:var(--paper)}
 .door.patrocinadores{background:var(--sun);color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;background:var(--ink);color:#fff;text-decoration:none;font:inherit;font-weight:600;padding:.7rem 1.2rem;border:2px solid var(--ink);border-radius:7px;cursor:pointer;text-align:center}
-.btn:hover{background:var(--sea);border-color:var(--sea)}
-.btn.light{background:transparent;color:var(--ink)}
-.btn.light:hover{background:var(--ink);color:#fff}
-.note{color:var(--muted);font-size:.95rem;margin-top:.75rem}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:1.75rem;flex-wrap:wrap}
-.section-head p{margin:0;color:var(--muted);max-width:56ch}
-#retos-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;align-items:start}
-.reto{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;min-width:0}
-.reto-img{display:block;aspect-ratio:3/2;overflow:hidden;border-bottom:4px solid var(--c)}
-.reto-img img{display:block;width:100%;height:100%;object-fit:cover}
-.reto-body{padding:1.4rem}
-.reto .kicker{font-size:.8rem;line-height:1.4;color:var(--muted);margin-bottom:.7rem}
-.reto h3{font-size:1.65rem;margin-bottom:.75rem}
-.reto .preview{font-size:1rem;color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:.35rem;margin:1rem 0}
-.chips span{border:1px solid var(--line);background:var(--mist);border-radius:999px;padding:.15rem .55rem;font-size:.8rem}
-.reto details{border-top:1px solid var(--line);margin-top:1rem;padding-top:.9rem}
-.reto summary{cursor:pointer;font-weight:600;min-height:44px;color:var(--sea)}
-.reto summary:hover{text-decoration:underline}
-.reto details[open] summary{margin-bottom:1rem}
-.reto details p{font-size:1rem}
-.reto .datos{font-size:.9rem;overflow-wrap:anywhere;color:var(--muted)}
-.reto .acts{align-items:stretch;flex-direction:column;margin-top:1rem}
-.reto .btn{font-size:.95rem}
-.reto-cta{margin-top:2rem;padding:1.5rem;background:#F7EBCB;border-radius:12px;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
-.reto-cta p{margin:0;font-family:var(--display);font-size:1.3rem;font-weight:600;max-width:36ch}
-.steps{list-style:none;padding:0;margin:2rem 0 0;counter-reset:s;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
-.steps li{counter-increment:s;border-top:2px solid var(--line);padding-top:1rem}
-.steps li::before{content:'0' counter(s);font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--sea);display:block;margin-bottom:.5rem}
-.steps b{display:block;margin-bottom:.4rem}
-.steps .when{display:block;color:var(--muted);font-size:.95rem;margin-top:.5rem}
-.phase-status{display:inline-block;font-size:.8rem;font-weight:600;background:var(--ink);color:#fff;padding:.15rem .5rem;border-radius:4px;margin-top:.5rem}
-.steps li.current{border-color:var(--sea)}
-.aud3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
-.aud3>div{border-top:4px solid var(--c);padding-top:1.25rem;scroll-margin-top:2rem;min-width:0}
-.aud3 h3{font-size:1.6rem;margin-bottom:1rem}
-.aud3 p{font-size:1rem}
-.discord{background:var(--discord);color:#fff;display:flex;gap:2rem;align-items:center;flex-wrap:wrap;padding-block:2.5rem}
-.discord>svg{width:3.5rem;height:3.5rem;fill:currentColor;flex:none}
-.discord>div{flex:1;min-width:min(100%,260px)}
-.discord h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.6rem}
-.discord p{margin:0}
-.discord .btn{background:#fff;color:var(--discord);border-color:#fff}
-.discord .btn:hover{background:var(--sun);color:var(--ink);border-color:var(--sun)}
-dialog#plano{border:0;padding:0;background:#fff;max-width:min(96vw,1400px);width:100%;max-height:90dvh;border-radius:10px}
+@media (max-width:760px){.doors{grid-template-columns:1fr;min-height:0}.door{min-height:34vh}}
+
+/* Banner de convocatoria (pieza de las diseñadoras) */
+.banner{display:block;background:#2B2E7A}
+.banner img{display:block;width:100%;height:auto;max-width:1600px;margin:0 auto}
+.banner:hover img{filter:brightness(1.05)}
+
+/* Discord: el lugar donde pasa todo */
+.discord{background:var(--discord);color:#fff;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1rem,3vw,2.5rem);align-items:center;padding:clamp(1.75rem,4vw,3rem) var(--gutter)}
+.discord svg{width:clamp(3.5rem,7vw,6rem);height:auto;fill:#fff}
+.discord h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem)}
+.discord p{margin:.4rem 0 0;max-width:52ch;opacity:.95}
+.discord .btn{background:#fff;color:var(--discord);white-space:nowrap}
+.discord .btn:hover{background:var(--sun);color:var(--ink)}
+@media (max-width:760px){.discord{grid-template-columns:1fr}.discord svg{width:3rem}}
+
+/* Botones */
+.btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:4px}
+.btn:hover{background:var(--sea)}
+.btn[aria-disabled="true"]{opacity:.55;cursor:default}
+.note{color:var(--muted);font-size:.95rem;margin-top:.6rem}
+
+/* Cómo funciona: es una secuencia, por eso va numerada */
+.how{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.9fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.how .fases{width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(20,54,66,.12)}
+@media (max-width:860px){.how{grid-template-columns:1fr}.how .fases{max-width:420px;margin:0 auto}}
+ol.steps{list-style:none;padding:0;margin:1.5rem 0 0;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1.25rem 1.5rem}
+ol.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:.7rem}
+ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--sea);display:block}
+ol.steps b{display:block;font-weight:600;margin:.15rem 0 .2rem}
+ol.steps .when{display:block;color:var(--muted);font-size:.92rem;margin-top:.3rem}
+
+/* Tres audiencias, en columnas */
+.aud3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,3vw,3rem)}
+.aud3 > div{border-top:6px solid var(--c);padding-top:1rem}
+.aud3 h2{font-size:1.7rem;margin-bottom:.6rem}
+.aud3 p{font-size:1.02rem}
+.aud3 .pieza{display:block;width:100%;max-width:340px;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 12px rgba(20,54,66,.12)}
+@media (max-width:860px){.aud3{grid-template-columns:1fr}}
+
+/* Retos 2026 (se cargan desde retos.json) */
+.retos-intro{max-width:64ch}
+.reto{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(1.25rem,3vw,3rem);align-items:center;padding:clamp(1.25rem,3vw,2rem) 0;margin-top:1.5rem;border-top:6px solid var(--c)}
+.reto:nth-of-type(even) .reto-img{order:2}
+.reto-img img{display:block;width:100%;height:auto;border-radius:10px}
+.reto .kicker{font-weight:600;color:var(--muted);font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem}
+.reto h3{font-size:clamp(1.5rem,2.8vw,2.1rem);margin-bottom:.8rem;max-width:26ch}
+.reto .chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.25rem 0 1rem;max-width:none}
+.reto .chips span{border:1.5px solid var(--ink);border-radius:999px;padding:.2rem .7rem;font-size:.9rem;font-weight:600}
+.reto .datos{font-size:.95rem;color:var(--muted)}
+.reto .acts{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.1rem}
+button.btn{border:0;cursor:pointer;font:inherit;font-weight:600}
+button.btn.light{border:2px solid var(--ink)}
+.reto-cta{margin-top:2.5rem;padding:1.5rem;background:var(--mist);border-radius:8px;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.reto-cta p{margin:0;font-family:var(--display);font-size:1.3rem;font-weight:600;max-width:34ch}
+@media (max-width:860px){.reto{grid-template-columns:1fr}.reto:nth-of-type(even) .reto-img{order:0}}
+dialog#plano{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);width:100%}
 dialog#plano::backdrop{background:rgba(8,29,48,.82)}
-dialog#plano img{display:block;width:100%;height:auto}
-dialog#plano .close{position:sticky;top:.5rem;margin:.5rem .5rem .5rem auto;display:block;min-width:44px;min-height:44px;border-radius:50%;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font-size:1.5rem;cursor:pointer}
-.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1.75rem 2rem;margin-top:2rem}
-.res h3{font-size:1.15rem;border-top:2px solid var(--sea);padding-top:.75rem;margin-bottom:.75rem}
-.res ul,.orgs ul{list-style:none;padding:0;margin:0}
-.res li{margin-bottom:.7rem;font-size:1rem;line-height:1.45}
+dialog#plano img{display:block;width:100%;height:auto;border-radius:8px}
+dialog#plano .close{position:absolute;top:.5rem;right:.5rem;width:2.5rem;height:2.5rem;border-radius:50%;border:0;background:var(--paper);color:var(--ink);font-size:1.5rem;line-height:1;cursor:pointer}
+
+/* Recursos (se cargan desde README.md, la fuente única) */
+.res-intro{max-width:64ch}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem 2rem;margin-top:1.5rem}
+.res h3{font-size:1.1rem;border-top:3px solid var(--sea);padding-top:.6rem;margin-bottom:.5rem}
+.res ul{list-style:none;padding:0;margin:0}
+.res li{margin:0 0 .5rem;font-size:.98rem;line-height:1.4}
 .res li a{font-weight:600}
-.res li span,.res-foot{color:var(--muted)}
-.res-foot{margin-top:1.5rem;font-size:.95rem}
+.res li span{color:var(--muted)}
+.res-foot{margin-top:1.5rem;color:var(--muted);font-size:.95rem}
+
+/* Redes */
 .social{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
-.social a{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;padding:.6rem 1rem;border-radius:999px}
-.social a:hover{background:var(--ink);color:#fff}
+.social a{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;padding:.6rem 1rem;border-radius:999px}
+.social a:hover{background:var(--ink);color:var(--paper)}
 .social a[hidden]{display:none}
-.main-sponsor{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;margin:1.5rem 0 2rem;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:12px}
-.main-sponsor .wm img{width:180px;display:block}
-.main-sponsor p{margin:0}
-.sponsors{display:block;width:100%;height:auto;background:#fff;padding:1rem;border-radius:12px}
-.orgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:1.5rem 2rem}
-.orgs h3{font-size:1rem;color:var(--muted);margin-bottom:.5rem}
-.orgs li{font-size:.95rem}
-footer{background:var(--ink);color:#fff;padding-block:2rem;font-size:.95rem}
+.social svg{width:1.15em;height:1.15em;fill:currentColor}
+
+/* Con el apoyo de */
+.main-sponsor{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.25rem,3vw,2.5rem);align-items:center;margin:1.5rem 0 2rem;padding:1.5rem;background:var(--paper);border-radius:8px;max-width:60rem}
+.main-sponsor .wm img{height:clamp(3.5rem,7vw,5.5rem);width:auto;display:block}
+.main-sponsor .wm-text{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--ink);white-space:nowrap}
+.main-sponsor p{margin:0;max-width:52ch}
+@media (max-width:640px){.main-sponsor{grid-template-columns:1fr}}
+.sponsors{display:block;width:100%;max-width:1100px;height:auto;background:var(--paper);padding:.75rem 1rem;border-radius:8px}
+
+/* Organizan + pie */
+.orgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem 2rem;margin-top:1rem}
+.orgs h3{font-size:1rem;color:var(--muted);font-weight:600;margin-bottom:.4rem}
+.orgs ul{list-style:none;padding:0;margin:0}
+.orgs li{font-weight:600}
+footer{background:var(--ink);color:var(--paper);padding:2rem var(--gutter);font-size:.95rem}
 footer a{color:var(--sun)}
 footer p{max-width:none;margin:0}
-@media(max-width:1000px){header.top{justify-content:center}#retos-list{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{gap:2rem}.hero-art{margin:0}}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:2.5rem}.hero-art{max-width:360px;width:100%;justify-self:center}.doors,.aud3{grid-template-columns:1fr}.door{padding:1.25rem}.door .h{font-size:1.5rem}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.main-sponsor{grid-template-columns:1fr}.discord{gap:1rem}nav.main{justify-content:center;gap:.1rem .8rem}.brand img{width:180px}}
-@media(max-width:520px){#retos-list,.steps{grid-template-columns:1fr}.hero .acts{align-items:stretch;flex-direction:column}.hero-art{max-width:280px}h1{font-size:2.8rem}.event-facts{font-size:.9rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
 
-<header class="top wrap">
+<header class="top">
   <a class="brand" href="#">
-    <img width="1159" height="233" src="logo.png" alt="CoAfina – Datos Abiertos en América Latina" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://laconga.redclara.net/hackathon/static/media/logo.280fcb44424e16fb6a8c.png'}else{this.replaceWith('CoAfina')}">
+    <img src="logo.png" alt="CoAfina – Datos Abiertos en América Latina" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://laconga.redclara.net/hackathon/static/media/logo.280fcb44424e16fb6a8c.png'}else{this.replaceWith('CoAfina')}">
     <span data-c="edition"></span>
   </a>
   <nav class="main" aria-label="Secciones">
-    <a href="#retos">Retos</a>
     <a href="#como-funciona">Cómo funciona</a>
     <a href="#participa">Participa</a>
+    <a href="#retos">Retos</a>
     <a href="#recursos">Recursos</a>
     <a href="#redes">Redes</a>
-    <a class="pill" data-href="discord" href="https://discord.gg/yWhUUvrhpj"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
+    <a class="pill" data-href="discord" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
+    <a class="language" href="index.html" lang="es" hreflang="es" aria-current="page">Español</a>
+    <a class="language" href="en.html" lang="en" hreflang="en">English</a>
   </nav>
 </header>
 
-<main id="contenido" tabindex="-1">
-<section class="hero wrap" aria-labelledby="hero-title">
-  <div>
-    <p class="eyebrow">CoAfina 2026 · Quinta edición</p>
-    <h1 id="hero-title">Datos abiertos.<br>Ideas que <em>nos conectan.</em></h1>
-    <p class="lead">Un hackathon latinoamericano para transformar datos abiertos en soluciones científicas y educativas. Tu disciplina también tiene algo que aportar.</p>
-    <p class="event-date" data-c="datesLong">27, 28 y 29 de noviembre de 2026</p>
-    <ul class="event-facts" aria-label="Modalidad"><li>En línea</li><li>Sin costo</li><li>Todas las disciplinas</li></ul>
-    <div class="acts">
-      <a class="btn" data-href="formHacker" data-registration href="https://forms.gle/v6UVWS3iQqonYNj4A">Inscribirme <span aria-hidden="true">↗</span></a>
-      <a class="btn light" href="#retos">Explorar los retos <span aria-hidden="true">↓</span></a>
-    </div>
-    <p class="note" data-c="dl3Note">Inscripciones hasta el 14 de noviembre.</p>
-  </div>
-  <figure class="hero-art">
-    <img src="hackathon-2026.png" alt="Los cinco personajes de CoAfina, listos para crear en equipo" width="480" height="592" fetchpriority="high">
-    <figcaption>Muchas miradas. Un equipo.</figcaption>
-  </figure>
-</section>
-<div class="doors wrap" aria-label="Encuentra tu forma de participar">
-  <a class="door hackers" href="#hackers"><small>Quiero crear en equipo</small><span class="h">Participa como hacker</span><p>Estudiantes de cualquier disciplina, con mentoría y sin costo.</p><span class="go">Cómo participar ↗</span></a>
-  <a class="door retadores" href="#retadores"><small>Tengo una pregunta</small><span class="h">Propón un reto</span><p>Conecta un problema científico o educativo con talento de toda la región.</p><span class="go">Cómo proponer un reto ↗</span></a>
-  <a class="door patrocinadores" href="#patrocinadores"><small>Quiero hacerlo posible</small><span class="h">Apoya la edición</span><p>Suma premios, mentoría o recursos para que más estudiantes participen.</p><span class="go">Cómo apoyar ↗</span></a>
+<div class="tagline"><div class="tagline-text"><strong>Hackathon latinoamericano de datos abiertos.</strong> Tres días, en línea, para convertir datos abiertos en soluciones científicas y educativas. <span data-c="datesLong"></span><br><span style="font-weight:400;font-size:.9em">Esta es la página de acción de CoAfina: cómo participar y dónde encontrarnos. La información completa de la edición está en el <a data-href="website" href="#">sitio oficial de CoAfina</a>.</span></div>
+  <video class="equipo" autoplay muted loop playsinline poster="hackathon-2026.png" aria-label="Hackathon 2026: los cinco personajes de CoAfina">
+    <source src="hackathon-2026.webm" type="video/webm">
+    <source src="hackathon-2026.mp4" type="video/mp4">
+    <img src="hackathon-2026.png" alt="Hackathon 2026: los cinco personajes de CoAfina">
+  </video></div>
+
+<div class="doors" aria-label="Formas de participar">
+  <a class="door retadores" href="#participa">
+    <small>Tengo un problema que resolver</small>
+    <span class="h">Propón un reto</span>
+    <p>Organizaciones, grupos de investigación y profesionales que quieran que un equipo trabaje su problema con datos abiertos.</p>
+    <span class="go">Cómo proponer un reto</span>
+  </a>
+  <a class="door hackers" href="#participa">
+    <small>Soy estudiante</small>
+    <span class="h">Participa como hacker</span>
+    <p>Estudiantes de pregrado y posgrado de cualquier disciplina en América Latina. En equipo, con mentoría y sin costo.</p>
+    <span class="go">Cómo inscribirte</span>
+  </a>
+  <a class="door patrocinadores" href="#participa">
+    <small>Quiero apoyar</small>
+    <span class="h">Apoya la edición</span>
+    <p>Instituciones y empresas que financian premios, infraestructura y la participación de estudiantes de toda la región.</p>
+    <span class="go">Cómo patrocinar</span>
+  </a>
 </div>
 
+<a class="banner" data-href="formChallenge" href="#" aria-label="Convocatoria de retos abierta: plazo ampliado hasta el 31 de octubre de 2026">
+  <p data-c="dl1Banner" style="margin:0;max-width:none;padding:1rem var(--gutter);color:#fff;font-weight:600">Convocatoria de retos abierta · Plazo ampliado hasta el 31 de octubre de 2026</p>
+  <img src="banner-retos-2026.jpg" alt="¿Tienes una idea? ¡Envíanos tu reto! Del 27 de septiembre al 23 de octubre de 2026" loading="lazy">
+</a>
+
+<div class="discord" id="discord">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
+  <div>
+    <h2>Todo pasa en nuestro Discord</h2>
+    <p>El servidor es nuestro canal de contacto. Ahí te da la bienvenida un equipo que está casi las 24 horas: haces preguntas, encuentras equipo, recibes las guías y los anuncios, hablas con mentores y sigues el evento en directo. Retador, hacker o patrocinador: empieza entrando.</p>
+  </div>
+  <a class="btn" data-href="discord" href="#">Entrar al servidor</a>
+</div>
+
+<section class="wrap" id="como-funciona">
+  <div class="how">
+  <div>
+  <h2>Cómo funciona una edición</h2>
+  <ol class="steps">
+    <li><b>Convocatoria de retos</b>Organizaciones y profesionales envían problemas resolubles con datos abiertos.<span class="when" data-c="dl1"></span></li>
+    <li><b>Publicación de retos</b>Los retos seleccionados se publican con sus datos y persona de contacto.<span class="when" data-c="dl2"></span></li>
+    <li><b>Inscripción de hackers</b>Inscripción individual; los equipos se forman al inicio del evento.<span class="when" data-c="dl3"></span></li>
+    <li><b>Pre-hackathon</b>En Discord: taller de desarrollo de aplicaciones, código de conducta y dinámica del evento, hora feliz y speed dating para armar equipos.<span class="when" data-c="dl35"></span></li>
+    <li><b>Hackathon</b>Tres días remotos con mentorías, charlas y visitas virtuales a laboratorios.<span class="when" data-c="dl4"></span></li>
+    <li><b>Evaluación y premios</b>Un jurado evalúa las soluciones y los equipos ganan premios.<span class="when" data-c="dl5"></span></li>
+  </ol>
+  <p class="note">Plazos ampliados: retos hasta el <span data-c="challengeDeadline">31 de octubre</span> e inscripciones hasta el <span data-c="hackerDeadline">14 de noviembre</span>. Las piezas gráficas conservan los plazos originales.</p>
+  </div>
+  <img class="fases" src="fases-2026.jpg" alt="Las tres fases de CoAfina 2026: llamado a retos del 27 de septiembre al 23 de octubre, llamado a estudiantes del 11 de octubre al 4 de noviembre, hackathon 27, 28 y 29 de noviembre" loading="lazy">
+  </div>
+</section>
+
+<section class="wrap band" id="participa">
+  <div class="aud3">
+    <div style="--c:var(--ink)">
+      <h2>Retadores</h2>
+      <p>Si tienes datos abiertos o una idea de cómo ciertas bases de datos podrían impulsar la ciencia o la educación, propón un reto. Tu organización gana visibilidad ante talento joven de toda América Latina, recibe varios enfoques de solución y forma parte del jurado de su reto. Los datos deben ser de acceso abierto. Los retos se eligen por su pertinencia, impacto, originalidad, viabilidad técnica y claridad, y se espera que quien los propone participe durante el hackathon.</p>
+      <a class="btn" data-href="formChallenge" href="#">Proponer un reto</a>
+      <p class="note" data-c="dl1Note"></p>
+      <p class="note">¿Dudas sobre si tu idea sirve como reto? Pregunta en Discord antes de llenar el formulario.</p>
+      <a data-href="formChallenge" href="#"><img class="pieza" src="llamado-retos-2026.jpg" alt="Datos abiertos + problema = retos. ¡Envíanos tu idea!" loading="lazy"></a>
+    </div>
+    <div style="--c:var(--sea)">
+      <h2>Hackers</h2>
+      <p>Estudiantes universitarios matriculados y residentes en América Latina, de pregrado, maestría o doctorado, de cualquier disciplina. No necesitas un equipo previo: la inscripción es individual y los grupos multidisciplinarios se forman al inicio del evento. Hay un fondo de ayuda para quien tenga limitaciones de conexión, gastos u otras dificultades para participar; se solicita en el mismo formulario. Habrá premios.</p>
+      <a class="btn" data-href="formHacker" href="#">Inscribirme</a>
+      <p class="note" data-c="dl3Note"></p>
+      <p class="note">Más tarde se pedirá un comprobante de que eres estudiante.</p>
+      <p class="note">Herramientas gratuitas recomendadas: <a href="#recursos">recursos para hackers</a>.</p>
+    </div>
+    <div style="--c:var(--sun)">
+      <h2>Patrocinadores</h2>
+      <p>CoAfina se financia con aportes de instituciones científicas, redes académicas y empresas: premios, créditos de cómputo, acceso a datos, mentores, jurado o una charla desde tus laboratorios. A cambio, presencia en el sitio y las comunicaciones de CoAfina, EL-BONGÓ physics, Creative Commons Venezuela y RedCLARA, contacto directo con estudiantes de toda la región y la opción de proponer tu propio reto.</p>
+      <a class="btn" data-href="discord" href="#">Hablar con el comité en Discord</a>
+      <p class="note">Apoyan la edición 2026: Wikimedia CH (patrocinador principal), INAIT y Software Sustainability Institute, junto a RedCLARA, Creative Commons Venezuela y EL-BONGÓ physics. En ediciones anteriores: ICTP / Physics Without Frontiers, Open Research Funders Group y Open Life Science.</p>
+    </div>
+  </div>
+</section>
+
 <section class="wrap" id="retos">
-  <p class="eyebrow">Ciencia, educación y comunidad</p>
-  <h2>Encuentra tu próximo reto</h2>
-  <p class="retos-intro">Explora las propuestas, encuentra dónde aportar y abre cada ficha para conocer sus datos, perfiles y entregables. Seguiremos sumando retos de la convocatoria.</p>
-  <noscript><style>#retos-list,#res-grid{display:none}</style><p>Activa JavaScript para explorar las fichas o <a href="https://laconga.redclara.net/hackathon/retos">consulta los retos en el sitio oficial</a>.</p></noscript>
+  <h2>Retos 2026</h2>
+  <p class="retos-intro">Cinco retos para explorar: cuatro del equipo organizador y AmbientIA, propuesto por la Dirección de Ambiente de Villa Yacanto de Calamuchita. Cada uno parte de una pregunta concreta, datos abiertos y un resultado que se puede ver y probar en tres días. Seguiremos sumando propuestas de la convocatoria.</p>
   <div id="retos-list"><p class="note">Cargando los retos…</p></div>
   <div class="reto-cta">
     <p>¿Tienes un problema que pueda resolverse con datos abiertos?</p>
-    <a class="btn" data-href="formChallenge" href="https://forms.gle/1kFML9vd5JsM4vfS8">Enviar mi reto</a>
+    <a class="btn" data-href="formChallenge" href="#">Enviar mi reto</a>
   </div>
 </section>
 
@@ -205,61 +286,9 @@ footer p{max-width:none;margin:0}
   <img alt="">
 </dialog>
 
-<div class="discord wrap" id="discord">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
-  <div>
-    <h2>Todo pasa en nuestro Discord</h2>
-    <p>Encuentra equipo, conversa con mentores y recibe las guías y los anuncios del evento. Si tienes una pregunta, la comunidad te espera.</p>
-  </div>
-  <a class="btn" data-href="discord" href="https://discord.gg/yWhUUvrhpj">Entrar al servidor</a>
-</div>
-
-<section class="wrap" id="como-funciona">
-  <p class="eyebrow">El camino hasta el hackathon</p>
-  <h2 id="timeline-title">De una pregunta a una solución</h2>
-  <p>Una convocatoria abierta, equipos multidisciplinarios y tres días para crear. Estas son las fechas de la edición.</p>
-  <ol class="steps">
-    <li data-phase="challenges"><b>Convocatoria de retos</b>Organizaciones y profesionales envían problemas resolubles con datos abiertos.<span class="when" data-c="dl1"></span></li>
-    <li data-phase="publication"><b>Publicación de retos</b>Los retos seleccionados se publican con sus datos y persona de contacto.<span class="when" data-c="dl2"></span></li>
-    <li data-phase="hackers"><b>Inscripción de hackers</b>Inscripción individual; los equipos se forman al inicio del evento.<span class="when" data-c="dl3"></span></li>
-    <li data-phase="prehackathon"><b>Pre-hackathon</b>En Discord: taller de desarrollo de aplicaciones, código de conducta y dinámica del evento, hora feliz y speed dating para armar equipos.<span class="when" data-c="dl35"></span></li>
-    <li data-phase="hackathon"><b>Hackathon</b>Tres días remotos con mentorías, charlas y visitas virtuales a laboratorios.<span class="when" data-c="dl4"></span></li>
-    <li data-phase="awards"><b>Evaluación y premios</b>Un jurado evalúa las soluciones y los equipos ganan premios.<span class="when" data-c="dl5"></span></li>
-  </ol>
-</section>
-
-<section class="wrap band" id="participa">
-  <p class="eyebrow">Hay un lugar para ti</p>
-  <h2>Tres formas de sumar</h2>
-  <div class="aud3">
-    <div style="--c:var(--ink)">
-      <h3 id="retadores">Retadores</h3>
-      <p>Si tienes datos abiertos o una idea de cómo ciertas bases de datos podrían impulsar la ciencia o la educación, propón un reto. Tu organización gana visibilidad ante talento joven de toda América Latina, recibe varios enfoques de solución y forma parte del jurado de su reto. Los datos deben ser de acceso abierto. Los retos se eligen por su pertinencia, impacto, originalidad, viabilidad técnica y claridad, y se espera que quien los propone participe durante el hackathon.</p>
-      <a class="btn" data-href="formChallenge" href="https://forms.gle/1kFML9vd5JsM4vfS8">Proponer un reto</a>
-      <p class="note" data-c="dl1Note"></p>
-      <p class="note">¿Dudas sobre si tu idea sirve como reto? Pregunta en Discord antes de llenar el formulario.</p>
-    </div>
-    <div style="--c:var(--sea)">
-      <h3 id="hackers">Hackers</h3>
-      <p>Estudiantes universitarios matriculados y residentes en América Latina, de pregrado, maestría o doctorado, de cualquier disciplina. No necesitas un equipo previo: la inscripción es individual y los grupos multidisciplinarios se forman al inicio del evento. Hay un fondo de ayuda para quien tenga limitaciones de conexión, gastos u otras dificultades para participar; se solicita en el mismo formulario. Habrá premios.</p>
-      <a class="btn" data-href="formHacker" data-registration href="https://forms.gle/v6UVWS3iQqonYNj4A">Inscribirme</a>
-      <p class="note" data-c="dl3Note"></p>
-      <p class="note">Más tarde se pedirá un comprobante de que eres estudiante.</p>
-      <p class="note">Herramientas gratuitas recomendadas: <a href="#recursos">recursos para hackers</a>.</p>
-    </div>
-    <div style="--c:var(--sun)">
-      <h3 id="patrocinadores">Patrocinadores</h3>
-      <p>CoAfina se financia con aportes de instituciones científicas, redes académicas y empresas: premios, créditos de cómputo, acceso a datos, mentores, jurado o una charla desde tus laboratorios. A cambio, presencia en el sitio y las comunicaciones de CoAfina, EL-BONGÓ physics, Creative Commons Venezuela y RedCLARA, contacto directo con estudiantes de toda la región y la opción de proponer tu propio reto.</p>
-      <a class="btn" data-href="discord" href="https://discord.gg/yWhUUvrhpj">Hablar con el comité en Discord</a>
-      <p class="note">Apoyan la edición 2026: Wikimedia CH (patrocinador principal), INAIT y Software Sustainability Institute, junto a RedCLARA, Creative Commons Venezuela y EL-BONGÓ physics. En ediciones anteriores: ICTP / Physics Without Frontiers, Open Research Funders Group y Open Life Science.</p>
-    </div>
-  </div>
-</section>
-
 <section class="wrap band" id="recursos">
   <h2>Recursos para hackers</h2>
-  <p class="res-intro">Herramientas con opciones gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución durante el hackathon. Elige las herramientas que mejor se adapten a tu equipo y comprueba sus condiciones antes de comenzar.</p>
-  <noscript><p>Consulta las herramientas en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README del repositorio</a>.</p></noscript>
+  <p class="res-intro">Herramientas gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución durante el hackathon. La lista vive en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README de este repositorio</a>; edítala allí y aparece aquí.</p>
   <div class="res" id="res-grid"><p class="note">Cargando la lista…</p></div>
   <p class="res-foot">¿Falta una herramienta? Abre un <em>pull request</em> en el repositorio o propónla en Discord.</p>
 </section>
@@ -268,14 +297,14 @@ footer p{max-width:none;margin:0}
   <h2>Síguenos</h2>
   <p>Las convocatorias, los plazos y los ganadores se anuncian primero en Discord y después en el resto de redes. Para preguntas, escríbenos en el servidor.</p>
   <div class="social">
-    <a data-href="discord" href="https://discord.gg/yWhUUvrhpj" class="pill" style="border-color:var(--discord)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
+    <a data-href="discord" href="#" class="pill" style="border-color:var(--discord)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>Discord</a>
     <a data-href="x" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H21l-6.5 7.5L22 22h-6.8l-4.7-6.2L5 22H2.2l7-8L1.5 2h7l4.3 5.7L18.2 2Zm-1.2 18h1.6L7.1 3.9H5.4L17 20Z"/></svg>X</a>
     <a data-href="instagram" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3 0-4.1.1-2.8.1-4.6 1.9-4.8 4.8C3 8 3 8.3 3 11v2c0 2.7 0 3 .1 4.1.1 2.9 1.9 4.6 4.8 4.8 1 .1 1.4.1 4.1.1s3 0 4.1-.1c2.9-.1 4.6-1.9 4.8-4.8.1-1 .1-1.4.1-4.1v-2c0-2.7 0-3-.1-4.1-.1-2.9-1.9-4.6-4.8-4.8C15 2 14.7 2 12 2Zm0 1.8c2.7 0 3 0 4 .1 2 .1 3 1 3.1 3.1.1 1 .1 1.3.1 4v2c0 2.7 0 3-.1 4-.1 2-1 3-3.1 3.1-1 .1-1.3.1-4 .1s-3 0-4-.1c-2-.1-3-1-3.1-3.1-.1-1-.1-1.3-.1-4v-2c0-2.7 0-3 .1-4 .1-2 1-3 3.1-3.1 1-.1 1.3-.1 4-.1Z"/></svg>Instagram</a>
     <a data-href="linkedin" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6ZM8 19H5V9.5h3V19ZM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3V9.5h2.9v1.3c.4-.8 1.4-1.5 2.8-1.5 3 0 3.6 2 3.6 4.6V19Z"/></svg>LinkedIn</a>
     <a data-href="facebook" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>Facebook</a>
     <a data-href="youtube" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2c-.3-1-1-1.8-2-2C19.2 4.7 12 4.7 12 4.7s-7.2 0-9 .5c-1 .3-1.7 1-2 2C.5 9 .5 12 .5 12s0 3 .5 4.8c.3 1 1 1.8 2 2 1.8.5 9 .5 9 .5s7.2 0 9-.5c1-.3 1.7-1 2-2 .5-1.8.5-4.8.5-4.8s0-3-.5-4.8ZM9.7 15.1V8.9l6 3.1-6 3.1Z"/></svg>YouTube</a>
     <a data-href="github" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
-    <a data-href="website" href="https://laconga.redclara.net/hackathon/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.9a15.6 15.6 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4ZM4.3 14a8 8 0 0 1 0-4h3.3a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h2.9c.3 1.3.8 2.5 1.4 3.6A8 8 0 0 1 5.1 16Zm2.9-8H5.1a8 8 0 0 1 4.3-3.6C8.8 5.5 8.3 6.7 8 8Zm4 12c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4Zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6Zm1.8-5.6a16.5 16.5 0 0 0 0-4h3.3a8 8 0 0 1 0 4h-3.3Z"/></svg>Sitio de la edición</a>
+    <a data-href="website" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.9a15.6 15.6 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4ZM4.3 14a8 8 0 0 1 0-4h3.3a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h2.9c.3 1.3.8 2.5 1.4 3.6A8 8 0 0 1 5.1 16Zm2.9-8H5.1a8 8 0 0 1 4.3-3.6C8.8 5.5 8.3 6.7 8 8Zm4 12c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4Zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6Zm1.8-5.6a16.5 16.5 0 0 0 0-4h3.3a8 8 0 0 1 0 4h-3.3Z"/></svg>Sitio de la edición</a>
   </div>
 </section>
 
@@ -283,27 +312,25 @@ footer p{max-width:none;margin:0}
   <h2>Con el apoyo de</h2>
   <div class="main-sponsor">
     <a href="https://wikimedia.ch" target="_blank" rel="noopener" class="wm">
-      <img width="900" height="270" src="wikimedia-ch.png" alt="Wikimedia CH" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wm-text',textContent:'Wikimedia CH'}))">
+      <img src="wikimedia-ch.png" alt="Wikimedia CH" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wm-text',textContent:'Wikimedia CH'}))">
     </a>
     <p>Wikimedia CH, la asociación suiza para el avance del conocimiento libre, es el patrocinador principal de la edición 2026. Su apoyo financia los premios a los proyectos y la participación de estudiantes de toda la región.</p>
   </div>
-  <img width="1800" height="126" class="sponsors" src="patrocinadores-2026.png" alt="RedCLARA, Creative Commons Venezuela, EL-BONGÓ physics, INAIT, Software Sustainability Institute" loading="lazy">
+  <img class="sponsors" src="patrocinadores-2026.png" alt="RedCLARA, Creative Commons Venezuela, EL-BONGÓ physics, INAIT, Software Sustainability Institute" loading="lazy">
 </section>
 
 <section class="wrap" id="organizan">
   <div class="orgs">
-    <div><h3>Sitio oficial</h3><ul><li><a data-href="website" href="https://laconga.redclara.net/hackathon/">laconga.redclara.net/hackathon</a></li><li style="font-weight:400;color:var(--muted)">Programa, retos, bases y resultados de cada edición.</li></ul></div>
+    <div><h3>Sitio oficial</h3><ul><li><a data-href="website" href="#">laconga.redclara.net/hackathon</a></li><li style="font-weight:400;color:var(--muted)">Programa, retos, bases y resultados de cada edición.</li></ul></div>
     <div><h3>Organizan</h3><ul><li>EL-BONGÓ physics</li><li>Creative Commons Venezuela</li><li>RedCLARA</li></ul></div>
     <div><h3>Apoyan 2026</h3><ul><li>Wikimedia CH (patrocinador principal)</li><li>INAIT</li><li>Software Sustainability Institute</li></ul></div>
     <div><h3>Ediciones</h3><ul><li>2022 · 2023 · 2024 · 2025 · 2026</li><li style="font-weight:400;color:var(--muted)">Quinta edición. En 2024, 80 estudiantes de 44 universidades.</li></ul></div>
-    <div><h3>Contacto</h3><ul><li><a data-href="discord" href="https://discord.gg/yWhUUvrhpj">Nuestro servidor de Discord</a></li><li style="font-weight:400;color:var(--muted)">Preguntas, bienvenidas y guías, casi 24/7.</li></ul></div>
+    <div><h3>Contacto</h3><ul><li><a data-href="discord" href="#">Nuestro servidor de Discord</a></li><li style="font-weight:400;color:var(--muted)">Preguntas, bienvenidas y guías, casi 24/7.</li></ul></div>
   </div>
 </section>
 
-</main>
-
-<footer class="wrap">
-  <p>CoAfina es una iniciativa de EL-BONGÓ physics (antes LA-CoNGA physics), Creative Commons Venezuela y RedCLARA. Esta página complementa el <a data-href="website" href="https://laconga.redclara.net/hackathon/">sitio oficial</a>. Contacto: <a data-href="discord" href="https://discord.gg/yWhUUvrhpj">Discord</a>. Sitio publicado con licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; el código está en <a data-href="repo" href="https://github.com/laa-hecap/coafina">GitHub</a>.</p>
+<footer>
+  <p>CoAfina es una iniciativa de EL-BONGÓ physics (antes LA-CoNGA physics), Creative Commons Venezuela y RedCLARA. Esta página complementa el <a data-href="website" href="#">sitio oficial</a>. Contacto: <a data-href="discord" href="#">Discord</a>. Sitio publicado con licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>; el código está en <a data-href="repo" href="#">GitHub</a>.</p>
 </footer>
 
 <!-- ============================================================
@@ -314,31 +341,14 @@ footer p{max-width:none;margin:0}
 <script id="config" type="application/json">
 {
   "edition": "2026",
-  "datesLong": "27, 28 y 29 de noviembre de 2026",
+  "datesLong": "Quinta edición: 27, 28 y 29 de noviembre de 2026.",
   "deadlines": {
-    "challenges": {
-      "start": "2026-09-27",
-      "end": "2026-10-31"
-    },
-    "publication": {
-      "start": "2026-10-11"
-    },
-    "hackers": {
-      "start": "2026-10-11",
-      "end": "2026-11-14"
-    },
-    "prehackathon": {
-      "start": "2026-11-23",
-      "end": "2026-11-23"
-    },
-    "hackathon": {
-      "start": "2026-11-27",
-      "end": "2026-11-29"
-    },
-    "awards": {
-      "start": "2026-11-29",
-      "end": "2026-11-29"
-    }
+    "challenges": "31 de octubre",
+    "publication": "Desde el 11 de octubre",
+    "hackers": "14 de noviembre",
+    "prehackathon": "23 de noviembre",
+    "hackathon": "27 al 29 de noviembre",
+    "awards": "29 de noviembre"
   },
   "links": {
     "discord": "https://discord.gg/yWhUUvrhpj",
@@ -363,28 +373,18 @@ footer p{max-width:none;margin:0}
   set('edition', c.edition);
   set('datesLong', c.datesLong || 'Fechas de la edición ' + c.edition + ': ' + tbc + '.');
   const d = c.deadlines;
-  // Date-only milestones use UTC consistently; form availability is managed by the organizers.
-  const today = new Date().toISOString().slice(0,10);
-  const format = value => new Intl.DateTimeFormat('es', {day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(value+'T12:00:00Z'));
-  const label = phase => phase.end && phase.end !== phase.start ? format(phase.start)+' – '+format(phase.end) : format(phase.start);
-  const active = phase => today >= phase.start && !!phase.end && today <= phase.end;
-  const registrationNote = (phase,noun) => today < phase.start ? noun+' desde el '+format(phase.start)+'.' : today > phase.end ? 'La convocatoria cerró el '+format(phase.end)+'. Consulta las novedades en Discord.' : noun+' hasta el '+format(phase.end)+'.';
-  set('dl1',label(d.challenges));
-  set('dl2','Desde el '+format(d.publication.start));
-  set('dl3',label(d.hackers));
-  set('dl35',label(d.prehackathon));
-  set('dl4',label(d.hackathon));
-  set('dl5',label(d.awards));
-  set('dl1Note',registrationNote(d.challenges,'Convocatoria abierta'));
-  set('dl3Note',registrationNote(d.hackers,'Inscripciones abiertas'));
-  if (!active(d.hackers)) document.querySelectorAll('[data-registration]').forEach(a => a.textContent='Consultar inscripción');
-  document.querySelectorAll('[data-phase]').forEach(li => {
-    if (active(d[li.dataset.phase])) {
-      li.classList.add('current');
-      const badge = document.createElement('span');
-      badge.className='phase-status'; badge.textContent='En curso'; li.append(badge);
-    }
-  });
+  set('challengeDeadline', d.challenges);
+  set('hackerDeadline', d.hackers);
+  set('dl1', d.challenges ? 'Hasta el ' + d.challenges : 'Fecha ' + tbc);
+  set('dl2', d.publication || 'Fecha ' + tbc);
+  set('dl3', d.hackers ? 'Hasta el ' + d.hackers : 'Fecha ' + tbc);
+  set('dl35', d.prehackathon || 'Fecha ' + tbc);
+  set('dl4', d.hackathon || 'Fecha ' + tbc);
+  set('dl5', d.awards || 'Último día del hackathon');
+  set('editionOrdinal', c.edition);
+  set('dl1Banner', d.challenges ? 'Convocatoria de retos abierta · Plazo ampliado hasta el ' + d.challenges + ' de ' + c.edition : 'Convocatoria de retos abierta');
+  set('dl1Note', d.challenges ? 'Convocatoria de retos abierta hasta el ' + d.challenges + '.' : 'La convocatoria abrirá próximamente; te avisamos en Discord.');
+  set('dl3Note', d.hackers ? 'Inscripciones abiertas hasta el ' + d.hackers + '.' : 'Las inscripciones abren cuando se publican los retos.');
   document.querySelectorAll('[data-href]').forEach(a => {
     let url = c.links[a.dataset.href] || '';
     if (url && url.includes('@') && !url.startsWith('mailto:')) url = 'mailto:' + url;
@@ -417,7 +417,7 @@ footer p{max-width:none;margin:0}
       '<div><h3>' + esc(x.title) + '</h3><ul>' +
       x.items.map(i => '<li><a href="' + esc(i.url) + '" target="_blank" rel="noopener">' + esc(i.name) + '</a>' + (i.desc ? ' <span>' + esc(i.desc) + '</span>' : '') + '</li>').join('') +
       '</ul></div>').join('');
-    if (!groups.some(x => x.items.length)) throw new Error('empty');
+    if (!groups.length) throw new Error('empty');
   } catch (e) {
     grid.innerHTML = '<p class="note">No se pudo cargar la lista. Está en el <a href="https://github.com/laa-hecap/coafina/blob/main/README.md">README del repositorio</a>.</p>';
   }
@@ -433,22 +433,19 @@ footer p{max-width:none;margin:0}
     const retos = await r.json();
     const discord = JSON.parse(document.getElementById('config').textContent).links.discord || '';
     list.innerHTML = retos.map(x =>
-      '<article class="reto" style="--c:' + esc(x.color) + '" aria-labelledby="reto-' + esc(x.n) + '">' +
-        '<div class="reto-img"><img src="' + esc(x.imagen) + '" alt="' + esc(x.alt) + '" width="1536" height="1024" loading="lazy"></div>' +
-        '<div class="reto-body">' +
+      '<article class="reto" style="--c:' + esc(x.color) + '">' +
+        '<div class="reto-img"><img src="' + esc(x.imagen) + '" alt="' + esc(x.alt) + '" loading="lazy"></div>' +
+        '<div>' +
           '<p class="kicker">Reto ' + esc(x.n) + ' · ' + esc(x.org) + '</p>' +
-          '<h3 id="reto-' + esc(x.n) + '">' + esc(x.nombre) + '</h3>' +
-          '<p class="preview">' + esc(x.bajada) + '</p>' +
-          '<div class="chips" aria-label="Perfiles buscados">' + x.perfiles.map(p => '<span>' + esc(p) + '</span>').join('') + '</div>' +
-          '<details><summary>Explorar reto <span class="sr-only">' + esc(x.nombre) + '</span></summary>' +
-          '<p><strong>' + esc(x.titulo) + '</strong></p>' +
+          '<h3>' + esc(x.titulo) + '</h3>' +
           '<p>' + esc(x.resumen) + '</p>' +
           '<p><strong>Entregable.</strong> ' + esc(x.entregable) + '</p>' +
+          '<div class="chips" aria-label="Perfiles buscados">' + x.perfiles.map(p => '<span>' + esc(p) + '</span>').join('') + '</div>' +
           '<p class="datos">Datos: <a href="' + esc(x.datos.url) + '" target="_blank" rel="noopener">' + esc(x.datos.nombre) + '</a>. Licencia: ' + esc(x.datos.licencia) + '.</p>' +
           '<div class="acts">' +
             '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">Ver el plano del reto</button>' +
             (discord ? '<a class="btn" href="' + esc(discord) + '" target="_blank" rel="noopener">Preguntar en Discord</a>' : '') +
-          '</div></details>' +
+          '</div>' +
         '</div>' +
       '</article>').join('');
   } catch (e) {
