@@ -165,7 +165,9 @@
         "url": "https://www.gbif.org/darwin-core"
       }
     ],
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "plano": "retos/reto-06-plano.png",
+    "altPlano": "Blueprint of challenge 06: select a sample, record it, normalise it with Darwin Core and check rights before publishing on Wikimedia."
   },
   {
     "n": "07",
@@ -187,7 +189,9 @@
       "licencia": "CC BY 4.0 proposed; not yet granted in the repository"
     },
     "aviso": "Before the package is reused or derivatives are published, the proposing team must formally license the data.",
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "plano": "retos/reto-07-plano.png",
+    "altPlano": "Blueprint of challenge 07: choose variables, map them to sound, compare two simulated showers and explain the phenomenon."
   },
   {
     "n": "08",
@@ -231,7 +235,9 @@
       "url": "https://amatohtli-frontend-opal.vercel.app/",
       "nota": "Starting point built during the BAM BUAP hackathon."
     },
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "plano": "retos/reto-08-plano.png",
+    "altPlano": "Blueprint of challenge 08: choose another museum, harmonise metadata, integrate objects and images, and test the exploration."
   },
   {
     "n": "09",
@@ -274,7 +280,9 @@
       "url": "https://radarcultural.mx/",
       "nota": "An evolving beta to explore events in the region."
     },
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "plano": "retos/reto-09-plano.png",
+    "altPlano": "Blueprint of challenge 09: publish an event, collect it by widget, schema.org or file, compare methods and show a complex event."
   },
   {
     "n": "10",
@@ -295,7 +303,9 @@
       "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview",
       "licencia": "CC BY; use a small extract"
     },
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "plano": "retos/reto-10-plano.png",
+    "altPlano": "Blueprint of challenge 10: choose a school and a risk, consult ERA5, make a map and build an educational model."
   },
   {
     "n": "11",
@@ -325,6 +335,8 @@
         "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/"
       }
     ],
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "plano": "retos/reto-11-plano.png",
+    "altPlano": "Blueprint of challenge 11: enter location and coordinates, compute visibility, warn about limits and show trajectory and stars."
   }
 ]

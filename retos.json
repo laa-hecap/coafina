@@ -165,7 +165,9 @@
         "url": "https://www.gbif.org/darwin-core"
       }
     ],
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "plano": "retos/reto-06-plano.png",
+    "altPlano": "Plano del reto 06: seleccionar una muestra, registrar, normalizar con Darwin Core y revisar derechos para publicar en Wikimedia."
   },
   {
     "n": "07",
@@ -187,7 +189,9 @@
       "licencia": "CC BY 4.0 propuesta; aún no concedida en el repositorio"
     },
     "aviso": "Antes de reutilizar o publicar derivados del paquete, el equipo proponente debe formalizar la licencia de los datos.",
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "plano": "retos/reto-07-plano.png",
+    "altPlano": "Plano del reto 07: elegir variables, asignarlas a sonido, comparar dos cascadas simuladas y explicar el fenómeno."
   },
   {
     "n": "08",
@@ -231,7 +235,9 @@
       "url": "https://amatohtli-frontend-opal.vercel.app/",
       "nota": "Punto de partida desarrollado en el Hackatón BAM BUAP."
     },
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "plano": "retos/reto-08-plano.png",
+    "altPlano": "Plano del reto 08: elegir otro museo, armonizar metadatos, integrar objetos e imágenes y probar la exploración."
   },
   {
     "n": "09",
@@ -274,7 +280,9 @@
       "url": "https://radarcultural.mx/",
       "nota": "Versión beta en desarrollo para explorar eventos de la región."
     },
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "plano": "retos/reto-09-plano.png",
+    "altPlano": "Plano del reto 09: publicar un evento, recogerlo por widget, schema.org o archivo, comparar métodos y mostrar un evento complejo."
   },
   {
     "n": "10",
@@ -295,7 +303,9 @@
       "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview",
       "licencia": "CC BY; descarga de muestra acotada"
     },
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "plano": "retos/reto-10-plano.png",
+    "altPlano": "Plano del reto 10: elegir una escuela y un riesgo, consultar ERA5, hacer un mapa y construir una maqueta educativa."
   },
   {
     "n": "11",
@@ -325,6 +335,8 @@
         "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/"
       }
     ],
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "plano": "retos/reto-11-plano.png",
+    "altPlano": "Plano del reto 11: indicar ubicación y coordenadas, calcular visibilidad, advertir límites y mostrar trayectoria y estrellas."
   }
 ]
