@@ -443,6 +443,7 @@ footer p{max-width:none;margin:0}
           '<div class="chips" aria-label="Perfiles buscados">' + x.perfiles.map(p => '<span>' + esc(p) + '</span>').join('') + '</div>' +
           '<p class="datos">Datos: <a href="' + esc(x.datos.url) + '" target="_blank" rel="noopener">' + esc(x.datos.nombre) + '</a>. Licencia: ' + esc(x.datos.licencia) + '.</p>' +
           (x.coleccion ? '<p class="datos">Colección propuesta: <a href="' + esc(x.coleccion.url) + '" target="_blank" rel="noopener">' + esc(x.coleccion.nombre) + '</a>. ' + esc(x.coleccion.nota) + '</p>' : '') +
+          (x.recurso ? '<p class="datos">Para profundizar: <a href="' + esc(x.recurso.url) + '" target="_blank" rel="noopener">' + esc(x.recurso.nombre) + '</a>. ' + esc(x.recurso.nota) + '</p>' : '') +
           '<div class="acts">' +
             '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">Ver el plano del reto</button>' +
             (discord ? '<a class="btn" href="' + esc(discord) + '" target="_blank" rel="noopener">Preguntar en Discord</a>' : '') +
