@@ -131,5 +131,200 @@
     "plano": "retos/reto-05-plano.png",
     "altPlano": "AmbientIA blueprint: scope communities, profile indicators, compare similarities and explain differences and missing data",
     "color": "var(--sea)"
+  },
+  {
+    "n": "06",
+    "org": "Centro Latinoamericano de Investigaciones Sobre Internet (CLISI)",
+    "titulo": "From museum drawer to open data: Venezuelan scientific heritage on Wikimedia",
+    "resumen": "A zoology or botany collection may be carefully kept yet almost invisible outside the museum when its records remain on paper. CLISI proposes a low-cost route from an object or catalogue card to a structured record that a small museum can review and prepare for Wikimedia Commons and Wikidata. A team might photograph objects with a phone, read scanned cards, clean a spreadsheet or map collections already online; it should demonstrate one complete workflow with a small sample. Museum workers, biologists and librarians decide what describes the object faithfully and what may be published; designers and educators make the tool usable without technical training. The prototype should be useful where connectivity is limited and adaptable by other Latin American museums.",
+    "entregable": "A prototype or interactive guide that turns a small sample of cards into reviewable records, exportable with Darwin Core fields and links to Wikidata/Commons; document provenance, per-file rights and a museum staff usability check.",
+    "perfiles": [
+      "Museums",
+      "Biology",
+      "Libraries",
+      "Design",
+      "Education",
+      "Data and code"
+    ],
+    "datos": {
+      "nombre": "GBIF: biodiversity records from Venezuela",
+      "url": "https://www.gbif.org/country/VE",
+      "licencia": "varies by dataset: CC0, CC BY 4.0 or CC BY-NC 4.0; select a suitable sample"
+    },
+    "fuentes": [
+      {
+        "nombre": "CLISI files on Commons",
+        "url": "https://commons.wikimedia.org/wiki/Category:Centro_Latinoamericano_de_Investigaciones_Sobre_Internet"
+      },
+      {
+        "nombre": "Wikidata Query Service",
+        "url": "https://query.wikidata.org/"
+      },
+      {
+        "nombre": "Darwin Core guide",
+        "url": "https://www.gbif.org/darwin-core"
+      }
+    ],
+    "color": "var(--sun)"
+  },
+  {
+    "n": "07",
+    "org": "GIRG – Halley",
+    "titulo": "The universe sounds: explore astroparticle data through sound",
+    "resumen": "Can you hear the difference between two particle showers? GIRG – Halley provides cosmic-ray simulations for an interactive sonification experience. Teams select variables such as energy, position and time, then explain how each controls pitch, rhythm, loudness or timbre. Visitors should be able to compare events and adjust those mappings while still seeing the values and units. Physicists interpret the phenomena; musicians and sound designers create the audible translation; educators, accessibility advocates and science communicators test whether it helps people learn; developers implement the interface. AI is optional and should add something demonstrable. These are simulations, not measurements from a real detector.",
+    "entregable": "An open demo that lets visitors hear and compare at least two showers, with a visible data-to-sound mapping, accessible controls, a physics explanation and a reproducible process.",
+    "perfiles": [
+      "Physics",
+      "Music and sound",
+      "Accessibility",
+      "Education",
+      "Design",
+      "Code"
+    ],
+    "datos": {
+      "nombre": "CORSIKA 7.8010 simulated showers (STARTER package)",
+      "url": "https://github.com/rmartinezra/Datos-Simulaciones-Hackathon-CoAfina",
+      "licencia": "CC BY 4.0 proposed; not yet granted in the repository"
+    },
+    "aviso": "Before the package is reused or derivatives are published, the proposing team must formally license the data.",
+    "color": "var(--sea)"
+  },
+  {
+    "n": "08",
+    "org": "Wikimedians in collaboration with BUAP",
+    "titulo": "Amatohtli: explore pre-Columbian art across museum collections",
+    "resumen": "Many pre-Columbian objects held by museums in different countries are hard for their communities of origin to discover. Amatohtli already has a prototype using objects from Museum Rietberg. The challenge is to take it further by adding works from at least one more museum and harmonizing names, origins, images and permanent catalogue links. Teams can also prototype an innovative feature or create a public narrative around a collection. Heritage research and community knowledge guide selection and context; librarians check metadata and rights; designers and user researchers improve discovery; developers connect the sources. Each image retains its own license and credits.",
+    "entregable": "A working prototype using objects from two museums with a metadata crosswalk, or a new feature or narrative demonstrated on one collection; include practical recommendations for museums publishing reusable data.",
+    "perfiles": [
+      "Heritage",
+      "Local knowledge",
+      "Libraries",
+      "Storytelling",
+      "Design",
+      "Code"
+    ],
+    "datos": {
+      "nombre": "Museum Rietberg Reinhart Collection in Wikidata",
+      "url": "https://w.wiki/QwUw",
+      "licencia": "CC0 for Wikidata metadata; images licensed individually"
+    },
+    "fuentes": [
+      {
+        "nombre": "Collection on Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/Category:Anne-Marie_und_Caspar_Reinhart_Collection_at_Museum_Rietberg,_Z%C3%BCrich"
+      },
+      {
+        "nombre": "Candidate collections annex",
+        "url": "https://tinyurl.com/AnexoAma26"
+      },
+      {
+        "nombre": "Frontend code",
+        "url": "https://github.com/BrandoLightx23/AMATOHTLI_FRONTEND"
+      },
+      {
+        "nombre": "Backend code",
+        "url": "https://github.com/BrandoLightx23/AMATOHTLI_BACKEND"
+      }
+    ],
+    "recurso": {
+      "nombre": "Amatohtli prototype",
+      "url": "https://amatohtli-frontend-opal.vercel.app/",
+      "nota": "Starting point built during the BAM BUAP hackathon."
+    },
+    "color": "#E8664A"
+  },
+  {
+    "n": "09",
+    "org": "Wikimedian in collaboration with BUAP",
+    "titulo": "Radar Cultural: let events travel between open calendars",
+    "resumen": "A concert or exhibition appears on one website and never reaches other calendars. Radar Cultural proposes an exchange experiment so organizers can retain their information while other platforms collect it without relying on one company. Teams build small test sites and demonstrate three routes: an embedded widget, schema.org data in a page, and a downloadable structured file. Cultural, academic or community events provide examples; tours and festivals show why one title and date are not enough. Cultural managers, journalists and editors decide what audiences need to understand; designers compare the experience; developers build and evaluate the methods. Wikidata can identify venues, works and people.",
+    "entregable": "A working multi-site proof of concept publishing and collecting events through all three methods, a comparison of their strengths and limits, and one complex event with clear provenance.",
+    "perfiles": [
+      "Cultural management",
+      "Journalism",
+      "Metadata",
+      "Design",
+      "Data and code"
+    ],
+    "datos": {
+      "nombre": "Wikidata: events, venues, works and organizations",
+      "url": "https://query.wikidata.org/",
+      "licencia": "CC0"
+    },
+    "fuentes": [
+      {
+        "nombre": "Radar Cultural beta",
+        "url": "https://luna.alf4.org/"
+      },
+      {
+        "nombre": "Artsdata",
+        "url": "https://www.artsdata.ca/en/"
+      },
+      {
+        "nombre": "Hinto OLE export",
+        "url": "https://www.hinto.ch/oleexport"
+      },
+      {
+        "nombre": "Complex events model",
+        "url": "https://drive.google.com/file/d/1HWEnT5_nAkAE_h8rOE7mug2F3vyuK6qi/view?usp=drive_link"
+      }
+    ],
+    "recurso": {
+      "nombre": "Radar Cultural Puebla",
+      "url": "https://radarcultural.mx/",
+      "nota": "An evolving beta to explore events in the region."
+    },
+    "color": "var(--sun)"
+  },
+  {
+    "n": "10",
+    "org": "University of Salamanca",
+    "titulo": "Prepare for climate risks: one school, open data and a physical model",
+    "resumen": "Choose a school or community and a local question: where is heat hardest to bear, where might floodwater flow, or what surroundings should be watched during fires? Using a small ERA5 extract and local evidence, teams create a readable map, an explanation of what the data can and cannot show, and a simple physical model made from cardboard, 3D printing or accessible materials. The model supports a conversation about preparation and possible routes; it is not a forecast or an official risk assessment. Teachers, geographers and residents choose the question and check whether the message makes sense; designers and communicators shape the experience; technical members prepare maps and calculations. Photos or video can show the model at the final presentation.",
+    "entregable": "A profile of one school or community, reproducible analysis using real ERA5 data, a map and clear educational material, plus a documented physical model and its limits.",
+    "perfiles": [
+      "Education",
+      "Geography and GIS",
+      "Communities",
+      "Design",
+      "Communication",
+      "Data"
+    ],
+    "datos": {
+      "nombre": "Copernicus Climate Data Store: ERA5 single levels",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview",
+      "licencia": "CC BY; use a small extract"
+    },
+    "color": "var(--sea)"
+  },
+  {
+    "n": "11",
+    "org": "Universidad de Los Andes · CIDATA · Creative Commons Venezuela",
+    "titulo": "Before moving the telescope: an open star-field simulator",
+    "resumen": "There is little room for error on an observing night. This challenge proposes a web simulator where someone enters a telescope location, date, time and an object’s celestial coordinates. The interface shows whether the target is visible, the route from the resting position and stars in the field from an open catalogue. It should warn when a target lies below the horizon or exceeds operating limits, including the four-hour hour-angle limit specified for this exercise. Astronomers validate calculations; educators turn warnings into learning; designers make the route and star field readable; developers build a reproducible prototype. This is a teaching simulation and sends no commands to a physical instrument.",
+    "entregable": "A web or desktop simulator with location and coordinate inputs, visual and audible warnings, a pointing path and star field; document and openly license the code and validate against known cases.",
+    "perfiles": [
+      "Astronomy",
+      "Education",
+      "Interface design",
+      "Accessibility",
+      "Python and data"
+    ],
+    "datos": {
+      "nombre": "Gaia Archive: a bounded star query",
+      "url": "https://gea.esac.esa.int/archive/",
+      "licencia": "open access with ESA/Gaia/DPAC credit"
+    },
+    "fuentes": [
+      {
+        "nombre": "CDS VizieR",
+        "url": "https://vizier.cds.unistra.fr/"
+      },
+      {
+        "nombre": "Gaia credit instructions",
+        "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/"
+      }
+    ],
+    "color": "#E8664A"
   }
 ]

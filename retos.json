@@ -131,5 +131,200 @@
     "plano": "retos/reto-05-plano.png",
     "altPlano": "Plano del reto AmbientIA: acotar comunidades, perfilar indicadores, comparar afinidades y explicar diferencias y datos faltantes",
     "color": "var(--sea)"
+  },
+  {
+    "n": "06",
+    "org": "Centro Latinoamericano de Investigaciones Sobre Internet (CLISI)",
+    "titulo": "Del cajón del museo a los datos abiertos: patrimonio científico venezolano en Wikimedia",
+    "resumen": "Una colección de zoología o botánica puede estar bien conservada y, aun así, ser invisible fuera del museo si sus fichas siguen en papel. CLISI propone construir un camino sencillo y de bajo costo desde una pieza o ficha hasta un registro estructurado que un museo pequeño pueda revisar y preparar para Wikimedia Commons y Wikidata. Un equipo puede fotografiar piezas con el móvil, reconocer fichas, limpiar una planilla o crear un tablero de colecciones existentes; deberá mostrar un flujo completo con una muestra pequeña. Museología, biología y bibliotecas deciden qué datos describen fielmente el objeto y qué derechos permiten publicar; diseño y educación hacen la herramienta comprensible para personal sin formación técnica. El prototipo debe funcionar con conectividad limitada y ser reutilizable en otros museos latinoamericanos.",
+    "entregable": "Prototipo o guía interactiva que convierta una pequeña muestra de fichas en registros revisables, exportables con campos Darwin Core y enlaces a Wikidata/Commons; incluir procedencia, licencias por archivo y una prueba de uso por personal de museo.",
+    "perfiles": [
+      "Museología",
+      "Biología",
+      "Bibliotecas",
+      "Diseño",
+      "Educación",
+      "Datos y código"
+    ],
+    "datos": {
+      "nombre": "GBIF: registros de biodiversidad de Venezuela",
+      "url": "https://www.gbif.org/country/VE",
+      "licencia": "según conjunto: CC0, CC BY 4.0 o CC BY-NC 4.0; elegir muestra compatible"
+    },
+    "fuentes": [
+      {
+        "nombre": "Archivos de CLISI en Commons",
+        "url": "https://commons.wikimedia.org/wiki/Category:Centro_Latinoamericano_de_Investigaciones_Sobre_Internet"
+      },
+      {
+        "nombre": "Wikidata Query Service",
+        "url": "https://query.wikidata.org/"
+      },
+      {
+        "nombre": "Guía Darwin Core",
+        "url": "https://www.gbif.org/darwin-core"
+      }
+    ],
+    "color": "var(--sun)"
+  },
+  {
+    "n": "07",
+    "org": "GIRG – Halley",
+    "titulo": "El universo suena: explorar datos de astropartículas con sonido",
+    "resumen": "¿Se puede escuchar la diferencia entre dos cascadas de partículas? GIRG – Halley aporta simulaciones de rayos cósmicos para crear una experiencia de sonificación interactiva. El equipo elegirá variables como energía, posición o tiempo y explicará cómo cada una controla altura, ritmo, intensidad o timbre. La persona visitante podrá comparar eventos y cambiar esas correspondencias sin perder de vista los datos y sus unidades. Física interpreta los fenómenos; música y diseño sonoro crean una traducción audible; educación, accesibilidad y comunicación científica prueban si ayuda a comprender; perfiles técnicos implementan la interfaz. La IA es opcional y debe aportar algo comprobable. Son simulaciones, no mediciones de un detector real.",
+    "entregable": "Demo abierta donde se escuchen y comparen al menos dos cascadas, con mapeo sonido-datos visible, controles accesibles, explicación física y proceso reproducible.",
+    "perfiles": [
+      "Física",
+      "Música y sonido",
+      "Accesibilidad",
+      "Educación",
+      "Diseño",
+      "Código"
+    ],
+    "datos": {
+      "nombre": "Cascadas simuladas CORSIKA 7.8010 (paquete STARTER)",
+      "url": "https://github.com/rmartinezra/Datos-Simulaciones-Hackathon-CoAfina",
+      "licencia": "CC BY 4.0 propuesta; aún no concedida en el repositorio"
+    },
+    "aviso": "Antes de reutilizar o publicar derivados del paquete, el equipo proponente debe formalizar la licencia de los datos.",
+    "color": "var(--sea)"
+  },
+  {
+    "n": "08",
+    "org": "Wikimedistas en colaboración con la BUAP",
+    "titulo": "Amatohtli: obras precolombinas de muchos museos en una sola exploración",
+    "resumen": "Muchas obras precolombinas conservadas en museos de distintos países son difíciles de descubrir desde sus comunidades de origen. Amatohtli ya tiene un prototipo basado en objetos del Museum Rietberg: el reto es llevarlo un paso más allá, incorporando obras de al menos otro museo y armonizando nombres, procedencias, imágenes y enlaces a sus catálogos. También hay caminos para equipos que quieran probar una función nueva o crear una narrativa pública sobre las colecciones. La investigación patrimonial y el conocimiento de las comunidades orientan la selección y el contexto; bibliotecas verifican metadatos y derechos; diseño e investigación de usuarios mejoran la exploración; código integra las fuentes. Cada imagen conserva su licencia y sus créditos.",
+    "entregable": "Ampliación funcional del prototipo con objetos de dos museos y una tabla de equivalencias de metadatos, o una función/narrativa nueva demostrada con una colección; recomendaciones concretas para que los museos publiquen datos reutilizables.",
+    "perfiles": [
+      "Patrimonio",
+      "Conocimiento local",
+      "Bibliotecas",
+      "Narrativa",
+      "Diseño",
+      "Código"
+    ],
+    "datos": {
+      "nombre": "Colección Reinhart del Museum Rietberg en Wikidata",
+      "url": "https://w.wiki/QwUw",
+      "licencia": "CC0 para metadatos de Wikidata; imágenes con licencia individual"
+    },
+    "fuentes": [
+      {
+        "nombre": "Colección en Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/Category:Anne-Marie_und_Caspar_Reinhart_Collection_at_Museum_Rietberg,_Z%C3%BCrich"
+      },
+      {
+        "nombre": "Anexo de colecciones candidatas",
+        "url": "https://tinyurl.com/AnexoAma26"
+      },
+      {
+        "nombre": "Código frontend",
+        "url": "https://github.com/BrandoLightx23/AMATOHTLI_FRONTEND"
+      },
+      {
+        "nombre": "Código backend",
+        "url": "https://github.com/BrandoLightx23/AMATOHTLI_BACKEND"
+      }
+    ],
+    "recurso": {
+      "nombre": "Prototipo Amatohtli",
+      "url": "https://amatohtli-frontend-opal.vercel.app/",
+      "nota": "Punto de partida desarrollado en el Hackatón BAM BUAP."
+    },
+    "color": "#E8664A"
+  },
+  {
+    "n": "09",
+    "org": "Wikimedista en colaboración con la BUAP",
+    "titulo": "Radar Cultural: que los eventos puedan viajar entre agendas abiertas",
+    "resumen": "Un concierto o una exposición aparece en una web y desaparece de las demás agendas. Radar Cultural propone una prueba de intercambio para que organizadores mantengan la información y varias plataformas puedan recogerla sin depender de una sola empresa. El equipo montará pequeños sitios de prueba y demostrará tres vías: un widget, datos schema.org incluidos en la página y un archivo estructurado descargable. Usará eventos culturales, académicos o comunitarios; las giras y los festivales muestran por qué un solo título y una fecha no bastan. Gestores culturales, periodistas y editores definen lo que debe entender el público; diseño compara la experiencia; perfiles técnicos construyen y evalúan los métodos. Wikidata puede ayudar a identificar lugares, obras y personas.",
+    "entregable": "Prueba funcional con varias páginas que publican y recopilan eventos por los tres métodos, una comparación de ventajas y límites y un ejemplo de evento complejo con procedencia clara.",
+    "perfiles": [
+      "Gestión cultural",
+      "Periodismo",
+      "Metadatos",
+      "Diseño",
+      "Datos y código"
+    ],
+    "datos": {
+      "nombre": "Wikidata: eventos, recintos, obras y organizaciones",
+      "url": "https://query.wikidata.org/",
+      "licencia": "CC0"
+    },
+    "fuentes": [
+      {
+        "nombre": "Radar Cultural beta",
+        "url": "https://luna.alf4.org/"
+      },
+      {
+        "nombre": "Artsdata",
+        "url": "https://www.artsdata.ca/en/"
+      },
+      {
+        "nombre": "Exportación Hinto OLE",
+        "url": "https://www.hinto.ch/oleexport"
+      },
+      {
+        "nombre": "Modelo de eventos complejos",
+        "url": "https://drive.google.com/file/d/1HWEnT5_nAkAE_h8rOE7mug2F3vyuK6qi/view?usp=drive_link"
+      }
+    ],
+    "recurso": {
+      "nombre": "Radar Cultural Puebla",
+      "url": "https://radarcultural.mx/",
+      "nota": "Versión beta en desarrollo para explorar eventos de la región."
+    },
+    "color": "var(--sun)"
+  },
+  {
+    "n": "10",
+    "org": "Universidad de Salamanca",
+    "titulo": "Protégete de los riesgos climáticos: una escuela, datos y una maqueta",
+    "resumen": "Escoge una escuela o comunidad y una pregunta cercana: ¿dónde pega más el calor, por dónde podría llegar el agua o qué entorno habría que vigilar ante incendios? Con una muestra acotada de ERA5 y datos locales, el equipo elaborará un mapa comprensible, una explicación de lo que sabemos y una maqueta física sencilla hecha con cartón, impresión 3D u otros materiales accesibles. La maqueta servirá para conversar sobre preparación y rutas posibles, sin presentarse como pronóstico ni evaluación oficial de riesgo. Docentes, geógrafos y vecinos eligen la pregunta y comprueban si el mensaje se entiende; diseño y comunicación convierten los datos en una experiencia; perfiles técnicos preparan mapas y cálculos. La presentación puede mostrar la maqueta mediante fotos o vídeo.",
+    "entregable": "Ficha de un centro o comunidad, análisis reproducible con datos reales de ERA5, mapa y material educativo claro, más una maqueta física documentada y explicación de sus límites.",
+    "perfiles": [
+      "Educación",
+      "Geografía y GIS",
+      "Comunidades",
+      "Diseño",
+      "Comunicación",
+      "Datos"
+    ],
+    "datos": {
+      "nombre": "Copernicus Climate Data Store: ERA5, niveles de superficie",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview",
+      "licencia": "CC BY; descarga de muestra acotada"
+    },
+    "color": "var(--sea)"
+  },
+  {
+    "n": "11",
+    "org": "Universidad de Los Andes · CIDATA · Creative Commons Venezuela",
+    "titulo": "Antes de mover el telescopio: simulador abierto de campos estelares",
+    "resumen": "Una noche de observación tiene poco margen para equivocaciones. Este reto propone un simulador web donde una persona indique la ubicación del telescopio, la fecha, la hora y las coordenadas de un objeto; la interfaz mostrará si es visible, la trayectoria desde la posición de reposo y las estrellas del campo según un catálogo abierto. Deberá advertir si el objetivo queda bajo el horizonte o supera límites operativos, incluido el ángulo horario de cuatro horas definido para el ejercicio. Astronomía valida los cálculos, docencia convierte los avisos en aprendizaje, diseño hace legibles la trayectoria y el campo, y desarrollo implementa un prototipo reproducible. Es una simulación formativa; no envía comandos a un instrumento físico.",
+    "entregable": "Simulador web o de escritorio con entrada de ubicación y coordenadas, avisos visuales y sonoros, trayectoria y campo estelar; documentación, código abierto y validación frente a casos conocidos.",
+    "perfiles": [
+      "Astronomía",
+      "Educación",
+      "Diseño de interfaz",
+      "Accesibilidad",
+      "Python y datos"
+    ],
+    "datos": {
+      "nombre": "Gaia Archive: consulta acotada de estrellas",
+      "url": "https://gea.esac.esa.int/archive/",
+      "licencia": "acceso abierto con crédito ESA/Gaia/DPAC"
+    },
+    "fuentes": [
+      {
+        "nombre": "CDS VizieR",
+        "url": "https://vizier.cds.unistra.fr/"
+      },
+      {
+        "nombre": "Condiciones y créditos Gaia",
+        "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/"
+      }
+    ],
+    "color": "#E8664A"
   }
 ]

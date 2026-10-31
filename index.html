@@ -114,6 +114,8 @@ ol.steps .when{display:block;color:var(--muted);font-size:.92rem;margin-top:.3re
 .reto{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(1.25rem,3vw,3rem);align-items:center;padding:clamp(1.25rem,3vw,2rem) 0;margin-top:1.5rem;border-top:6px solid var(--c)}
 .reto:nth-of-type(even) .reto-img{order:2}
 .reto-img img{display:block;width:100%;height:auto;border-radius:10px}
+.reto--sin-imagen{grid-template-columns:1fr}
+.reto--sin-imagen .reto-contenido{max-width:82ch}
 .reto .kicker{font-weight:600;color:var(--muted);font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem}
 .reto h3{font-size:clamp(1.5rem,2.8vw,2.1rem);margin-bottom:.8rem;max-width:26ch}
 .reto .chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:.25rem 0 1rem;max-width:none}
@@ -273,7 +275,7 @@ footer p{max-width:none;margin:0}
 
 <section class="wrap" id="retos">
   <h2>Retos 2026</h2>
-  <p class="retos-intro">Cinco retos para explorar: cuatro del equipo organizador y AmbientIA, propuesto por la Dirección de Ambiente de Villa Yacanto de Calamuchita. Cada uno parte de una pregunta concreta, datos abiertos y un resultado que se puede ver y probar en tres días. Seguiremos sumando propuestas de la convocatoria.</p>
+  <p class="retos-intro">Once retos de ciencia, educación, patrimonio y tecnología cívica, propuestos por nuestro equipo y por organizaciones de América Latina y Europa. Hay lugar para quienes programan, investigan, diseñan, enseñan y conocen sus comunidades.</p>
   <div id="retos-list"><p class="note">Cargando los retos…</p></div>
   <div class="reto-cta">
     <p>¿Tienes un problema que pueda resolverse con datos abiertos?</p>
@@ -433,19 +435,21 @@ footer p{max-width:none;margin:0}
     const retos = await r.json();
     const discord = JSON.parse(document.getElementById('config').textContent).links.discord || '';
     list.innerHTML = retos.map(x =>
-      '<article class="reto" style="--c:' + esc(x.color) + '">' +
-        '<div class="reto-img"><img src="' + esc(x.imagen) + '" alt="' + esc(x.alt) + '" loading="lazy"></div>' +
-        '<div>' +
+      '<article class="reto' + (x.imagen ? '' : ' reto--sin-imagen') + '" style="--c:' + esc(x.color) + '">' +
+        (x.imagen ? '<div class="reto-img"><img src="' + esc(x.imagen) + '" alt="' + esc(x.alt) + '" loading="lazy"></div>' : '') +
+        '<div class="reto-contenido">' +
           '<p class="kicker">Reto ' + esc(x.n) + ' · ' + esc(x.org) + '</p>' +
           '<h3>' + esc(x.titulo) + '</h3>' +
           '<p>' + esc(x.resumen) + '</p>' +
           '<p><strong>Entregable.</strong> ' + esc(x.entregable) + '</p>' +
           '<div class="chips" aria-label="Perfiles buscados">' + x.perfiles.map(p => '<span>' + esc(p) + '</span>').join('') + '</div>' +
           '<p class="datos">Datos: <a href="' + esc(x.datos.url) + '" target="_blank" rel="noopener">' + esc(x.datos.nombre) + '</a>. Licencia: ' + esc(x.datos.licencia) + '.</p>' +
+          (x.fuentes ? '<p class="datos">Más fuentes: ' + x.fuentes.map(s => '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.nombre) + '</a>').join(' · ') + '.</p>' : '') +
+          (x.aviso ? '<p class="datos"><strong>' + esc(x.aviso) + '</strong></p>' : '') +
           (x.coleccion ? '<p class="datos">Colección propuesta: <a href="' + esc(x.coleccion.url) + '" target="_blank" rel="noopener">' + esc(x.coleccion.nombre) + '</a>. ' + esc(x.coleccion.nota) + '</p>' : '') +
           (x.recurso ? '<p class="datos">Para profundizar: <a href="' + esc(x.recurso.url) + '" target="_blank" rel="noopener">' + esc(x.recurso.nombre) + '</a>. ' + esc(x.recurso.nota) + '</p>' : '') +
           '<div class="acts">' +
-            '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">Ver el plano del reto</button>' +
+            (x.plano ? '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">Ver el plano del reto</button>' : '') +
             (discord ? '<a class="btn" href="' + esc(discord) + '" target="_blank" rel="noopener">Preguntar en Discord</a>' : '') +
           '</div>' +
         '</div>' +
