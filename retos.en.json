@@ -166,6 +166,8 @@
       }
     ],
     "color": "var(--sun)",
+    "imagen": "retos/reto-06-ilustracion.jpg",
+    "alt": "Museum staff and students photograph a specimen, compare its paper card and review a digital record together.",
     "plano": "retos/reto-06-plano.png",
     "altPlano": "Blueprint of challenge 06: select a sample, record it, normalise it with Darwin Core and check rights before publishing on Wikimedia."
   },
@@ -190,6 +192,8 @@
     },
     "aviso": "Before the package is reused or derivatives are published, the proposing team must formally license the data.",
     "color": "var(--sea)",
+    "imagen": "retos/reto-07-ilustracion.jpg",
+    "alt": "A team compares two simulated particle showers and listens to their sonification with headphones and visual controls.",
     "plano": "retos/reto-07-plano.png",
     "altPlano": "Blueprint of challenge 07: choose variables, map them to sound, compare two simulated showers and explain the phenomenon."
   },
@@ -236,6 +240,8 @@
       "nota": "Starting point built during the BAM BUAP hackathon."
     },
     "color": "#E8664A",
+    "imagen": "retos/reto-08-ilustracion.jpg",
+    "alt": "Four people compare records and images of pre-Columbian works from two museum collections.",
     "plano": "retos/reto-08-plano.png",
     "altPlano": "Blueprint of challenge 08: choose another museum, harmonise metadata, integrate objects and images, and test the exploration."
   },
@@ -281,6 +287,8 @@
       "nota": "An evolving beta to explore events in the region."
     },
     "color": "var(--sun)",
+    "imagen": "retos/reto-09-ilustracion.jpg",
+    "alt": "A team checks that the same festival appears on a tablet, computer, phone and poster.",
     "plano": "retos/reto-09-plano.png",
     "altPlano": "Blueprint of challenge 09: publish an event, collect it by widget, schema.org or file, compare methods and show a complex event."
   },
@@ -304,6 +312,8 @@
       "licencia": "CC BY; use a small extract"
     },
     "color": "var(--sea)",
+    "imagen": "retos/reto-10-ilustracion.jpg",
+    "alt": "Teachers, students and neighbours study a school’s surroundings with a map, physical model and climate data.",
     "plano": "retos/reto-10-plano.png",
     "altPlano": "Blueprint of challenge 10: choose a school and a risk, consult ERA5, make a map and build an educational model."
   },
@@ -336,6 +346,8 @@
       }
     ],
     "color": "#E8664A",
+    "imagen": "retos/reto-11-ilustracion.jpg",
+    "alt": "Students and a teacher prepare an observation with a simulator showing the horizon, pointing path and star field.",
     "plano": "retos/reto-11-plano.png",
     "altPlano": "Blueprint of challenge 11: enter location and coordinates, compute visibility, warn about limits and show trajectory and stars."
   }

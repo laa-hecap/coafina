@@ -166,6 +166,8 @@
       }
     ],
     "color": "var(--sun)",
+    "imagen": "retos/reto-06-ilustracion.jpg",
+    "alt": "Personal de un museo y estudiantes fotografían un espécimen, comparan su ficha en papel y revisan juntos un registro digital.",
     "plano": "retos/reto-06-plano.png",
     "altPlano": "Plano del reto 06: seleccionar una muestra, registrar, normalizar con Darwin Core y revisar derechos para publicar en Wikimedia."
   },
@@ -190,6 +192,8 @@
     },
     "aviso": "Antes de reutilizar o publicar derivados del paquete, el equipo proponente debe formalizar la licencia de los datos.",
     "color": "var(--sea)",
+    "imagen": "retos/reto-07-ilustracion.jpg",
+    "alt": "Un equipo compara dos cascadas de partículas simuladas y escucha su sonificación con auriculares y controles visuales.",
     "plano": "retos/reto-07-plano.png",
     "altPlano": "Plano del reto 07: elegir variables, asignarlas a sonido, comparar dos cascadas simuladas y explicar el fenómeno."
   },
@@ -236,6 +240,8 @@
       "nota": "Punto de partida desarrollado en el Hackatón BAM BUAP."
     },
     "color": "#E8664A",
+    "imagen": "retos/reto-08-ilustracion.jpg",
+    "alt": "Cuatro personas comparan fichas e imágenes de obras precolombinas procedentes de dos colecciones museísticas.",
     "plano": "retos/reto-08-plano.png",
     "altPlano": "Plano del reto 08: elegir otro museo, armonizar metadatos, integrar objetos e imágenes y probar la exploración."
   },
@@ -281,6 +287,8 @@
       "nota": "Versión beta en desarrollo para explorar eventos de la región."
     },
     "color": "var(--sun)",
+    "imagen": "retos/reto-09-ilustracion.jpg",
+    "alt": "Un equipo comprueba que el mismo festival aparece en una tableta, una computadora, un teléfono y un cartel.",
     "plano": "retos/reto-09-plano.png",
     "altPlano": "Plano del reto 09: publicar un evento, recogerlo por widget, schema.org o archivo, comparar métodos y mostrar un evento complejo."
   },
@@ -304,6 +312,8 @@
       "licencia": "CC BY; descarga de muestra acotada"
     },
     "color": "var(--sea)",
+    "imagen": "retos/reto-10-ilustracion.jpg",
+    "alt": "Docentes, estudiantes y vecinos estudian el entorno de una escuela con un mapa, una maqueta física y datos climáticos.",
     "plano": "retos/reto-10-plano.png",
     "altPlano": "Plano del reto 10: elegir una escuela y un riesgo, consultar ERA5, hacer un mapa y construir una maqueta educativa."
   },
@@ -336,6 +346,8 @@
       }
     ],
     "color": "#E8664A",
+    "imagen": "retos/reto-11-ilustracion.jpg",
+    "alt": "Estudiantes y docente preparan una observación con un simulador que muestra horizonte, trayectoria y campo estelar.",
     "plano": "retos/reto-11-plano.png",
     "altPlano": "Plano del reto 11: indicar ubicación y coordenadas, calcular visibilidad, advertir límites y mostrar trayectoria y estrellas."
   }
