@@ -50,9 +50,9 @@
   {
     "n": "03",
     "org": "CoAfina",
-    "titulo": "Archivo Abierto: rescatar patrimonio científico y cultural con OCR y revisión humana",
-    "resumen": "Una pequeña exposición digital a partir de 5 a 10 páginas de las Memorias de la Sociedad Científica «Antonio Alzate» (México, 1887–1888, dominio público): OCR con Tesseract en GitHub Actions, revisión humana de al menos dos páginas, búsqueda, lectura lado a lado y un paquete descargable con su procedencia. Los equipos pueden proponer otra fuente si prueban que sus derechos son abiertos.",
-    "entregable": "Un sitio buscable con imagen, OCR y texto corregido lado a lado, más un paquete versionado de imágenes, textos y metadatos.",
+    "titulo": "Archivo Abierto: hacer buscables los documentos históricos venezolanos",
+    "resumen": "Una página escaneada conserva la imagen, pero no deja buscar nombres, comparar datos ni leerla con herramientas de accesibilidad. Hace años, Creative Commons Venezuela imaginó con An Open Scanner que podríamos volver a documentos ya fotografiados cuando mejorara el OCR. Ahora proponemos probarlo con una pieza real de la Red de Historia de Venezuela, por ejemplo las cuatro páginas de El Venezolano (1845). En tres días, el equipo ejecutará OCR en GitHub Actions y creará una pequeña exposición buscable: imagen y texto corregido lado a lado, contexto histórico y una pregunta que pueda usarse en una clase o un reportaje. Archivistas, periodistas, docentes y diseñadores tomarán decisiones esenciales junto al equipo técnico. Un PDF de dominio público en Commons permite empezar; publicar imágenes de la Red requiere aclarar sus permisos.",
+    "entregable": "Una exposición web con búsqueda, imagen y texto lado a lado, dos páginas revisadas por personas, contexto y cita al archivo original; más un paquete descargable con textos, metadatos y proceso reproducible.",
     "perfiles": [
       "Archivos y bibliotecas",
       "Traducción",
@@ -70,7 +70,12 @@
     "alt": "Tres estudiantes comparan un libro antiguo con su texto reconocido en pantalla; al fondo, flechas de imagen a OCR y a sitio web",
     "plano": "retos/reto-03-plano.png",
     "altPlano": "Plano del reto Archivo Abierto: elegir, reconocer, revisar y publicar",
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "coleccion": {
+      "nombre": "Red de Historia Venezuela · El Venezolano, 26 de abril de 1845",
+      "url": "https://archivo.redhistoriave.org/pieza/26-abril-1845-n276",
+      "nota": "Permiso para republicar imágenes y derivados pendiente de confirmar."
+    }
   },
   {
     "n": "04",

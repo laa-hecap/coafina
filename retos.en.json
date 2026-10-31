@@ -50,9 +50,9 @@
   {
     "n": "03",
     "org": "CoAfina",
-    "titulo": "Archivo Abierto: recover scientific and cultural heritage using OCR and human review",
-    "resumen": "A small digital exhibition based on 5 to 10 pages from Memorias de la Sociedad Científica «Antonio Alzate» (Mexico, 1887–1888, public domain): OCR with Tesseract in GitHub Actions, human review of at least two pages, search, side-by-side reading and a downloadable package documenting its provenance. Teams may propose another source if they demonstrate that its rights are open.",
-    "entregable": "A searchable website with the image, OCR and corrected text side by side, plus a versioned package of images, texts and metadata.",
+    "titulo": "Open Archive: make Venezuelan historical documents searchable",
+    "resumen": "A scanned page preserves an image, but it is hard to search for names, compare facts or use with assistive reading tools. Years ago, Creative Commons Venezuela’s An Open Scanner imagined revisiting photographed documents once OCR improved. Now we propose to test that idea with a real item from Red Historia Venezuela, such as four pages of an 1845 issue of El Venezolano. In three days, the team runs OCR in GitHub Actions and builds a small searchable exhibit: image and reviewed text side by side, historical context, and a question a teacher or journalist could explore. Archivists, journalists, educators and designers make key decisions alongside developers. A public-domain Commons PDF lets teams start; republishing the archive’s images requires clarification of reuse rights.",
+    "entregable": "A searchable web exhibit with page image and text side by side, two human-reviewed pages, context and a citation to the original archive; plus a downloadable package with texts, metadata and a reproducible workflow.",
     "perfiles": [
       "Archives and libraries",
       "Translation",
@@ -70,7 +70,12 @@
     "alt": "Three students compare an old book with its recognized text on screen; arrows in the background lead from image to OCR to website",
     "plano": "retos/reto-03-plano.png",
     "altPlano": "Archivo Abierto blueprint: select, recognize, review and publish",
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "coleccion": {
+      "nombre": "Red Historia Venezuela · El Venezolano, 26 April 1845",
+      "url": "https://archivo.redhistoriave.org/pieza/26-abril-1845-n276",
+      "nota": "Permission to republish images and derivatives remains to be confirmed."
+    }
   },
   {
     "n": "04",

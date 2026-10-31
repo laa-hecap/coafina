@@ -444,6 +444,7 @@ footer p{max-width:none;margin:0}
           '<p><strong>Deliverable.</strong> ' + esc(x.entregable) + '</p>' +
           '<div class="chips" aria-label="Skills wanted">' + x.perfiles.map(p => '<span>' + esc(p) + '</span>').join('') + '</div>' +
           '<p class="datos">Data: <a href="' + esc(x.datos.url) + '" target="_blank" rel="noopener">' + esc(x.datos.nombre) + '</a>. License: ' + esc(x.datos.licencia) + '.</p>' +
+          (x.coleccion ? '<p class="datos">Proposed collection: <a href="' + esc(x.coleccion.url) + '" target="_blank" rel="noopener">' + esc(x.coleccion.nombre) + '</a>. ' + esc(x.coleccion.nota) + '</p>' : '') +
           '<div class="acts">' +
             '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">View challenge blueprint</button>' +
             (discord ? '<a class="btn" href="' + esc(discord) + '" target="_blank" rel="noopener">Ask on Discord</a>' : '') +
