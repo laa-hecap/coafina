@@ -3,8 +3,8 @@
     "n": "01",
     "org": "INAIT SA",
     "titulo": "Clúster Sur: un observatorio sísmico que muestra cómo se recupera de una falla",
-    "resumen": "Un observatorio público en GitHub Pages con un catálogo sísmico histórico del USGS: mapa, gráficos y filtros, más una vista que muestra cómo dos computadoras se repartieron el trabajo y qué pasó cuando una se desconectó. No es monitoreo en tiempo real ni predicción.",
-    "entregable": "Una URL pública con mapa, filtros, gráficos y registro de la falla, con un resultado igual al del cálculo de referencia.",
+    "resumen": "Un catálogo sísmico cuenta qué ocurrió; una computadora que se desconecta durante el análisis plantea otra pregunta: ¿podemos confiar en el resultado? Con datos históricos del USGS, el equipo construirá un observatorio público para explorar sismos de una región en un mapa con filtros y gráficos. Dos computadoras se reparten un cálculo; una demostración reproduce la caída de una, muestra cómo se recupera el trabajo pendiente y comprueba que el resultado coincide con un cálculo de referencia. Periodismo elige las preguntas que importan, docencia transforma la falla en una explicación, diseño vuelve comprensible la vista y los perfiles técnicos implementan y verifican el flujo. Se podrá enseñar en una URL de GitHub Pages. Son datos históricos: no hay alertas en vivo ni predicción.",
+    "entregable": "Sitio público con mapa, filtros y gráficos, una vista que reproduce la falla y la recuperación del cálculo, y una comparación verificable con el resultado de referencia.",
     "perfiles": [
       "Ingeniería y datos",
       "Periodismo",
@@ -20,14 +20,19 @@
     "alt": "Estudiantes revisan sismogramas y mapas mientras computadoras repartidas por América Latina se pasan tareas, una de ellas desconectada",
     "plano": "retos/reto-01-plano.png",
     "altPlano": "Plano del reto Clúster Sur: datos, distribuir, recuperar y mostrar",
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "recurso": {
+      "nombre": "OpenQuake Engine: ejemplo guiado de riesgo",
+      "url": "https://docs.openquake.org/oq-engine/master/manual/getting-started/risk-quickstart.html",
+      "nota": "Extensión opcional con modelos preparados; el CSV del USGS no es entrada directa de este ejemplo y la recuperación de tareas se demuestra por separado."
+    }
   },
   {
     "n": "02",
     "org": "Creative Commons Venezuela y Creative Commons Switzerland",
     "titulo": "Mapa vivo: descubrir y mejorar espacios educativos dentro de Wikimedia",
-    "resumen": "Un mapa interactivo y una tabla compartibles, hechos con Wikidata Query Service, de los museos de ciencias y planetarios de un país o zona de América Latina. Una página de trabajo en Wikidata los reúne con entre 5 y 10 mejoras propuestas, cada una con su QID y una fuente independiente.",
-    "entregable": "Mapa y tabla compartibles, página de entrada en Wikidata y 5 a 10 propuestas verificables; los lugares sin coordenadas siguen visibles en la tabla.",
+    "resumen": "¿Qué museos de ciencias o planetarios pueden descubrir estudiantes en su región? Wikidata puede ayudar a responderlo, pero en algunas zonas faltan coordenadas, datos o fuentes. El equipo elige un país o una región de América Latina y construye con Wikidata Query Service un mapa interactivo y una tabla; los lugares sin posición siguen visibles como preguntas por investigar. Luego propone entre 5 y 10 mejoras de fichas, cada una con su QID y una fuente independiente, y deja una página de trabajo en Wikidata para continuar. Quienes conocen el territorio, enseñan, investigan en bibliotecas o hacen periodismo ayudan a reconocer instituciones y verificar información; diseño hace el recurso legible y los perfiles técnicos afinan la consulta. El resultado vive en el ecosistema Wikimedia y puede crecer después del hackathon.",
+    "entregable": "Mapa y tabla compartibles desde Wikidata Query Service, página de trabajo en Wikidata y 5 a 10 mejoras propuestas con fuentes; las fichas sin coordenadas permanecen en la tabla.",
     "perfiles": [
       "Conocimiento local",
       "Bibliotecas y archivos",
@@ -81,8 +86,8 @@
     "n": "04",
     "org": "Creative Commons Venezuela",
     "titulo": "Del kit al impacto: datos abiertos para ampliar una iniciativa educativa",
-    "resumen": "Una iniciativa real preparó 600 kits educativos en Caracas y La Guaira. Al 10 de octubre había entregado 509 y recibido 60 dibujos. Crea un panel móvil con inventario, entregas verificadas, mapa a escala segura y fotografías autorizadas. Propón además cómo un jurado humano podría valorar dibujos anónimos y elegir diez para recibir un kit ampliado. El registro sensible queda privado; el prototipo de jurado usa ejemplos sintéticos.",
-    "entregable": "Panel público con cifras fechadas, conciliación, mapa de entregas publicables e informe exportable; prototipo restringido del flujo de jurado, con rúbrica y decisiones trazables.",
+    "resumen": "Se prepararon 600 kits educativos en Caracas y La Guaira con estudiantes de la UCV, productores locales y organizaciones comunitarias. El corte del 10 de octubre registra 509 kits entregados y 60 dibujos recibidos; recibir un dibujo no implica permiso para publicarlo. ¿Cómo demostrar qué llegó, qué falta y qué aprendimos sin exponer a los niños? Con la composición, el presupuesto y los totales abiertos, el equipo creará un panel móvil que cuadre preparados, entregados y pendientes y genere informes. Diseñará un mapa listo para incorporar localidades de entrega verificadas y un prototipo separado para que un jurado humano valore dibujos anónimos con una rúbrica y seleccione diez kits ampliados. Educación y trabajo comunitario definen criterios y verifican entregas; periodismo y diseño explican los resultados; perfiles técnicos implementan el flujo. Las entregas individuales y el jurado se demuestran con datos sintéticos hasta contar con permisos.",
+    "entregable": "Panel público móvil con balance e informe exportable; mapa preparado para localidades verificadas; prototipo separado del jurado con rúbrica y ejemplos sintéticos. Dibujos e imágenes solo se muestran con autorización documentada.",
     "perfiles": [
       "Educación",
       "Trabajo comunitario",

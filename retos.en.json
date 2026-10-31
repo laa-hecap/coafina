@@ -3,8 +3,8 @@
     "n": "01",
     "org": "INAIT SA",
     "titulo": "Clúster Sur: a seismic observatory that shows how it recovers from a failure",
-    "resumen": "A public observatory on GitHub Pages using a historical USGS earthquake catalog: a map, charts and filters, plus a view showing how two computers shared the work and what happened when one disconnected. This is not real-time monitoring or prediction.",
-    "entregable": "A public URL with a map, filters, charts and a failure log, producing the same result as the reference calculation.",
+    "resumen": "An earthquake catalog tells us what happened; a computer dropping out during the analysis raises another question: can we still trust the result? Using historical USGS data, teams build a public observatory with a map, filters and charts to explore earthquakes in a chosen region. Two computers share a calculation; a replay shows one failing, the other recovering unfinished work, and the final output matching a reference result. Journalists choose useful questions, educators turn the failure into an explanation, designers make it understandable, and technical contributors build and verify the workflow. Visitors can try the result on a GitHub Pages URL. These are historical data, with no live alerts or earthquake prediction.",
+    "entregable": "A public site with a map, filters and charts, a replay of the failure and recovery, and a verifiable comparison with the reference result.",
     "perfiles": [
       "Engineering and data",
       "Journalism",
@@ -20,14 +20,19 @@
     "alt": "Students review seismograms and maps while computers across Latin America share tasks, with one computer disconnected",
     "plano": "retos/reto-01-plano.png",
     "altPlano": "Clúster Sur blueprint: data, distribution, recovery and presentation",
-    "color": "var(--sea)"
+    "color": "var(--sea)",
+    "recurso": {
+      "nombre": "OpenQuake Engine: guided risk example",
+      "url": "https://docs.openquake.org/oq-engine/master/manual/getting-started/risk-quickstart.html",
+      "nota": "Optional extension using prepared models; the USGS CSV is not a direct input for this example, and task recovery is demonstrated separately."
+    }
   },
   {
     "n": "02",
     "org": "Creative Commons Venezuela y Creative Commons Switzerland",
     "titulo": "Mapa vivo: discover and improve educational spaces within Wikimedia",
-    "resumen": "A shareable interactive map and table, built with Wikidata Query Service, of science museums and planetariums in a country or area of Latin America. A Wikidata work page brings them together with 5 to 10 proposed improvements, each with its QID and an independent source.",
-    "entregable": "A shareable map and table, a Wikidata entry page and 5 to 10 verifiable proposals; places without coordinates remain visible in the table.",
+    "resumen": "Which science museums or planetariums could students discover in their region? Wikidata can help answer, but some areas have missing coordinates, details or sources. Teams choose a Latin American country or region and build a shareable map and table with Wikidata Query Service; places without coordinates remain visible as questions to investigate. They then propose 5 to 10 improvements, each with a Wikidata QID and an independent source, and leave a Wikidata work page for others to continue. People who know the area, teach, work in libraries or investigate as journalists help identify institutions and check facts; designers make the resource readable and technical contributors refine the query. The result lives in the Wikimedia ecosystem and can grow after the hackathon.",
+    "entregable": "A shareable Wikidata Query Service map and table, a Wikidata work page, and 5 to 10 sourced improvement proposals; items without coordinates remain in the table.",
     "perfiles": [
       "Local knowledge",
       "Libraries and archives",
@@ -81,8 +86,8 @@
     "n": "04",
     "org": "Creative Commons Venezuela",
     "titulo": "Del kit al impacto: open data to expand an educational initiative",
-    "resumen": "A real initiative prepared 600 educational kits in Caracas and La Guaira. By October 10, it had delivered 509 and received 60 drawings. Create a mobile dashboard with inventory, verified deliveries, a map at a safe scale and authorized photographs. Also propose how a human jury could assess anonymous drawings and select ten to receive an expanded kit. Sensitive records remain private; the jury prototype uses synthetic examples.",
-    "entregable": "A public dashboard with dated figures, reconciliation, a map of publishable deliveries and an exportable report; a restricted jury workflow prototype with a rubric and traceable decisions.",
+    "resumen": "Students from UCV, local producers and community groups prepared 600 educational kits for Caracas and La Guaira. The October 10 snapshot records 509 kits delivered and 60 drawings received; receiving a drawing does not authorize its publication. How can we show what arrived, what remains and what we learned without exposing children? Using open kit composition, budget and totals, teams build a mobile dashboard that reconciles prepared, delivered and remaining kits and exports reports. They design a map ready for verified general delivery locations and a separate prototype in which a human jury assesses anonymous drawings against a rubric and selects ten expanded kits. Educators and community workers define criteria and verify deliveries; journalists and designers explain the results; developers implement the flow. Individual deliveries and the jury use synthetic examples until data and permissions are available.",
+    "entregable": "A public mobile dashboard with dated totals and an exportable report; a map ready for verified general locations; a separate jury prototype with a rubric and synthetic examples. Drawings and photos appear only with documented permission.",
     "perfiles": [
       "Education",
       "Community work",
