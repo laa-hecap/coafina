@@ -31,8 +31,8 @@
     "n": "02",
     "org": "Creative Commons Venezuela y Creative Commons Switzerland",
     "titulo": "Mapa vivo: descubrir y mejorar espacios educativos dentro de Wikimedia",
-    "resumen": "¿Qué museos de ciencias o planetarios pueden descubrir estudiantes en su región? Wikidata puede ayudar a responderlo, pero en algunas zonas faltan coordenadas, datos o fuentes. El equipo elige un país o una región de América Latina y construye con Wikidata Query Service un mapa interactivo y una tabla; los lugares sin posición siguen visibles como preguntas por investigar. Luego propone entre 5 y 10 mejoras de fichas, cada una con su QID y una fuente independiente, y deja una página de trabajo en Wikidata para continuar. Quienes conocen el territorio, enseñan, investigan en bibliotecas o hacen periodismo ayudan a reconocer instituciones y verificar información; diseño hace el recurso legible y los perfiles técnicos afinan la consulta. El resultado vive en el ecosistema Wikimedia y puede crecer después del hackathon.",
-    "entregable": "Mapa y tabla compartibles desde Wikidata Query Service, página de trabajo en Wikidata y 5 a 10 mejoras propuestas con fuentes; las fichas sin coordenadas permanecen en la tabla.",
+    "resumen": "¿Qué museos de ciencias y planetarios se pueden descubrir en una región, y cuáles quedan fuera porque Wikidata los clasifica solo como museos? El equipo elige un país o una zona acotada de América Latina. Consulta la clase de museo de ciencias y sus subclases, además de los planetarios, para crear un mapa y una tabla con Wikidata Query Service; los lugares sin coordenadas siguen en la tabla. Después examina una muestra de museos con clasificación genérica y la compara con catálogos institucionales y fuentes locales para encontrar candidatos que falten en la consulta. No basta un nombre para cambiar una ficha: el equipo documenta entre 5 y 10 mejoras propuestas con QID, dato, fuente independiente y justificación, e identifica los casos dudosos. Una tabla breve muestra cuántas instituciones usan los tipos encontrados en la zona. La consulta y los hallazgos se preparan para compartirlos con el WikiProject Heritage institutions ya existente, sin crear otra página ni importar datos masivamente. Bibliotecas, museos, docentes y personas que conocen el territorio verifican los casos; diseño y código hacen el resultado fácil de explorar.",
+    "entregable": "Mapa y tabla compartibles desde Wikidata Query Service para una zona acotada, con las fichas sin coordenadas en la tabla; conteo breve por tipos; 5 a 10 mejoras propuestas con QID, fuente y justificación; y una nota de hallazgos para el WikiProject Heritage institutions existente.",
     "perfiles": [
       "Conocimiento local",
       "Bibliotecas y archivos",
@@ -45,6 +45,33 @@
       "nombre": "Wikidata Query Service",
       "url": "https://query.wikidata.org/",
       "licencia": "CC0"
+    },
+    "fuentes": [
+      {
+        "nombre": "WikiProject Heritage institutions",
+        "url": "https://www.wikidata.org/wiki/Wikidata:WikiProject_Heritage_institutions"
+      },
+      {
+        "nombre": "Tipología de instituciones patrimoniales",
+        "url": "https://www.wikidata.org/wiki/Wikidata:WikiProject_Heritage_institutions/Typology"
+      },
+      {
+        "nombre": "Ejemplo de conteo por tipos: espacios culturales",
+        "url": "https://www.wikidata.org/wiki/Wikidata:WikiProject_Cultural_venues/Typology"
+      },
+      {
+        "nombre": "FindingGLAMs: antecedentes y conjuntos de datos",
+        "url": "https://meta.wikimedia.org/wiki/FindingGLAMs"
+      },
+      {
+        "nombre": "Notas de trabajo sobre tipología de museos (Beat Estermann, 2026)",
+        "url": "https://docs.google.com/document/d/1LiBSP1E5_HL_crk-5zArKMUL3dQ-NftCLjnltNi-drA/edit"
+      }
+    ],
+    "recurso": {
+      "nombre": "Wikimedia CH Map Service",
+      "url": "https://map.wikimedia.swiss/your-map",
+      "nota": "Extensión opcional: proponer un mapa con una consulta SPARQL probada; su publicación depende del servicio."
     },
     "imagen": "retos/reto-02-ilustracion.jpg",
     "alt": "Personas con mapas, libros y laptops marcan museos y planetarios en un mapa de América Latina, con fichas incompletas por completar",
@@ -70,6 +97,25 @@
       "nombre": "Memorias de la Sociedad Científica «Antonio Alzate», tomo 1 (Wikimedia Commons)",
       "url": "https://commons.wikimedia.org/wiki/File:Memorias_de_la_Sociedad_Cientica_%22Antonio_Alzate.%22_(IA_memoriasdelasoci8788soci).pdf",
       "licencia": "Dominio público"
+    },
+    "fuentes": [
+      {
+        "nombre": "An Open Scanner: propuesta original",
+        "url": "https://medium.com/creative-commons-we-like-to-share/an-open-scanner-20f9cc4b5513"
+      },
+      {
+        "nombre": "Estación de captura e inventario de Bruno Jehle",
+        "url": "https://meta.wikimedia.org/wiki/Digitization_Projects/Public_Domain_Project/Inventory"
+      },
+      {
+        "nombre": "Entrevista a Bruno Jehle",
+        "url": "https://podcast.federicabressan.com/bruno-jehle.php"
+      }
+    ],
+    "recurso": {
+      "nombre": "Captura física opcional con un móvil",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Museu_Portatil_Edi%C3%A7%C3%A3o_de_Bolso_Manual_2022.pdf",
+      "nota": "Si el equipo dispone de unas pocas páginas cuya captura y publicación estén autorizadas, puede probarlas y comparar el resultado con el flujo de OCR. No es requisito para el entregable mínimo."
     },
     "imagen": "retos/reto-03-ilustracion.jpg",
     "alt": "Tres estudiantes comparan un libro antiguo con su texto reconocido en pantalla; al fondo, flechas de imagen a OCR y a sitio web",
