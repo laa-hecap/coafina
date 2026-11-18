@@ -167,6 +167,56 @@ dialog#plano .close{position:absolute;top:.5rem;right:.5rem;width:2.5rem;height:
 footer{background:var(--ink);color:var(--paper);padding:2rem var(--gutter);font-size:.95rem}
 footer a{color:var(--sun)}
 footer p{max-width:none;margin:0}
+
+/* Cronograma (se carga desde cronograma.json) */
+.crono{padding:clamp(1.6rem,4vw,2.8rem) var(--gutter);border-bottom:1px solid var(--line)}
+.crono-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem 2rem;flex-wrap:wrap;margin-bottom:1.1rem}
+.crono-eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);margin:0 0 .35rem;max-width:none}
+.crono-sub{color:var(--muted);font-size:.98rem;margin:.5rem 0 0;max-width:72ch}
+.crono-side{display:flex;align-items:center;gap:.6rem 1rem;flex-wrap:wrap}
+.crono-badge{background:var(--sun);color:var(--ink);font-weight:600;font-size:.85rem;border-radius:999px;padding:.4rem .9rem}
+.crono-dl{font-weight:600;font-size:.95rem}
+.crono-grid{display:grid;grid-template-columns:3.3rem repeat(7,minmax(0,1fr));grid-auto-rows:minmax(2.1rem,auto)}
+.cg-grp{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .7rem;border-radius:.5rem .5rem 0 0;margin:0 3px}
+.cg-grp.previa{color:var(--muted);background:var(--mist)}
+.cg-grp.hackathon{color:#fff;background:var(--sea)}
+.cg-day{display:flex;align-items:baseline;gap:.45rem;padding:.4rem .7rem .5rem;border-bottom:2px solid var(--ink)}
+.cg-day b{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1}
+.cg-day span{font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cg-day.hk{background:#EEF6F5}
+.cg-day.hoy{border-bottom-color:var(--sun);box-shadow:inset 0 -4px 0 var(--sun)}
+.cg-time{grid-column:1;font-size:.74rem;color:var(--muted);text-align:right;padding:.2rem .55rem 0 0;font-variant-numeric:tabular-nums}
+.cg-cell{border-top:1px solid #DDE6E8;border-left:1px solid #EDF2F3}
+.cg-cell.hk{background:#F4FAF9}
+.ev{margin:2px 3px;border-radius:.55rem;padding:.3rem .55rem .4rem;display:flex;flex-direction:column;gap:.05rem;z-index:1;min-width:0}
+.ev .tag{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.ev b{font-size:.84rem;font-weight:600;line-height:1.2}
+.ev .mt{font-size:.76rem;line-height:1.2}
+.ev.hack{background:var(--ink);color:#FFFCF5}
+.ev.talk{background:#CDE8E4;color:var(--ink)}
+.ev.orient{background:#F8DC8F;color:var(--ink)}
+.ev.social{background:#F8CFC3;color:var(--ink)}
+.ev.dead{background:#C7462C;color:#fff}
+.ev.pend{background:#fff;color:var(--muted);border:1.5px dashed #8FA5AC}
+.ev.fin{background:transparent;color:var(--muted)}
+.ev.fin b{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.crono-list{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cl-day{margin-top:1.2rem}
+.cl-day h3{display:flex;align-items:baseline;gap:.5rem;border-bottom:2px solid var(--ink);padding-bottom:.35rem;margin-bottom:.5rem}
+.cl-day h3 b{font-family:var(--display);font-weight:800;font-size:1.6rem}
+.cl-day h3 small{font-family:var(--body);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);margin-left:auto;text-align:right}
+.cl-day ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.cl-day li{display:grid;grid-template-columns:5.7rem 1fr;gap:.6rem;align-items:start}
+.cl-time{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:.4rem}
+.cl-day li .ev{margin:0}
+.cl-day li .ev b{font-size:.98rem}
+.cl-day li .ev .mt{font-size:.88rem}
+.cl-day li .ev .tag{font-size:.68rem}
+.crono-legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:1rem;font-size:.85rem}
+.crono-legend span{display:inline-flex;align-items:center;gap:.4rem}
+.crono-legend i.ev{display:inline-block;width:.9rem;height:.9rem;border-radius:.25rem;margin:0;padding:0}
+.crono-img img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:.6rem}
+@media (max-width:900px){.crono-grid{display:none}.crono-list{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}}
 </style>
 </head>
 <body>
@@ -177,6 +227,7 @@ footer p{max-width:none;margin:0}
     <span data-c="edition"></span>
   </a>
   <nav class="main" aria-label="Sections">
+    <a href="#cronograma">Schedule</a>
     <a href="#como-funciona">How it works</a>
     <a href="#participa">Take part</a>
     <a href="#retos">Challenges</a>
@@ -194,6 +245,25 @@ footer p{max-width:none;margin:0}
     <source src="hackathon-2026.mp4" type="video/mp4">
     <img src="hackathon-2026.png" alt="Hackathon 2026: CoAfina’s five characters">
   </video></div>
+
+<section class="crono" id="cronograma" aria-labelledby="crono-h">
+  <div class="crono-head">
+    <div>
+      <p class="crono-eyebrow">Week of 23 to 29 November 2026</p>
+      <h2 id="crono-h">Hackathon schedule</h2>
+      <p class="crono-sub">All times are GMT-5 (Bogotá, Lima and Quito). Mexico City is 1 hour behind · Caracas and La Paz, 1 hour ahead · Buenos Aires, Santiago and São Paulo, 2 hours ahead.</p>
+    </div>
+    <div class="crono-side">
+      <span class="crono-badge" id="crono-badge">Preliminary version · may change</span>
+      <a class="crono-dl" href="cronograma-2026.pdf">Download PDF (in Spanish)</a>
+      <a class="crono-dl" href="cronograma-2026.png">View as image</a>
+    </div>
+  </div>
+  <div class="crono-grid" id="crono-grid" aria-hidden="true"></div>
+  <div class="crono-list" id="crono-list"><p class="note">Loading the schedule…</p></div>
+  <div class="crono-legend" id="crono-legend"></div>
+  <noscript><a class="crono-img" href="cronograma-2026.png"><img src="cronograma-2026.png" alt="CoAfina 2026 hackathon schedule, week of 23 to 29 November (in Spanish)"></a></noscript>
+</section>
 
 <div class="doors" aria-label="Ways to take part">
   <a class="door retadores" href="#participa">
@@ -465,6 +535,44 @@ footer p{max-width:none;margin:0}
     if (b) { img.src = b.dataset.plano; img.alt = b.dataset.alt || ''; dlg.showModal(); return; }
     if (e.target === dlg || e.target.closest('#plano .close')) dlg.close();
   });
+})();
+</script>
+<script>
+/* Cronograma: se dibuja a partir de cronograma.en.json (cuadrícula en pantallas anchas, lista en móviles) */
+(async function(){
+  const grid = document.getElementById('crono-grid'); if (!grid) return;
+  const list = document.getElementById('crono-list'), leg = document.getElementById('crono-legend'), badge = document.getElementById('crono-badge');
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const hh = h => String(h).padStart(2,'0') + ':00';
+  try {
+    const r = await fetch('cronograma.en.json', {cache:'no-cache'});
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json(), H0 = d.horaInicio, H1 = d.horaFin, dias = d.dias;
+    const hoy = new Date(Date.now() - 5*3600e3).toISOString().slice(0,10);   // fecha actual en GMT-5
+    const card = (e, st) => `<div class="ev ${esc(e.tipo)}"${st ? ` style="${st}"` : ''}>${e.etiqueta ? `<span class="tag">${esc(e.etiqueta)}</span>` : ''}<b>${esc(e.titulo)}</b>${e.detalle ? `<span class="mt">${esc(e.detalle)}</span>` : ''}</div>`;
+    let g = '';
+    for (let i = 0; i < dias.length; ) { let j = i; while (j < dias.length && dias[j].grupo === dias[i].grupo) j++;
+      g += `<div class="cg-grp ${esc(dias[i].grupo)}" style="grid-row:1;grid-column:${i+2} / span ${j-i}">${esc((d.grupos||{})[dias[i].grupo] || '')}</div>`; i = j; }
+    dias.forEach((x, k) => { g += `<div class="cg-day${x.grupo==='hackathon'?' hk':''}${x.fecha===hoy?' hoy':''}" style="grid-row:2;grid-column:${k+2}"><b>${Number(x.fecha.slice(8))}</b><span>${esc(x.nombre)}</span></div>`; });
+    for (let h = H0; h < H1; h++) { const row = h - H0 + 3;
+      g += `<div class="cg-time" style="grid-row:${row}">${hh(h)}</div>`;
+      dias.forEach((x, k) => { g += `<div class="cg-cell${x.grupo==='hackathon'?' hk':''}" style="grid-row:${row};grid-column:${k+2}"></div>`; }); }
+    d.eventos.forEach(e => { const k = dias.findIndex(x => x.fecha === e.fecha); if (k < 0) return;
+      const a = Math.max(e.inicio, H0), b = Math.min(e.fin, H1); if (b <= a) return;
+      g += card(e, `grid-column:${k+2};grid-row:${a-H0+3} / span ${b-a}`); });
+    grid.innerHTML = g;
+    let l = '';
+    dias.forEach(x => { const evs = d.eventos.filter(e => e.fecha === x.fecha).sort((p, q) => p.inicio - q.inicio); if (!evs.length) return;
+      l += `<div class="cl-day"><h3><b>${Number(x.fecha.slice(8))}</b> ${esc(x.nombre)} <small>${esc(((d.grupos||{})[x.grupo] || '').split(' · ')[0])}</small></h3><ul>` +
+        evs.map(e => `<li><span class="cl-time">${e.tipo==='fin' ? hh(e.inicio) : hh(e.inicio) + '–' + hh(e.fin)}</span>${card(e)}</li>`).join('') + '</ul></div>'; });
+    list.innerHTML = l;
+    leg.innerHTML = Object.entries(d.tipos || {}).map(([k, v]) => `<span><i class="ev ${esc(k)}"></i>${esc(v)}</span>`).join('');
+    if (badge) badge.textContent = d.preliminar ? `Preliminary version · ${d.version} · may change` : `Updated on ${d.version}`;
+  } catch (err) {
+    grid.style.display = 'none';
+    list.style.cssText = 'position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal';
+    list.innerHTML = '<a class="crono-img" href="cronograma-2026.png"><img src="cronograma-2026.png" alt="CoAfina 2026 hackathon schedule, week of 23 to 29 November (in Spanish)" loading="lazy"></a>';
+  }
 })();
 </script>
 </body>

@@ -1,0 +1,196 @@
+{
+  "_ayuda": "Edita este archivo para actualizar el cronograma del sitio. Las horas son enteras y están en GMT-5. Tipos: hack, talk, orient, social, dead, pend, fin.",
+  "version": "18 de noviembre de 2026",
+  "preliminar": true,
+  "horaInicio": 8,
+  "horaFin": 20,
+  "grupos": {
+    "previa": "Semana previa",
+    "hackathon": "Hackathon · 27, 28 y 29 de noviembre"
+  },
+  "tipos": {
+    "hack": "Sesiones del hackathon",
+    "talk": "Charlas y talleres",
+    "orient": "Orientación",
+    "social": "Social",
+    "dead": "Entrega",
+    "pend": "Por definir"
+  },
+  "dias": [
+    {
+      "fecha": "2026-11-23",
+      "nombre": "Lunes",
+      "grupo": "previa"
+    },
+    {
+      "fecha": "2026-11-24",
+      "nombre": "Martes",
+      "grupo": "previa"
+    },
+    {
+      "fecha": "2026-11-25",
+      "nombre": "Miércoles",
+      "grupo": "previa"
+    },
+    {
+      "fecha": "2026-11-26",
+      "nombre": "Jueves",
+      "grupo": "previa"
+    },
+    {
+      "fecha": "2026-11-27",
+      "nombre": "Viernes",
+      "grupo": "hackathon"
+    },
+    {
+      "fecha": "2026-11-28",
+      "nombre": "Sábado",
+      "grupo": "hackathon"
+    },
+    {
+      "fecha": "2026-11-29",
+      "nombre": "Domingo",
+      "grupo": "hackathon"
+    }
+  ],
+  "eventos": [
+    {
+      "fecha": "2026-11-24",
+      "inicio": 13,
+      "fin": 14,
+      "tipo": "talk",
+      "titulo": "Herramientas y recursos útiles a usar durante el hackathon (y tu carrera)",
+      "etiqueta": "Taller",
+      "detalle": "Arturo Sánchez · Recursos de cómputo"
+    },
+    {
+      "fecha": "2026-11-24",
+      "inicio": 14,
+      "fin": 15,
+      "tipo": "orient",
+      "titulo": "Código de conducta, Discord y dinámica del evento",
+      "etiqueta": "Orientación"
+    },
+    {
+      "fecha": "2026-11-25",
+      "inicio": 13,
+      "fin": 14,
+      "tipo": "pend",
+      "titulo": "Atlas",
+      "etiqueta": "Por definir"
+    },
+    {
+      "fecha": "2026-11-26",
+      "inicio": 19,
+      "fin": 20,
+      "tipo": "social",
+      "titulo": "Hora feliz previa al evento",
+      "etiqueta": "Social",
+      "detalle": "Speed dating · Discord"
+    },
+    {
+      "fecha": "2026-11-27",
+      "inicio": 9,
+      "fin": 11,
+      "tipo": "hack",
+      "titulo": "Bienvenida y presentación de retos",
+      "etiqueta": "Apertura",
+      "detalle": "Reina · Zoom"
+    },
+    {
+      "fecha": "2026-11-27",
+      "inicio": 11,
+      "fin": 13,
+      "tipo": "hack",
+      "titulo": "Creación de grupos y selección de reto",
+      "etiqueta": "Equipos"
+    },
+    {
+      "fecha": "2026-11-27",
+      "inicio": 14,
+      "fin": 15,
+      "tipo": "talk",
+      "titulo": "Responsive AI",
+      "etiqueta": "Charla · por definir",
+      "detalle": "Carlos Cámara"
+    },
+    {
+      "fecha": "2026-11-28",
+      "inicio": 8,
+      "fin": 9,
+      "tipo": "hack",
+      "titulo": "Debriefing, preguntas y anuncios"
+    },
+    {
+      "fecha": "2026-11-28",
+      "inicio": 11,
+      "fin": 12,
+      "tipo": "talk",
+      "titulo": "Riva · OLS",
+      "etiqueta": "Charla"
+    },
+    {
+      "fecha": "2026-11-28",
+      "inicio": 14,
+      "fin": 15,
+      "tipo": "talk",
+      "titulo": "Del laboratorio a la industria: hidrógeno, CO₂ y decisiones con datos",
+      "etiqueta": "Charla",
+      "detalle": "Dalia León Chaparro"
+    },
+    {
+      "fecha": "2026-11-28",
+      "inicio": 19,
+      "fin": 20,
+      "tipo": "hack",
+      "titulo": "Debriefing, preguntas y anuncios"
+    },
+    {
+      "fecha": "2026-11-29",
+      "inicio": 8,
+      "fin": 9,
+      "tipo": "hack",
+      "titulo": "Debriefing, preguntas y anuncios"
+    },
+    {
+      "fecha": "2026-11-29",
+      "inicio": 11,
+      "fin": 12,
+      "tipo": "dead",
+      "titulo": "Entrega de soluciones",
+      "etiqueta": "Entrega",
+      "detalle": "Hasta las 12:00"
+    },
+    {
+      "fecha": "2026-11-29",
+      "inicio": 13,
+      "fin": 15,
+      "tipo": "hack",
+      "titulo": "Presentación de las soluciones a los retos",
+      "etiqueta": "Presentaciones"
+    },
+    {
+      "fecha": "2026-11-29",
+      "inicio": 15,
+      "fin": 17,
+      "tipo": "hack",
+      "titulo": "Presentación de las soluciones a los retos",
+      "etiqueta": "Presentaciones"
+    },
+    {
+      "fecha": "2026-11-29",
+      "inicio": 17,
+      "fin": 18,
+      "tipo": "hack",
+      "titulo": "Anuncio de equipos ganadores",
+      "etiqueta": "Cierre"
+    },
+    {
+      "fecha": "2026-11-29",
+      "inicio": 18,
+      "fin": 19,
+      "tipo": "fin",
+      "titulo": "Fin"
+    }
+  ]
+}
