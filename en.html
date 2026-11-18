@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CoAfina — Latin American open data hackathon</title>
-<meta name="description" content="Propose a challenge, join as a hacker or support this edition. It all happens on Discord.">
+<meta name="description" content="Latin American open data hackathon: 27, 28 and 29 November 2026, online. Schedule, challenges and resources. It all happens on our Discord.">
 <meta property="og:title" content="CoAfina — Latin American open data hackathon">
-<meta property="og:description" content="Propose a challenge, join as a hacker or support this edition. It all happens on Discord.">
-<meta property="og:image" content="logo.png">
+<meta property="og:description" content="Latin American open data hackathon: 27, 28 and 29 November 2026, online. Schedule, challenges and resources. It all happens on our Discord.">
+<meta property="og:image" content="https://laa-hecap.github.io/coafina/logo.png">
+<meta property="og:url" content="https://laa-hecap.github.io/coafina/en.html">
 <meta property="og:type" content="website">
 <link rel="alternate" hreflang="es" href="index.html">
 <link rel="alternate" hreflang="en" href="en.html">
@@ -17,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#143642; --sea:#0F8B8D; --sun:#F2C14E; --paper:#FFFFFF; --mist:#E9EFF1; --line:#C9D6DA; --muted:#4A6572;
+  --ink:#143642; --sea:#0E8082; --sun:#F2C14E; --paper:#FFFFFF; --mist:#E9EFF1; --line:#C9D6DA; --muted:#4A6572;
   --discord:#5865F2;
   --display:"Bricolage Grotesque", system-ui, sans-serif;
   --body:"Source Sans 3", system-ui, sans-serif;
@@ -240,6 +241,7 @@ footer p{max-width:none;margin:0}
 .charla h3{font-size:1.45rem;margin:.25rem 0 .5rem}
 .charla p{margin:0;max-width:62ch;color:var(--muted)}
 .charla .charla-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sea)}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
@@ -301,17 +303,29 @@ footer p{max-width:none;margin:0}
 </section>
 
 <div class="doors" aria-label="Ways to take part">
-  <a class="door retadores" href="#participa">
+  <a class="door retadores" href="#participa" data-open="retos" hidden>
     <small>I have a problem to solve</small>
     <span class="h">Propose a challenge</span>
     <p>Organizations, research groups and professionals who want a team to tackle their problem using open data.</p>
     <span class="go">How to propose a challenge</span>
   </a>
-  <a class="door hackers" href="#participa">
+  <a class="door retadores" href="#retos" data-closed="retos">
+    <small>This edition's challenges</small>
+    <span class="h">Meet the challenges</span>
+    <p>Eleven challenges in science, education, heritage and civic technology, proposed by organisations in Latin America and Europe.</p>
+    <span class="go">See the challenges</span>
+  </a>
+  <a class="door hackers" href="#participa" data-open="hackers" hidden>
     <small>I am a student</small>
     <span class="h">Join as a hacker</span>
     <p>Undergraduate and graduate students from any discipline in Latin America. Work in a team, with mentoring, at no cost.</p>
     <span class="go">How to register</span>
+  </a>
+  <a class="door hackers" href="#cronograma" data-closed="hackers">
+    <small>I'm taking part</small>
+    <span class="h">Get ready for the hackathon</span>
+    <p>Check the schedule, choose your challenge and arrive with your tools ready on 27 November.</p>
+    <span class="go">See the schedule</span>
   </a>
   <a class="door patrocinadores" href="#participa">
     <small>I want to help</small>
@@ -320,6 +334,11 @@ footer p{max-width:none;margin:0}
     <span class="go">How to sponsor</span>
   </a>
 </div>
+
+<a class="banner" data-open="retos" hidden data-href="formChallenge" href="#" aria-label="Challenge call is open: deadline extended to October 31, 2026">
+  <p data-c="dl1Banner" style="margin:0;max-width:none;padding:1rem var(--gutter);color:#fff;font-weight:600">Challenge call is open · Deadline extended to October 31, 2026</p>
+  <img src="banner-retos-2026.jpg" alt="Original Spanish campaign artwork: submit a challenge, September 27 to October 23, 2026. Extended deadline shown above." loading="lazy">
+</a>
 
 <div class="discord" id="discord">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.4 2.2 15 15 0 0 0-15.2 0A18 18 0 0 1 8.8 3.4L8.6 3a19.8 19.8 0 0 0-4.9 1.5C.6 9 .1 13.4.3 17.8a20 20 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.3 14.3 0 0 0 11.8 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a20 20 0 0 0 6-3c.3-5-1-9.4-3.4-13.4ZM8.5 15.1c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
@@ -342,7 +361,8 @@ footer p{max-width:none;margin:0}
     <li><b>Hackathon</b>Three days online with mentoring, talks and virtual laboratory visits.<span class="when" data-c="dl4"></span></li>
     <li><b>Judging and prizes</b>A jury evaluates the solutions and teams receive prizes.<span class="when" data-c="dl5"></span></li>
   </ol>
-  <p class="note">Extended deadlines: challenges until <span data-c="challengeDeadline">October 31</span> and registration until <span data-c="hackerDeadline">November 14</span>. The campaign artwork retains the original deadlines and Spanish text.</p>
+  <p class="note" data-closed="alguna">The calls for the 2026 edition are now closed. The hackathon runs from 27 to 29 November.</p>
+  <p class="note" data-open="alguna" hidden>Extended deadlines: challenges until <span data-c="challengeDeadline">October 31</span> and registration until <span data-c="hackerDeadline">November 14</span>. The campaign artwork retains the original deadlines and Spanish text.</p>
   </div>
   <img class="fases" src="fases-2026.jpg" alt="Original Spanish schedule artwork. Updated deadlines: challenges October 31; students November 14; hackathon November 27–29, 2026." loading="lazy">
   </div>
@@ -353,14 +373,23 @@ footer p{max-width:none;margin:0}
     <div style="--c:var(--ink)">
       <h2>Challenge proposers</h2>
       <p>If you have open data, or an idea of how a dataset could advance science or education, propose a challenge. Your organization gains visibility among young talent across Latin America, receives different approaches to a solution and joins the jury for its challenge. Data must be openly accessible. Challenges are selected for relevance, impact, originality, technical feasibility and clarity. Proposers are expected to participate during the hackathon.</p>
-      <p class="note">The 2026 call for challenges is now closed. It will return for the 2027 edition.</p>
+      <div data-open="retos" hidden>
+        <a class="btn" data-href="formChallenge" href="#">Propose a challenge</a>
+        <p class="note" data-c="dl1Note"></p>
+        <p class="note">Unsure whether your idea would make a good challenge? Ask on Discord before filling in the form.</p>
+        <a data-href="formChallenge" href="#"><img class="pieza" src="llamado-retos-2026.jpg" alt="Open data + a problem = a challenge. Send us your idea!" loading="lazy"></a>
+      </div>
+      <p class="note" data-closed="retos">The 2026 call for challenges is now closed. It will return for the 2027 edition.</p>
     </div>
     <div style="--c:var(--sea)">
       <h2>Hackers</h2>
       <p>Open to enrolled university students living in Latin America, at undergraduate, master’s or doctoral level, in any discipline. You do not need a team beforehand: registration is individual and multidisciplinary teams form at the start of the event. A support fund is available for connectivity, expenses or other barriers to participation; apply through the same registration form. There will be prizes.</p>
-      <a class="btn" data-href="formHacker" href="#">Register</a>
-      <p class="note" data-c="dl3Note"></p>
-      <p class="note">You will be asked for proof of student status later.</p>
+      <div data-open="hackers" hidden>
+        <a class="btn" data-href="formHacker" href="#">Register</a>
+        <p class="note" data-c="dl3Note"></p>
+        <p class="note">You will be asked for proof of student status later.</p>
+      </div>
+      <p class="note" data-closed="hackers">Participant registration for 2026 is now closed. If you registered, check the <a href="#cronograma">schedule</a> and join Discord.</p>
       <p class="note">Recommended free tools: <a href="#recursos">resources for hackers</a>.</p>
     </div>
     <div style="--c:var(--sun)">
@@ -376,6 +405,10 @@ footer p{max-width:none;margin:0}
   <h2>2026 challenges</h2>
   <p class="retos-intro">Eleven challenges in science, education, heritage and civic technology, proposed by our team and organizations across Latin America and Europe. There is room for coders, researchers, designers, educators and people with local knowledge.</p>
   <div id="retos-list"><p class="note">Loading challenges…</p></div>
+  <div class="reto-cta" data-open="retos" hidden>
+    <p>Have a problem that open data could help solve?</p>
+    <a class="btn" data-href="formChallenge" href="#">Submit my challenge</a>
+  </div>
 </section>
 
 <dialog id="plano" aria-label="Challenge blueprint">
@@ -494,6 +527,7 @@ footer p{max-width:none;margin:0}
     let url = c.links[a.dataset.href] || '';
     if (url && url.includes('@') && !url.startsWith('mailto:')) url = 'mailto:' + url;
     if (url) { a.href = url; if (!url.startsWith('mailto:') && !url.startsWith('#')) { a.target = '_blank'; a.rel = 'noopener'; } }
+    else if (a.closest('.social')) { a.hidden = true; }
     else if (a.closest('.social')) { a.hidden = true; }
     else { a.setAttribute('aria-disabled','true'); a.title = 'Link ' + tbc; a.addEventListener('click', e => e.preventDefault()); }
   });
@@ -614,6 +648,16 @@ footer p{max-width:none;margin:0}
   const inicio = Date.UTC(2026, 10, 27), fin = Date.UTC(2026, 10, 29), d = Math.round((inicio - hoy) / 864e5);
   const t = d > 1 ? d + ' days to go' : d === 1 ? 'Starts tomorrow' : hoy <= fin ? 'Happening now · day ' + (1 - d) + ' of 3' : '';
   if (t) { el.textContent = t; el.hidden = false; }
+})();
+</script>
+<script>
+/* Convocatorias abiertas o cerradas: se leen de convocatorias.json (true = abierta). Sin ese archivo, se muestran cerradas. */
+(async function(){
+  let st = {retos:false, hackers:false};
+  try { const r = await fetch('convocatorias.json', {cache:'no-cache'}); if (r.ok) { const j = await r.json(); st = {retos: j.retos === true, hackers: j.hackers === true}; } } catch (e) {}
+  st.alguna = st.retos || st.hackers;
+  document.querySelectorAll('[data-open]').forEach(e => { e.hidden = !st[e.dataset.open]; });
+  document.querySelectorAll('[data-closed]').forEach(e => { e.hidden = !!st[e.dataset.closed]; });
 })();
 </script>
 </body>

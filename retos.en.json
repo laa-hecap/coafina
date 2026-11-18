@@ -82,9 +82,9 @@
   {
     "n": "03",
     "org": "CoAfina",
-    "titulo": "Open Archive: make Venezuelan historical documents searchable",
-    "resumen": "A scanned page preserves an image, but it is hard to search for names, compare facts or use with assistive reading tools. Years ago, Creative Commons Venezuela’s An Open Scanner imagined revisiting photographed documents once OCR improved. Now we propose to test that idea with a real item from Red Historia Venezuela, such as four pages of an 1845 issue of El Venezolano. In three days, the team runs OCR in GitHub Actions and builds a small searchable exhibit: image and reviewed text side by side, historical context, and a question a teacher or journalist could explore. Archivists, journalists, educators and designers make key decisions alongside developers. A public-domain Commons PDF lets teams start; republishing the archive’s images requires clarification of reuse rights.",
-    "entregable": "A searchable web exhibit with page image and text side by side, two human-reviewed pages, context and a citation to the original archive; plus a downloadable package with texts, metadata and a reproducible workflow.",
+    "titulo": "Open Archive: bring Venezuelan historical documents to life",
+    "resumen": "A scanned page preserves an image, but it is hard to search for names, compare facts or use with assistive reading tools. Years ago, Creative Commons Venezuela’s An Open Scanner imagined revisiting photographed documents once OCR improved. Today reading the text is the easy part: OCR does it in minutes. The challenge starts after that. With a real item from Red Historia Venezuela, such as four pages of an 1845 issue of El Venezolano, we want to see what teams imagine to bring that text to life: a story, a map, a timeline or a lesson. In three days, the team runs OCR in GitHub Actions, reviews the result and builds a small exhibit with image and reviewed text side by side, historical context and their own idea for telling the document’s story. Archivists, journalists, educators and designers make key decisions alongside developers. The archive’s images are licensed CC0; a public-domain PDF on Commons is also available.",
+    "entregable": "A searchable web exhibit with page image and text side by side, two human-reviewed pages, context and a citation to the original archive, and the team’s own idea for bringing the document to life; plus a downloadable package with texts, metadata and a reproducible workflow.",
     "perfiles": [
       "Archives and libraries",
       "Translation",
@@ -341,9 +341,9 @@
   {
     "n": "10",
     "org": "University of Salamanca",
-    "titulo": "Prepare for climate risks: one school, open data and a physical model",
-    "resumen": "Choose a school or community and a local question: where is heat hardest to bear, where might floodwater flow, or what surroundings should be watched during fires? Using a small ERA5 extract and local evidence, teams create a readable map, an explanation of what the data can and cannot show, and a simple physical model made from cardboard, 3D printing or accessible materials. The model supports a conversation about preparation and possible routes; it is not a forecast or an official risk assessment. Teachers, geographers and residents choose the question and check whether the message makes sense; designers and communicators shape the experience; technical members prepare maps and calculations. Photos or video can show the model at the final presentation.",
-    "entregable": "A profile of one school or community, reproducible analysis using real ERA5 data, a map and clear educational material, plus a documented physical model and its limits.",
+    "titulo": "Prepare for climate risks: one school, open data and a model",
+    "resumen": "Choose a school or community and a local question: where is heat hardest to bear, where might floodwater flow, or what surroundings should be watched during fires? Using a small ERA5 extract and local evidence, teams create a readable map, an explanation of what the data can and cannot show, and an interactive digital model, for example a 3D model explored on screen. The model supports a conversation about preparation and possible routes; it is not a forecast or an official risk assessment. Teachers, geographers and residents choose the question and check whether the message makes sense; designers and communicators shape the experience; technical members prepare maps and calculations. Because the hackathon is online, the model is presented digitally; teams may use it as a plan to build a physical one later with cardboard or 3D printing.",
+    "entregable": "A profile of one school or community, reproducible analysis using real ERA5 data, a map and clear educational material, plus a documented interactive digital model and its limits.",
     "perfiles": [
       "Education",
       "Geography and GIS",

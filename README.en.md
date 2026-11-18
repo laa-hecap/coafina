@@ -8,6 +8,7 @@ Tools and resources for hosting, analyzing, visualizing and sharing your project
 - [GitHub Pages](https://pages.github.com/): Website hosting for your GitHub repositories.
 - [Netlify](https://www.netlify.com/): Deploy modern web projects.
 - [GitLab](https://gitlab.com/): A DevOps platform for developers.
+- [Render](https://render.com/articles/should-i-use-render): Cloud platform to deploy apps, databases and static sites; this guide explains who it suits and its trade-offs.
 
 ## Interactive Computing and Notebooks
 - [Jupyter](https://jupyter.org/): Open-source software for interactive computing.
@@ -51,7 +52,6 @@ Tools and resources for hosting, analyzing, visualizing and sharing your project
 - [Hackathon LACONGA](https://laconga.redclara.net/hackathon-coc/): Collaboration and innovation in Latin America.
 - [Sites for Deploying Any Application](https://dev.to/joselatines/sites-to-deploy-any-application-paidfree-alternatives-3em8): Free and paid deployment options (Spanish).
 - [15 Free Hosting Options for Front-End Developers](https://blog.bitsrc.io/15-free-hosting-for-front-end-developers-9224bc34e14a): A guide to free hosting options.
-- [Should I Use Render?](https://render.com/articles/should-i-use-render): Render's own guide: who it suits, its trade-offs and how it compares with Railway, Fly.io, Vercel and Heroku.
 
 ## Documents and Collaboration
 - [Google Docs](https://www.google.com/docs/about/): Create, edit and share documents online.

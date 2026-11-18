@@ -12,6 +12,7 @@ Aquí encontrarás de todo: desde plataformas para alojar tu proyecto hasta herr
 - [GitHub Pages](https://pages.github.com/): Alojamiento gratuito para tus repos en GitHub.
 - [Netlify](https://www.netlify.com/): Despliega proyectos web modernos con facilidad.
 - [GitLab](https://gitlab.com/): Plataforma DevOps para desarrolladores.
+- [Render](https://render.com/articles/should-i-use-render): Nube para desplegar apps, bases de datos y sitios estáticos; esta guía explica para quién sirve y sus límites.
 
 ## 💻 Computación Interactiva y Notebooks
 - [Jupyter](https://jupyter.org/): App web de código abierto para computación interactiva.
@@ -55,7 +56,6 @@ Aquí encontrarás de todo: desde plataformas para alojar tu proyecto hasta herr
 - [Hackathon LACONGA](https://laconga.redclara.net/hackathon-coc/): Hackathon para colaboración e innovación en América Latina.
 - [Sitios para Desplegar Cualquier Aplicación](https://dev.to/joselatines/sites-to-deploy-any-application-paidfree-alternatives-3em8): Alternativas pagas y gratuitas para desplegar apps.
 - [15 Alojamientos Gratuitos para Desarrolladores Front-End](https://blog.bitsrc.io/15-free-hosting-for-front-end-developers-9224bc34e14a): Guía de opciones de hosting gratuito para desarrolladores front-end.
-- [¿Debería usar Render?](https://render.com/articles/should-i-use-render): Guía de la propia Render: para quién sirve, sus límites y cómo se compara con Railway, Fly.io, Vercel y Heroku.
 
 ## 📝 Documentos y Colaboración
 - [Google Docs](https://www.google.com/docs/about/): Herramienta para crear, editar y compartir documentos en línea.

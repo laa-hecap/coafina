@@ -31,3 +31,25 @@ Las piezas gráficas conservan los plazos originales. El aviso sobre el banner y
 `index.html` es la versión en español y `en.html` la versión en inglés. Ambas conservan el diseño original, con fondo marfil (`#FFFCF5`) y enlaces Español / English en la cabecera. Los textos de las piezas gráficas originales permanecen en español; los textos HTML y alternativos de la versión inglesa están traducidos.
 
 La versión inglesa carga `retos.en.json` y `README.en.md`; comparten las mismas imágenes, planos y destinos de los formularios. Al actualizar un reto, un enlace, una fecha o un recurso, actualiza ambas versiones. Las fechas de cada HTML usan cadenas del idioma correspondiente; no hay traducción automática ni cierre por reloj de la convocatoria de retos.
+
+## Convocatorias abiertas o cerradas
+
+El archivo `convocatorias.json` decide qué convocatorias se muestran abiertas, en español y en inglés a la vez:
+
+```json
+{ "retos": false, "hackers": false }
+```
+
+- `"retos": true` vuelve a mostrar la puerta «Propón un reto», el banner de la convocatoria, el botón «Proponer un reto» con su afiche y el botón «Enviar mi reto».
+- `"hackers": true` vuelve a mostrar la puerta «Participa como hacker» y el botón «Inscribirme» con sus notas.
+- Con `false`, cada puerta lleva a los retos o al cronograma, y las columnas muestran una nota de convocatoria cerrada.
+
+Al reabrir, actualiza también las fechas (`deadlines`) y los formularios (`links`) en el bloque de configuración de `index.html` y `en.html`. Los patrocinios están siempre abiertos y no dependen de este archivo.
+
+## Cronograma
+
+La sección «Cronograma» se dibuja desde `cronograma.json` (español) y `cronograma.en.json` (inglés): una cuadrícula semanal en pantallas anchas y una lista por día en móviles. Cada evento lleva `fecha`, `inicio` y `fin` (horas enteras en GMT-5), `tipo` (`hack`, `talk`, `orient`, `social`, `dead`, `pend` o `fin`), `titulo` y, si hace falta, `etiqueta` y `detalle`. Con `"preliminar": true` aparece el aviso de versión preliminar. `cronograma-2026.pdf` y `cronograma-2026.png` son copias fijas para descargar: hay que regenerarlas cuando cambie el cronograma.
+
+## Diapositivas del taller
+
+`charla-recursos.html` contiene las diapositivas del taller «Herramientas y recursos útiles para el hackathon (y tu carrera)». Se abre desde el bloque al final de «Recursos para hackers» y no aparece en el menú. Es una sola página: se avanza con las flechas, y al imprimirla se obtiene un PDF con una diapositiva por hoja.
