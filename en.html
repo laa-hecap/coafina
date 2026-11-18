@@ -52,11 +52,28 @@ nav.main .language[aria-current="page"]{background:var(--ink);color:#fff}
 .pill:hover{text-decoration:none!important;filter:brightness(1.1)}
 .pill svg{width:1.1em;height:1.1em;fill:currentColor}
 
-.tagline{display:flex;align-items:center;gap:clamp(1rem,3vw,3rem);padding:1.1rem var(--gutter);font-family:var(--display);font-size:clamp(1.05rem,1.9vw,1.35rem);font-weight:500;border-bottom:1px solid var(--line);color:var(--muted)}
-.tagline-text{flex:1}
-.tagline .equipo{width:clamp(150px,18vw,240px);height:auto;flex:none;display:block}
-@media (max-width:760px){.tagline{flex-direction:column;align-items:flex-start}.tagline .equipo{width:min(70%,260px);align-self:center}}
-.tagline strong{color:var(--ink);font-weight:600}
+.hero{display:flex;align-items:center;gap:clamp(1.5rem,5vw,5rem);padding:clamp(2rem,5vw,4.2rem) var(--gutter);border-bottom:1px solid var(--line);background:radial-gradient(circle at 86% 45%,#E6F3F1 0,rgba(230,243,241,0) 44%)}
+.hero-text{flex:1;min-width:0}
+.hero-eyebrow{font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin:0 0 .8rem;max-width:none}
+.hero h1{font-size:clamp(2.3rem,5.6vw,4.5rem);font-weight:800;line-height:1.02;letter-spacing:-.02em;max-width:15ch}
+.hero h1 span{background:linear-gradient(transparent 64%,var(--sun) 64%,var(--sun) 92%,transparent 92%)}
+.hero-lead{font-family:var(--display);font-size:clamp(1.1rem,1.9vw,1.45rem);font-weight:500;line-height:1.35;color:var(--muted);margin:1.1rem 0 0;max-width:34ch}
+.hero-when{display:flex;align-items:center;gap:.7rem 1.1rem;flex-wrap:wrap;margin-top:1.5rem}
+.hero-days{display:flex;gap:.45rem}
+.hero-days b{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1;padding:.32em .42em;border-radius:.5rem;display:inline-block}
+.hero-days b:nth-child(1){background:var(--ink);color:#fff;transform:rotate(-3deg)}
+.hero-days b:nth-child(2){background:var(--sea);color:#fff;transform:rotate(2deg)}
+.hero-days b:nth-child(3){background:var(--sun);color:var(--ink);transform:rotate(-1.5deg)}
+.hero-date{font-family:var(--display);font-weight:600;font-size:clamp(1.05rem,1.7vw,1.35rem);margin:0;max-width:none;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.hero-count{font-family:var(--body);font-size:.85rem;font-weight:700;color:var(--sea);box-shadow:inset 0 0 0 1.5px var(--sea);padding:.3rem .75rem;border-radius:999px;white-space:nowrap}
+.hero-count[hidden]{display:none}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.6rem 0 0;max-width:none}
+.hero .btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.hero .btn.alt:hover{background:var(--ink);color:#fff}
+.hero-note{font-size:.93rem;color:var(--muted);margin:1.4rem 0 0;max-width:62ch}
+.hero .equipo{width:clamp(190px,27vw,380px);height:auto;flex:none;display:block}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:760px){.hero{flex-direction:column;align-items:flex-start;background:none}.hero .equipo{width:min(72%,280px);align-self:center}}
 
 /* Tres puertas */
 .doors{display:grid;grid-template-columns:repeat(3,1fr);min-height:min(68vh,620px)}
@@ -217,6 +234,12 @@ footer p{max-width:none;margin:0}
 .crono-legend i.ev{display:inline-block;width:.9rem;height:.9rem;border-radius:.25rem;margin:0;padding:0}
 .crono-img img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:.6rem}
 @media (max-width:900px){.crono-grid{display:none}.crono-list{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}}
+
+/* Charla enlazada desde Recursos */
+.charla{display:flex;justify-content:space-between;align-items:center;gap:1.2rem 2rem;flex-wrap:wrap;margin-top:2.2rem;padding:1.4rem 1.6rem;background:#fff;border:1px solid var(--line);border-radius:.8rem}
+.charla h3{font-size:1.45rem;margin:.25rem 0 .5rem}
+.charla p{margin:0;max-width:62ch;color:var(--muted)}
+.charla .charla-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sea)}
 </style>
 </head>
 <body>
@@ -239,12 +262,24 @@ footer p{max-width:none;margin:0}
   </nav>
 </header>
 
-<div class="tagline"><div class="tagline-text"><strong>Latin American open data hackathon.</strong> Three days online to turn open data into scientific and educational solutions. <span data-c="datesLong"></span><br><span style="font-weight:400;font-size:.9em">This is CoAfina’s action page: how to take part and where to find us. Full details about this edition are on the <a data-href="website" href="#">official CoAfina website</a>.</span></div>
+<div class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Fifth edition · Online · Free of charge</p>
+    <h1>Latin American <span>open data</span> hackathon</h1>
+    <p class="hero-lead">Three days to turn open data into scientific and educational solutions.</p>
+    <div class="hero-when">
+      <div class="hero-days" aria-hidden="true"><b>27</b><b>28</b><b>29</b></div>
+      <p class="hero-date"><span><span class="vh">27, 28 and 29 </span>November 2026</span><span class="hero-count" id="hero-count" hidden></span></p>
+    </div>
+    <p class="hero-cta"><a class="btn" href="#cronograma">See the schedule</a><a class="btn alt" href="#retos">See the challenges</a></p>
+    <p class="hero-note">This is CoAfina’s action page: how to take part and where to find us. Full details about this edition are on the <a data-href="website" href="#">official CoAfina website</a>.</p>
+  </div>
   <video class="equipo" autoplay muted loop playsinline poster="hackathon-2026.png" aria-label="Hackathon 2026: CoAfina’s five characters">
     <source src="hackathon-2026.webm" type="video/webm">
     <source src="hackathon-2026.mp4" type="video/mp4">
     <img src="hackathon-2026.png" alt="Hackathon 2026: CoAfina’s five characters">
-  </video></div>
+  </video>
+</div>
 
 <section class="crono" id="cronograma" aria-labelledby="crono-h">
   <div class="crono-head">
@@ -353,6 +388,14 @@ footer p{max-width:none;margin:0}
   <p class="res-intro">Free or open-source tools to host, analyze, visualize and deploy your solution during the hackathon. The list is maintained in <a href="https://github.com/laa-hecap/coafina/blob/main/README.en.md">this repository’s README</a>; edits there appear here.</p>
   <div class="res" id="res-grid"><p class="note">Loading resources…</p></div>
   <p class="res-foot">Missing a tool? Open a <em>pull request</em> in the repository or suggest it on Discord.</p>
+  <div class="charla">
+    <div>
+      <p class="charla-eyebrow">Workshop · Tuesday 24 November</p>
+      <h3>Useful tools and resources for the hackathon (and your career)</h3>
+      <p>A tour of thirteen toolboxes to plan, code, analyse, publish and tell the story of your project. Presented by Arturo Sánchez Pineda. The slides are in Spanish.</p>
+    </div>
+    <a class="btn" href="charla-recursos.html">View the slides</a>
+  </div>
 </section>
 
 <section class="wrap" id="redes">
@@ -561,6 +604,16 @@ footer p{max-width:none;margin:0}
     list.style.cssText = 'position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal';
     list.innerHTML = '<a class="crono-img" href="cronograma-2026.png"><img src="cronograma-2026.png" alt="CoAfina 2026 hackathon schedule, week of 23 to 29 November (in Spanish)" loading="lazy"></a>';
   }
+})();
+</script>
+<script>
+/* Cuenta regresiva del encabezado (fechas en GMT-5) */
+(function(){
+  const el = document.getElementById('hero-count'); if (!el) return;
+  const n = new Date(Date.now() - 5*3600e3), hoy = Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate());
+  const inicio = Date.UTC(2026, 10, 27), fin = Date.UTC(2026, 10, 29), d = Math.round((inicio - hoy) / 864e5);
+  const t = d > 1 ? d + ' days to go' : d === 1 ? 'Starts tomorrow' : hoy <= fin ? 'Happening now · day ' + (1 - d) + ' of 3' : '';
+  if (t) { el.textContent = t; el.hidden = false; }
 })();
 </script>
 </body>

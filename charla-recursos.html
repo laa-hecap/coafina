@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herramientas y recursos útiles para el hackathon (y tu carrera) · CoAfina 2026</title>
+<meta name="description" content="Diapositivas del taller de Arturo Sánchez Pineda para el hackathon CoAfina 2026: trece cajas de herramientas para trabajar con datos abiertos.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#143642;--sea:#0F8B8D;--sun:#F2C14E;--coral:#C7462C;--cream:#FFFCF5;--mist:#E9EFF1;--line:#C9D6DA;--muted:#4A6572;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);overflow:hidden;line-height:1.45}
+a{color:var(--sea)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.deck{height:100vh;height:100dvh;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.deck::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}}
+.slide{flex:0 0 100vw;height:100%;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto;display:flex;flex-direction:column;justify-content:center;gap:clamp(.6rem,1.4vw,1.2rem);
+  padding:clamp(1.4rem,4vw,4rem) clamp(1.3rem,6vw,6.5rem) clamp(4.8rem,7vw,6rem);background:var(--cream)}
+.slide.dark{background:var(--ink);color:var(--cream)}
+h1,h2{font-family:var(--display);font-weight:800;line-height:1.03;letter-spacing:-.015em;margin:0}
+h1{font-size:clamp(2.2rem,6.2vw,5.4rem)}
+h1 span{font-weight:300}
+h2{font-size:clamp(1.8rem,4.3vw,3.5rem)}
+p{margin:0}
+.eyebrow{font-size:clamp(.82rem,1.15vw,1.05rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);display:flex;align-items:center;gap:.7rem}
+.dark .eyebrow{color:var(--sun)}
+.lead{font-size:clamp(1.08rem,1.85vw,1.6rem);line-height:1.38;color:var(--muted);max-width:44ch}
+.dark .lead{color:#D5E4E6}
+.dark .lead b{color:var(--cream)}
+.aside{font-size:clamp(.95rem,1.3vw,1.15rem);color:var(--sea);font-weight:600}
+.narrow{display:flex;flex-direction:column;gap:clamp(.8rem,1.6vw,1.4rem);max-width:60rem}
+.narrow .lead{max-width:52ch}
+/* portada */
+.cover{flex-direction:row;align-items:center;gap:clamp(1rem,4vw,4rem)}
+.cover-text{flex:1;display:flex;flex-direction:column;gap:clamp(.8rem,1.6vw,1.4rem)}
+.cover .logo{height:clamp(2.6rem,5vw,4.4rem);width:auto;align-self:flex-start}
+.cover .who{font-size:clamp(1.05rem,1.7vw,1.5rem);color:var(--muted)}
+.cover .who b{color:var(--ink)}
+.cover .hint{font-size:clamp(.85rem,1.05vw,1rem);color:var(--muted)}
+.cover .sticker{width:clamp(180px,30vw,460px);height:auto;flex:none}
+/* índice */
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:clamp(.5rem,1vw,.9rem);margin-top:clamp(.4rem,1vw,1rem)}
+.chip{display:flex;align-items:center;gap:.8rem;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:.65rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;font-size:clamp(.95rem,1.25vw,1.15rem);line-height:1.2}
+.chip:hover{border-color:var(--sea)}
+.chip b,.num{flex:none;display:inline-grid;place-items:center;width:2.1em;height:2.1em;border-radius:50%;font-family:var(--display);font-weight:800}
+.sea b,.num.sea{background:var(--sea);color:#fff}
+.coral b,.num.coral{background:var(--coral);color:#fff}
+.sun b,.num.sun{background:var(--sun);color:var(--ink)}
+.ink b,.num.ink{background:var(--ink);color:var(--cream)}
+.num{font-size:1.15em;letter-spacing:0}
+/* paradas */
+.cat{flex-direction:row;align-items:center;gap:clamp(1.2rem,4vw,4.5rem)}
+.cat-text{flex:5;display:flex;flex-direction:column;gap:clamp(.7rem,1.4vw,1.3rem);min-width:0}
+.tools{flex:6;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:clamp(.45rem,.9vw,.8rem);min-width:0}
+.tools.many,.tools.two{grid-template-columns:1fr 1fr}
+.tool{display:flex;flex-direction:column;gap:.1rem;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:clamp(.55rem,1vw,.9rem) clamp(.8rem,1.3vw,1.2rem);text-decoration:none;color:var(--ink);height:100%}
+.tool:hover{border-color:var(--sea);box-shadow:0 2px 0 var(--sea)}
+.tool b{font-size:clamp(1rem,1.5vw,1.35rem);font-weight:600;line-height:1.2}
+.tool span{font-size:clamp(.8rem,1vw,.95rem);color:var(--muted);overflow-wrap:anywhere}
+/* botones */
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:.4rem;font-size:clamp(.95rem,1.2vw,1.1rem)}
+.btn:hover{background:var(--sea)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.discord{background:#5865F2}
+.btn.light{background:var(--sun);color:var(--ink)}
+.btn.ghost.light{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream)}
+/* cierre */
+.end{flex-direction:row;align-items:center;gap:clamp(1rem,4vw,4rem)}
+.end-text{flex:1;display:flex;flex-direction:column;gap:clamp(.8rem,1.6vw,1.4rem)}
+.qr{flex:none;background:#fff;border-radius:1.2rem;padding:clamp(.9rem,1.8vw,1.6rem);display:flex;flex-direction:column;align-items:center;gap:.6rem;color:var(--ink);font-weight:600;font-size:clamp(.85rem,1.1vw,1rem)}
+.qr img{width:clamp(140px,19vw,260px);height:auto;display:block}
+/* barra de navegación */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:center;gap:1rem;padding:.55rem clamp(1rem,3vw,2.5rem);background:rgba(255,252,245,.94);border-top:1px solid var(--line);font-size:.92rem}
+.bar a{color:var(--ink);font-weight:600;text-decoration:none;white-space:nowrap}
+.bar a:hover{text-decoration:underline}
+.prog{flex:1;height:4px;background:var(--mist);border-radius:2px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--sea);transition:width .25s}
+.count{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.bar button{font:inherit;font-weight:700;width:2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.bar button:hover:not(:disabled){border-color:var(--sea);color:var(--sea)}
+.bar button:disabled{opacity:.35;cursor:default}
+@media (max-width:820px){
+  .cover,.cat,.end{flex-direction:column;align-items:flex-start;justify-content:flex-start}
+  .slide{justify-content:flex-start}
+  .cover-text,.end-text{flex:none}
+  .cover .sticker{width:min(60%,240px);align-self:center}
+  .tools,.cat-text{flex:none;width:100%}
+  .tools.many{grid-template-columns:1fr 1fr}
+  .qr{align-self:center}
+  .bar .back span{display:none}
+}
+@media (max-width:480px){.tools.many,.tools.two{grid-template-columns:1fr}}
+@media print{
+  @page{size:landscape;margin:0}
+  body{overflow:visible}
+  .deck{display:block;height:auto;overflow:visible}
+  .slide{width:100%;height:100vh;break-after:page;page-break-after:always;overflow:hidden}
+  .bar{display:none}
+  .dark,.num,.chip b,.btn{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<main class="deck" id="deck">
+<section class="slide cover" aria-label="Portada">
+  <div class="cover-text">
+    <img class="logo" src="logo.png" alt="CoAfina, datos abiertos en América Latina">
+    <p class="eyebrow">Taller · Hackathon CoAfina 2026</p>
+    <h1>Herramientas y recursos útiles para el hackathon <span>(y tu carrera)</span></h1>
+    <p class="who"><b>Arturo Sánchez Pineda</b><br>Martes 24 de noviembre de 2026 · 13:00 (GMT-5)</p>
+    <p class="hint">Avanza con las flechas ← → del teclado, con los botones de abajo o deslizando.</p>
+  </div>
+  <img class="sticker" src="hackathon-2026.png" alt="Hackathon 2026: los cinco personajes de CoAfina">
+</section>
+<section class="slide" aria-label="Declinación de responsabilidad">
+  <div class="narrow">
+    <p class="eyebrow">Antes de empezar</p>
+    <h2>Declinación de responsabilidad</h2>
+    <p class="lead">Las opiniones y adjetivos presentados en estas láminas se deben atribuir solo a mi persona y no a ninguna institución a la que haya estado o aún esté asociado, y tampoco representan opiniones de las mismas.</p>
+    <p class="lead"><a href="https://www.linkedin.com/in/arturo-sanchez-pineda/" target="_blank" rel="noopener">Arturo Sánchez Pineda · linkedin.com/in/arturo-sanchez-pineda</a></p>
+  </div>
+</section>
+<section class="slide dark" aria-label="Qué queremos hacer hoy">
+  <div class="narrow">
+    <p class="eyebrow">El plan</p>
+    <h2>¿Qué queremos hacer hoy?</h2>
+    <p class="lead">Vamos a dar un paseo en línea por una serie de herramientas, algunas súper bien conocidas y otras un poco menos.</p>
+    <p class="lead">La idea es que tantas personas como sea posible tengan una caja de herramientas lo suficientemente amplia para trabajar durante el hackathon y, en general, para sus estudios o su trabajo.</p>
+  </div>
+</section>
+<section class="slide" aria-label="El paseo: trece paradas">
+  <p class="eyebrow">El paseo</p>
+  <h2>Trece paradas</h2>
+  <div class="chips"><a class="chip sea" href="#5"><b>1</b><span>Ideación y colaboración</span></a><a class="chip coral" href="#6"><b>2</b><span>Código, versionamiento y documentación</span></a><a class="chip sun" href="#7"><b>3</b><span>Entornos reproducibles de notebooks</span></a><a class="chip ink" href="#8"><b>4</b><span>Datos abiertos y APIs sencillas</span></a><a class="chip sea" href="#9"><b>5</b><span>Wikidata y Wikimedia</span></a><a class="chip coral" href="#10"><b>6</b><span>Visualización y prototipado sin ser dev web</span></a><a class="chip sun" href="#11"><b>7</b><span>Diseño, multimedia y 3D</span></a><a class="chip ink" href="#12"><b>8</b><span>Publicación, trazabilidad y licencias</span></a><a class="chip sea" href="#13"><b>9</b><span>Automatización CI/CD y contenedores</span></a><a class="chip coral" href="#14"><b>10</b><span>OCR y digitalización</span></a><a class="chip sun" href="#15"><b>11</b><span>Google y LLMs</span></a><a class="chip ink" href="#16"><b>12</b><span>Blogs y difusión</span></a><a class="chip sea" href="#17"><b>13</b><span>Limpieza y validación de datos</span></a></div>
+</section>
+<section class="slide cat" aria-label="Parada 1: Ideación y colaboración">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sea">1</span> Parada 1 de 13</p>
+    <h2>Ideación y colaboración</h2>
+    <p class="lead">Herramientas para definir el proyecto en equipo. Escritura de documentos (Google Docs), la creación de diagramas de flujo (Diagrams.net) y el diseño colaborativo de la interfaz de usuario (Penpot, FigJam).</p><p class="aside">Claro está, hay opciones de código abierto…</p>
+  </div>
+  <ul class="tools many"><li><a class="tool" href="https://docs.google.com/" target="_blank" rel="noopener"><b>Google Docs</b><span>docs.google.com ↗</span></a></li><li><a class="tool" href="https://sheets.google.com/" target="_blank" rel="noopener"><b>Google Sheets</b><span>sheets.google.com ↗</span></a></li><li><a class="tool" href="https://docs.google.com/presentation/" target="_blank" rel="noopener"><b>Google Slides</b><span>docs.google.com ↗</span></a></li><li><a class="tool" href="https://sites.google.com/" target="_blank" rel="noopener"><b>Google Sites</b><span>sites.google.com ↗</span></a></li><li><a class="tool" href="https://app.diagrams.net/" target="_blank" rel="noopener"><b>Diagrams.net (draw.io)</b><span>app.diagrams.net ↗</span></a></li><li><a class="tool" href="https://excalidraw.com/" target="_blank" rel="noopener"><b>Excalidraw</b><span>excalidraw.com ↗</span></a></li><li><a class="tool" href="https://www.figma.com/figjam/" target="_blank" rel="noopener"><b>FigJam</b><span>figma.com ↗</span></a></li><li><a class="tool" href="https://penpot.app/" target="_blank" rel="noopener"><b>Penpot (código abierto)</b><span>penpot.app ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams" target="_blank" rel="noopener"><b>Mermaid en GitHub</b><span>docs.github.com ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 2: Código, versionamiento y documentación">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num coral">2</span> Parada 2 de 13</p>
+    <h2>Código, versionamiento y documentación</h2>
+    <p class="lead">El núcleo técnico del proyecto. Usa GitHub para guardar el código y controlar sus cambios, Markdown para documentarlo, y GitHub Pages y Actions para publicarlo y automatizar tareas.</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://github.com/" target="_blank" rel="noopener"><b>GitHub</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://docs.gitlab.com/" target="_blank" rel="noopener"><b>GitLab Docs</b><span>docs.gitlab.com ↗</span></a></li><li><a class="tool" href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noopener"><b>Markdown Guide</b><span>markdownguide.org ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/pages" target="_blank" rel="noopener"><b>GitHub Pages</b><span>docs.github.com ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/actions" target="_blank" rel="noopener"><b>GitHub Actions</b><span>docs.github.com ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 3: Entornos reproducibles de notebooks">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sun">3</span> Parada 3 de 13</p>
+    <h2>Entornos reproducibles de notebooks</h2>
+    <p class="lead">El laboratorio de análisis de datos. Incluye notebooks en la nube (Colab), entornos de desarrollo completos (Codespaces) y herramientas (MyBinder) para garantizar la reproducibilidad del análisis.</p>
+  </div>
+  <ul class="tools many"><li><a class="tool" href="https://colab.research.google.com/" target="_blank" rel="noopener"><b>Google Colab</b><span>colab.research.google.com ↗</span></a></li><li><a class="tool" href="https://jupyter.org/" target="_blank" rel="noopener"><b>Jupyter</b><span>jupyter.org ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/codespaces" target="_blank" rel="noopener"><b>GitHub Codespaces</b><span>docs.github.com ↗</span></a></li><li><a class="tool" href="https://mybinder.org/" target="_blank" rel="noopener"><b>MyBinder</b><span>mybinder.org ↗</span></a></li><li><a class="tool" href="https://nbviewer.org/" target="_blank" rel="noopener"><b>nbviewer</b><span>nbviewer.org ↗</span></a></li><li><a class="tool" href="https://jupyter.org/try" target="_blank" rel="noopener"><b>JupyterLite</b><span>jupyter.org ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 4: Datos abiertos y APIs sencillas">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num ink">4</span> Parada 4 de 13</p>
+    <h2>Datos abiertos y APIs sencillas</h2>
+    <p class="lead">Fuentes de datos listas para consumir. APIs para obtener indicadores socioeconómicos (World Bank), datos geoespaciales (OSM) y datos cívicos de portales de gobierno (México, Chile, Colombia).</p>
+  </div>
+  <ul class="tools many"><li><a class="tool" href="https://data.worldbank.org/developers" target="_blank" rel="noopener"><b>World Bank API</b><span>data.worldbank.org ↗</span></a></li><li><a class="tool" href="https://dev.overpass-api.de/overpass-doc/en/" target="_blank" rel="noopener"><b>Overpass (OSM)</b><span>dev.overpass-api.de ↗</span></a></li><li><a class="tool" href="https://api.nasa.gov/" target="_blank" rel="noopener"><b>NASA APIs</b><span>api.nasa.gov ↗</span></a></li><li><a class="tool" href="https://openweathermap.org/api" target="_blank" rel="noopener"><b>OpenWeather API</b><span>openweathermap.org ↗</span></a></li><li><a class="tool" href="https://datos.gob.mx/" target="_blank" rel="noopener"><b>Datos Abiertos México</b><span>datos.gob.mx ↗</span></a></li><li><a class="tool" href="https://datos.gob.cl/" target="_blank" rel="noopener"><b>Datos Abiertos Chile</b><span>datos.gob.cl ↗</span></a></li><li><a class="tool" href="https://datos.gov.co/" target="_blank" rel="noopener"><b>Datos Abiertos Colombia</b><span>datos.gov.co ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 5: Wikidata y Wikimedia">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sea">5</span> Parada 5 de 13</p>
+    <h2>Wikidata y Wikimedia</h2>
+    <p class="lead">Acceso a la base de conocimiento estructurada más grande del mundo. Usa SPARQL (Wikidata) para datos relacionales complejos y la API de Commons para obtener imágenes y medios libres.</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://query.wikidata.org/" target="_blank" rel="noopener"><b>Wikidata Query Service</b><span>query.wikidata.org ↗</span></a></li><li><a class="tool" href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank" rel="noopener"><b>MediaWiki API</b><span>mediawiki.org ↗</span></a></li><li><a class="tool" href="https://www.mediawiki.org/wiki/API:Imageinfo" target="_blank" rel="noopener"><b>Commons (imageinfo)</b><span>mediawiki.org ↗</span></a></li><li><a class="tool" href="https://commons.wikimedia.org/" target="_blank" rel="noopener"><b>Wikimedia Commons</b><span>commons.wikimedia.org ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 6: Visualización y prototipado sin ser dev web">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num coral">6</span> Parada 6 de 13</p>
+    <h2>Visualización y prototipado sin ser dev web</h2>
+    <p class="lead">Herramientas para crear aplicaciones web interactivas rápidamente. Convierte scripts de Python en dashboards (Streamlit) o crea mapas personalizados y reportes (uMap, Looker Studio).</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://docs.streamlit.io/get-started" target="_blank" rel="noopener"><b>Streamlit</b><span>docs.streamlit.io ↗</span></a></li><li><a class="tool" href="https://docs.streamlit.io/get-started/installation/community-cloud" target="_blank" rel="noopener"><b>Streamlit: ejemplo con Codespaces</b><span>docs.streamlit.io ↗</span></a></li><li><a class="tool" href="https://umap.openstreetmap.fr/en/" target="_blank" rel="noopener"><b>uMap (OSM)</b><span>umap.openstreetmap.fr ↗</span></a></li><li><a class="tool" href="https://cloud.google.com/looker-studio" target="_blank" rel="noopener"><b>Looker Studio</b><span>cloud.google.com ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 7: Diseño, multimedia y 3D">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sun">7</span> Parada 7 de 13</p>
+    <h2>Diseño, multimedia y 3D</h2>
+    <p class="lead">El stack creativo de código abierto. Incluye diseño 3D y renders (Blender), grabación de la demo (OBS Studio) y diseño gráfico vectorial o ráster (Inkscape, GIMP, Krita).</p>
+  </div>
+  <ul class="tools many"><li><a class="tool" href="https://penpot.app/" target="_blank" rel="noopener"><b>Penpot</b><span>penpot.app ↗</span></a></li><li><a class="tool" href="https://www.blender.org/download/" target="_blank" rel="noopener"><b>Blender</b><span>blender.org ↗</span></a></li><li><a class="tool" href="https://obsproject.com/" target="_blank" rel="noopener"><b>OBS Studio</b><span>obsproject.com ↗</span></a></li><li><a class="tool" href="https://inkscape.org/" target="_blank" rel="noopener"><b>Inkscape</b><span>inkscape.org ↗</span></a></li><li><a class="tool" href="https://www.gimp.org/" target="_blank" rel="noopener"><b>GIMP</b><span>gimp.org ↗</span></a></li><li><a class="tool" href="https://krita.org/" target="_blank" rel="noopener"><b>Krita</b><span>krita.org ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 8: Publicación, trazabilidad y licencias">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num ink">8</span> Parada 8 de 13</p>
+    <h2>Publicación, trazabilidad y licencias</h2>
+    <p class="lead">El módulo de ciencia abierta. Asegura el crédito de autor (ORCID), obtiene un DOI citable (Zenodo) y aplica la licencia legal correcta (Creative Commons, ODbL).</p>
+  </div>
+  <ul class="tools many"><li><a class="tool" href="https://help.zenodo.org/docs/github/enable-repository/" target="_blank" rel="noopener"><b>Zenodo ↔ GitHub</b><span>help.zenodo.org ↗</span></a></li><li><a class="tool" href="https://zenodo.org/" target="_blank" rel="noopener"><b>Zenodo</b><span>zenodo.org ↗</span></a></li><li><a class="tool" href="https://orcid.org/register" target="_blank" rel="noopener"><b>ORCID (registro)</b><span>orcid.org ↗</span></a></li><li><a class="tool" href="https://chooser-beta.creativecommons.org/" target="_blank" rel="noopener"><b>Creative Commons Chooser</b><span>chooser-beta.creativecommons.org ↗</span></a></li><li><a class="tool" href="https://opendatacommons.org/licenses/" target="_blank" rel="noopener"><b>Open Data Commons (ODbL, ODC-BY, PDDL)</b><span>opendatacommons.org ↗</span></a></li><li><a class="tool" href="https://citation-file-format.github.io/" target="_blank" rel="noopener"><b>CITATION.cff</b><span>citation-file-format.github.io ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 9: Automatización CI/CD y contenedores">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sea">9</span> Parada 9 de 13</p>
+    <h2>Automatización CI/CD y contenedores</h2>
+    <p class="lead">Prácticas avanzadas de DevOps. Usa GitHub Actions para automatizar pruebas y despliegues, y Docker o Podman para empaquetar la aplicación y garantizar que funcione en cualquier lugar.</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://docs.github.com/en/actions" target="_blank" rel="noopener"><b>GitHub Actions</b><span>docs.github.com ↗</span></a></li><li><a class="tool" href="https://github.com/actions/upload-pages-artifact" target="_blank" rel="noopener"><b>upload-pages-artifact</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://github.com/actions/deploy-pages" target="_blank" rel="noopener"><b>deploy-pages</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"><b>Docker: primeros pasos</b><span>docs.docker.com ↗</span></a></li><li><a class="tool" href="https://podman.io/docs/" target="_blank" rel="noopener"><b>Podman Docs</b><span>podman.io ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 10: OCR y digitalización">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num coral">10</span> Parada 10 de 13</p>
+    <h2>OCR y digitalización</h2>
+    <p class="lead">Digitalización de datos no estructurados. Utiliza Tesseract (OCR) y pytesseract para extraer texto de imágenes o PDF escaneados y convertirlos en datos analizables.</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener"><b>Tesseract OCR</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://pypi.org/project/pytesseract/" target="_blank" rel="noopener"><b>pytesseract</b><span>pypi.org ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 11: Google y LLMs">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sun">11</span> Parada 11 de 13</p>
+    <h2>Google y LLMs</h2>
+    <p class="lead">Uso de IA generativa como copiloto. Incluye la API de Gemini (AI Studio) para asistir en el código o el análisis, y NotebookLM para consultar sobre tus propios documentos.</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://ai.google.dev/aistudio" target="_blank" rel="noopener"><b>Google AI Studio (Gemini)</b><span>ai.google.dev ↗</span></a></li><li><a class="tool" href="https://ai.google.dev/api" target="_blank" rel="noopener"><b>Gemini API Reference</b><span>ai.google.dev ↗</span></a></li><li><a class="tool" href="https://notebooklm.google/" target="_blank" rel="noopener"><b>NotebookLM</b><span>notebooklm.google ↗</span></a></li><li><a class="tool" href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener"><b>Colab (introducción)</b><span>colab.research.google.com ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 12: Blogs y difusión">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num ink">12</span> Parada 12 de 13</p>
+    <h2>Blogs y difusión</h2>
+    <p class="lead">Plataformas para contar la historia de tu proyecto. Incluye generadores de sitios estáticos para documentación (MkDocs, Quarto) y plataformas de blogging (Ghost, Blogger).</p>
+  </div>
+  <ul class="tools many"><li><a class="tool" href="https://jekyllrb.com/docs/github-pages/" target="_blank" rel="noopener"><b>Jekyll + GitHub Pages</b><span>jekyllrb.com ↗</span></a></li><li><a class="tool" href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener"><b>Hugo (inicio rápido)</b><span>gohugo.io ↗</span></a></li><li><a class="tool" href="https://www.mkdocs.org/" target="_blank" rel="noopener"><b>MkDocs</b><span>mkdocs.org ↗</span></a></li><li><a class="tool" href="https://quarto.org/" target="_blank" rel="noopener"><b>Quarto</b><span>quarto.org ↗</span></a></li><li><a class="tool" href="https://ghost.org/" target="_blank" rel="noopener"><b>Ghost</b><span>ghost.org ↗</span></a></li><li><a class="tool" href="https://wordpress.com/" target="_blank" rel="noopener"><b>WordPress</b><span>wordpress.com ↗</span></a></li><li><a class="tool" href="https://www.blogger.com/" target="_blank" rel="noopener"><b>Blogger</b><span>blogger.com ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 13: Limpieza y validación de datos">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sea">13</span> Parada 13 de 13</p>
+    <h2>Limpieza y validación de datos</h2>
+    <p class="lead">Herramientas para asegurar la calidad de los datos. Incluye limpieza interactiva de datos «sucios» (OpenRefine) y validación de la estructura (Frictionless Data).</p>
+  </div>
+  <ul class="tools"><li><a class="tool" href="https://openrefine.org/" target="_blank" rel="noopener"><b>OpenRefine</b><span>openrefine.org ↗</span></a></li><li><a class="tool" href="https://csvkit.readthedocs.io/" target="_blank" rel="noopener"><b>csvkit</b><span>csvkit.readthedocs.io ↗</span></a></li><li><a class="tool" href="https://framework.frictionlessdata.io/" target="_blank" rel="noopener"><b>Frictionless Data</b><span>framework.frictionlessdata.io ↗</span></a></li></ul>
+</section>
+<section class="slide" aria-label="Más recursos en el sitio">
+  <div class="narrow">
+    <p class="eyebrow">Y hay más</p>
+    <h2>La lista sigue en el sitio de CoAfina</h2>
+    <p class="lead">En la página del hackathon hay más herramientas gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución. La lista vive en el README del repositorio.</p>
+    <p class="lead">¿Falta una herramienta? Abre un <em>pull request</em> o propónla en Discord.</p>
+    <p class="btns"><a class="btn" href="index.html#recursos">Ver los recursos del sitio</a><a class="btn ghost" href="https://github.com/laa-hecap/coafina/blob/main/README.md" target="_blank" rel="noopener">README en GitHub ↗</a></p>
+  </div>
+</section>
+<section class="slide" aria-label="Espacios de comunicación">
+  <div class="narrow">
+    <p class="eyebrow">Dónde nos encontramos</p>
+    <h2>Espacios de comunicación y feedback: Discord y Zoom</h2>
+    <p class="lead">Si es tu primera vez usando Discord o Zoom, mira estos tutoriales cortos:</p>
+    <ul class="tools two">
+      <li><a class="tool" href="https://www.youtube.com/watch?v=kcDqvS6-fEM" target="_blank" rel="noopener"><b>Tutorial 1</b><span>youtube.com ↗</span></a></li>
+      <li><a class="tool" href="https://youtu.be/3Urm0c6Wy_4" target="_blank" rel="noopener"><b>Tutorial 2</b><span>youtu.be ↗</span></a></li>
+    </ul>
+    <p class="lead">¿Ya te uniste al Discord? ¡Es súper importante!</p>
+    <p class="btns"><a class="btn discord" href="https://discord.gg/yWhUUvrhpj" target="_blank" rel="noopener">Entrar al Discord de CoAfina ↗</a></p>
+  </div>
+</section>
+<section class="slide dark end" aria-label="Cierre">
+  <div class="end-text">
+    <p class="eyebrow">Hackathon CoAfina 2026 · 27, 28 y 29 de noviembre</p>
+    <h1>¡Gracias!</h1>
+    <p class="lead">¿Preguntas? Escríbeme en Discord: <b>artfisica</b></p>
+    <p class="btns"><a class="btn light" href="index.html#cronograma">Ver el cronograma</a><a class="btn ghost light" href="index.html#retos">Ver los retos</a></p>
+  </div>
+  <div class="qr"><img src="data:image/png;base64,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" alt="Código QR que lleva a laconga.redclara.net/hackathon"><span>laconga.redclara.net/hackathon</span></div>
+</section>
+</main>
+<nav class="bar" aria-label="Navegación de las diapositivas">
+  <a class="back" href="index.html#recursos">← <span>Sitio de CoAfina</span></a>
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+  <span class="count" id="count" aria-live="polite"></span>
+  <button id="prev" type="button" aria-label="Diapositiva anterior">‹</button>
+  <button id="next" type="button" aria-label="Diapositiva siguiente">›</button>
+  <button id="full" type="button" aria-label="Pantalla completa">⛶</button>
+</nav>
+<script>
+(function(){
+  const deck=document.getElementById('deck'), slides=[...deck.children];
+  const prev=document.getElementById('prev'), next=document.getElementById('next'), count=document.getElementById('count'), bar=document.getElementById('prog');
+  let cur=0, settle=0;
+  const update=()=>{ count.textContent=(cur+1)+' / '+slides.length; bar.style.width=((cur+1)/slides.length*100)+'%';
+    prev.disabled=cur===0; next.disabled=cur===slides.length-1; history.replaceState(null,'','#'+(cur+1)); };
+  const go=(i,instant)=>{ i=Math.max(0,Math.min(slides.length-1,i)); cur=i; settle=Date.now()+(instant?150:700); update(); deck.scrollTo({left:slides[i].offsetLeft,behavior:instant?'instant':'smooth'}); };
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting && Date.now()>settle){ cur=slides.indexOf(e.target); update(); } }),{root:deck,threshold:.6});
+  slides.forEach(s=>io.observe(s));
+  prev.addEventListener('click',()=>go(cur-1)); next.addEventListener('click',()=>go(cur+1));
+  document.getElementById('full').addEventListener('click',()=>{ document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen(); });
+  document.addEventListener('keydown',e=>{ if(e.metaKey||e.ctrlKey||e.altKey) return;
+    if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){ if(e.key===' '||e.key==='Enter'){ if(document.activeElement&&['A','BUTTON'].includes(document.activeElement.tagName)) return; } e.preventDefault(); go(cur+1); }
+    else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); go(cur-1); }
+    else if(e.key==='Home'){ e.preventDefault(); go(0); } else if(e.key==='End'){ e.preventDefault(); go(slides.length-1); }
+    else if(e.key==='f'||e.key==='F'){ document.getElementById('full').click(); } });
+  const fromHash=instant=>{ const n=parseInt(location.hash.slice(1),10); if(n>=1&&n<=slides.length) go(n-1,instant); };
+  document.addEventListener('click',e=>{ const a=e.target.closest('a[href^="#"]'); if(!a) return; const n=parseInt(a.getAttribute('href').slice(1),10); if(n){ e.preventDefault(); go(n-1); } });
+  window.addEventListener('hashchange',()=>fromHash(false));
+  window.addEventListener('resize',()=>go(cur,true));
+  fromHash(true); update();
+})();
+</script>
+</body>
+</html>
