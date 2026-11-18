@@ -120,3 +120,15 @@ Cada enlace te proporciona herramientas y servicios valiosos para diferentes asp
 # Mantenimiento del sitio
 
 Consulta [README-pages.md](README-pages.md) para publicar el sitio, actualizar fechas y enlaces, y añadir retos.
+
+## Abrir o cerrar las convocatorias
+
+Las convocatorias de retos y de hackers se abren y se cierran en [`convocatorias.json`](convocatorias.json):
+
+```json
+{ "retos": false, "hackers": false }
+```
+
+Cambia `false` por `true` para abrir una convocatoria, o `true` por `false` para cerrarla. Guarda el cambio («Commit changes») y el sitio se actualiza en uno o dos minutos, en español y en inglés. Los patrocinios están siempre abiertos.
+
+La guía completa, con lo que cambia en cada parte del sitio, está en [README-pages.md](README-pages.md#el-interruptor-de-las-convocatorias).

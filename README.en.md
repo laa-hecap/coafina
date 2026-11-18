@@ -108,3 +108,15 @@ Tools and resources for hosting, analyzing, visualizing and sharing your project
 # Site maintenance
 
 See [README-pages.md](README-pages.md) for publishing and maintenance instructions (Spanish). Keep this resource list aligned with README.md.
+
+## Opening or closing the calls
+
+The call for challenges and the registration for hackers are switched in [`convocatorias.json`](convocatorias.json):
+
+```json
+{ "retos": false, "hackers": false }
+```
+
+`retos` is the call for challenges and `hackers` is participant registration. Change `false` to `true` to open one, or `true` to `false` to close it. Commit the change and the site updates in a minute or two, in Spanish and English. Sponsorship is always open.
+
+The full guide, with what changes in each part of the site, is in [README-pages.md](README-pages.md#el-interruptor-de-las-convocatorias) (in Spanish).

@@ -1,10 +1,95 @@
 # Sitio de acción de CoAfina (GitHub Pages)
 
-Un solo archivo, `index.html`, sin build. No sustituye al sitio de la edición en laconga.redclara.net: es la puerta de entrada que manda a cada persona a donde tiene que ir (retos, inscripción, patrocinio) y, sobre todo, a Discord.
+Sitio estático, sin build: `index.html` (español), `en.html` (inglés) y unos pocos archivos de datos. No sustituye al sitio de la edición en laconga.redclara.net: es la puerta de entrada que manda a cada persona a donde tiene que ir (retos, inscripción, patrocinio) y, sobre todo, a Discord.
+
+## Qué archivo cambia qué
+
+En la siguiente tabla está cada cosa que suele cambiar y el archivo donde se cambia.
+
+| Quiero… | Archivo |
+|---|---|
+| Abrir o cerrar la convocatoria de retos o la de hackers | `convocatorias.json` |
+| Actualizar el cronograma | `cronograma.json` y `cronograma.en.json` |
+| Añadir o corregir un reto | `retos.json` y `retos.en.json` |
+| Añadir un recurso para hackers | `README.md` y `README.en.md` |
+| Cambiar fechas, formularios, Discord o redes | Bloque de configuración al final de `index.html` y `en.html` |
+| Cambiar las diapositivas del taller | `charla-recursos.html` |
+
+## El interruptor de las convocatorias
+
+Las convocatorias de retos y de hackers se abren y se cierran desde un solo archivo: `convocatorias.json`, en la raíz del repositorio. Tiene dos valores, uno por convocatoria:
+
+```json
+{
+  "retos": false,
+  "hackers": false
+}
+```
+
+`true` significa abierta y `false` significa cerrada. El cambio vale para la página en español y para la página en inglés al mismo tiempo. El archivo trae además una línea `_ayuda` con una nota para quien lo edite; esa línea se queda como está.
+
+### Cambiarlo en tres pasos
+
+Se puede hacer desde el navegador, en GitHub:
+
+1. Abre [`convocatorias.json`](convocatorias.json) y pulsa el lápiz («Edit this file»).
+2. Cambia `false` por `true`, o `true` por `false`, en la línea de la convocatoria que quieras.
+3. Pulsa «Commit changes». El sitio se actualiza solo en uno o dos minutos.
+
+Por ejemplo, para abrir la convocatoria de retos y dejar cerrada la de hackers, el archivo queda así:
+
+```json
+{
+  "retos": true,
+  "hackers": false
+}
+```
+
+Quien prefiera la terminal puede hacer lo mismo de esta forma:
+
+```bash
+git pull
+# edita convocatorias.json
+git add convocatorias.json
+git commit -m "Abre la convocatoria de retos"
+git push
+```
+
+### Qué cambia en el sitio
+
+En la siguiente tabla se ve qué muestra el sitio con cada valor.
+
+| Valor | Parte del sitio | Abierta (`true`) | Cerrada (`false`) |
+|---|---|---|---|
+| `retos` | Primera puerta | «Propón un reto», que lleva a cómo proponerlo | «Conoce los retos», que lleva a los retos de la edición |
+| `retos` | Franja bajo las puertas | Banner de la convocatoria con su plazo | Oculta |
+| `retos` | Columna «Retadores» | Botón «Proponer un reto», plazo, nota de dudas y afiche | Nota de convocatoria cerrada |
+| `retos` | Bajo las tarjetas de retos | Botón «Enviar mi reto» | Oculto |
+| `hackers` | Segunda puerta | «Participa como hacker», que lleva a cómo inscribirse | «Prepárate para el hackathon», que lleva al cronograma |
+| `hackers` | Columna «Hackers» | Botón «Inscribirme», plazo y nota del comprobante | Nota de inscripción cerrada |
+| Los dos | «Cómo funciona» | Línea con los plazos, si alguna convocatoria está abierta | Aviso de convocatorias cerradas, si las dos lo están |
+
+La puerta «Apoya la edición» y la columna «Patrocinadores» están siempre visibles, porque los patrocinios se reciben todo el año.
+
+### Antes de abrir una convocatoria nueva
+
+El interruptor muestra u oculta lo que ya está en las páginas. Los textos y enlaces de una convocatoria abierta salen de otros lugares, así que conviene revisarlos antes de poner `true`:
+
+- **Fechas límite:** `deadlines.challenges` y `deadlines.hackers`, en el bloque de configuración al final de `index.html` y de `en.html`.
+- **Formularios:** `links.formChallenge` y `links.formHacker`, en ese mismo bloque.
+- **Imágenes:** `banner-retos-2026.jpg` (el banner) y `llamado-retos-2026.jpg` (el afiche de la columna «Retadores»).
+- **Aviso sobre el banner:** el texto «Plazo ampliado hasta el…» está en el script de cada página; búscalo por esas palabras.
+- **Notas de cierre:** mencionan el año («…de 2026 ya cerró. Volverá en la edición 2027»). Están en `index.html` y `en.html`; búscalas por `data-closed`.
+
+### Si algo sale distinto de lo esperado
+
+- **Pusiste `true` y el sitio sigue mostrando la convocatoria cerrada.** Casi siempre es un detalle de escritura en el archivo: `true` y `false` van en minúsculas y sin comillas, cada línea termina en coma salvo la última, y las llaves `{ }` abren y cierran el archivo. Cuando el archivo tiene un error, el sitio muestra las dos convocatorias cerradas, que es la opción segura.
+- **Todavía ves la versión anterior.** Espera un par de minutos y recarga la página sin caché (Cmd+Shift+R en Mac, Ctrl+F5 en Windows).
+- **Dudas sobre qué página editar.** Basta con cambiar `convocatorias.json`: las dos páginas leen ese archivo.
 
 ## Publicar
 
-1. Copie `index.html`, `logo.png` y los recursos gráficos (`hackathon-2026.webm/.mp4/.png`, `banner-retos-2026.jpg`, `fases-2026.jpg`, `llamado-retos-2026.jpg`, `patrocinadores-2026.png`, `wikimedia-ch.png`) a la raíz del repositorio.
+1. Copie a la raíz del repositorio las páginas (`index.html`, `en.html`, `charla-recursos.html`), los archivos de datos (`convocatorias.json`, `cronograma.json`, `cronograma.en.json`, `retos.json`, `retos.en.json`), la carpeta `retos/`, `logo.png` y los recursos gráficos (`hackathon-2026.webm/.mp4/.png`, `banner-retos-2026.jpg`, `fases-2026.jpg`, `llamado-retos-2026.jpg`, `patrocinadores-2026.png`, `wikimedia-ch.png`).
 2. Settings → Pages → Deploy from a branch → `main`, carpeta `/`.
 3. En unos minutos queda en `https://laa-hecap.github.io/<repo>/`.
 
@@ -16,7 +101,7 @@ Todo lo que cambia está en el bloque `<script id="config" type="application/jso
 - `formChallenge`, `formHacker`: formularios de retos e inscripción.
 - El contacto es Discord en todo el sitio (retadores, hackers, patrocinadores, pie); no hay correo.
 - `x`, `instagram`, `linkedin`, `facebook`, `youtube`, `github`, `website`: redes. Las que queden en `""` no se muestran.
-- `datesLong` y `deadlines`: fechas de la edición 2026 ya cargadas (retos hasta el 31 de octubre, inscripciones hasta el 14 de noviembre, hackathon 27–29 de noviembre). Las prórrogas al 31 de octubre y al 114 de noviembre se cambian aquí cuando se anuncien.
+- `datesLong` y `deadlines`: fechas de la edición 2026 ya cargadas (retos hasta el 31 de octubre, inscripciones hasta el 14 de noviembre, hackathon 27–29 de noviembre). Las prórrogas al 31 de octubre y al 14 de noviembre se cambian aquí cuando se anuncien.
 
 
 
@@ -31,20 +116,6 @@ Las piezas gráficas conservan los plazos originales. El aviso sobre el banner y
 `index.html` es la versión en español y `en.html` la versión en inglés. Ambas conservan el diseño original, con fondo marfil (`#FFFCF5`) y enlaces Español / English en la cabecera. Los textos de las piezas gráficas originales permanecen en español; los textos HTML y alternativos de la versión inglesa están traducidos.
 
 La versión inglesa carga `retos.en.json` y `README.en.md`; comparten las mismas imágenes, planos y destinos de los formularios. Al actualizar un reto, un enlace, una fecha o un recurso, actualiza ambas versiones. Las fechas de cada HTML usan cadenas del idioma correspondiente; no hay traducción automática ni cierre por reloj de la convocatoria de retos.
-
-## Convocatorias abiertas o cerradas
-
-El archivo `convocatorias.json` decide qué convocatorias se muestran abiertas, en español y en inglés a la vez:
-
-```json
-{ "retos": false, "hackers": false }
-```
-
-- `"retos": true` vuelve a mostrar la puerta «Propón un reto», el banner de la convocatoria, el botón «Proponer un reto» con su afiche y el botón «Enviar mi reto».
-- `"hackers": true` vuelve a mostrar la puerta «Participa como hacker» y el botón «Inscribirme» con sus notas.
-- Con `false`, cada puerta lleva a los retos o al cronograma, y las columnas muestran una nota de convocatoria cerrada.
-
-Al reabrir, actualiza también las fechas (`deadlines`) y los formularios (`links`) en el bloque de configuración de `index.html` y `en.html`. Los patrocinios están siempre abiertos y no dependen de este archivo.
 
 ## Cronograma
 
