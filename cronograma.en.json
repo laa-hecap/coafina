@@ -1,7 +1,7 @@
 {
   "_ayuda": "Edit this file to update the schedule on the site. Hours are whole numbers in GMT-5. Types: hack, talk, orient, social, dead, pend, fin.",
   "version": "18 November 2026",
-  "preliminar": true,
+  "preliminar": false,
   "horaInicio": 8,
   "horaFin": 20,
   "grupos": {
@@ -10,11 +10,10 @@
   },
   "tipos": {
     "hack": "Hackathon sessions",
-    "talk": "Talks and workshops",
+    "talk": "Talks, workshops and visits",
     "orient": "Orientation",
     "social": "Social",
-    "dead": "Deadline",
-    "pend": "To be defined"
+    "dead": "Deadline"
   },
   "dias": [
     {
@@ -61,7 +60,7 @@
       "tipo": "talk",
       "titulo": "Useful tools and resources for the hackathon (and your career)",
       "etiqueta": "Workshop",
-      "detalle": "Arturo Sánchez · Computing resources"
+      "detalle": "Arturo Sánchez · Discord and Zoom"
     },
     {
       "fecha": "2026-11-24",
@@ -69,15 +68,17 @@
       "fin": 15,
       "tipo": "orient",
       "titulo": "Code of conduct, Discord and how the event works",
-      "etiqueta": "Orientation"
+      "etiqueta": "Orientation",
+      "detalle": "Discord"
     },
     {
       "fecha": "2026-11-25",
-      "inicio": 13,
-      "fin": 14,
-      "tipo": "pend",
-      "titulo": "Atlas",
-      "etiqueta": "To be defined"
+      "inicio": 11,
+      "fin": 12,
+      "tipo": "talk",
+      "titulo": "Virtual visit to ATLAS",
+      "etiqueta": "Virtual visit",
+      "detalle": "Zoom"
     },
     {
       "fecha": "2026-11-26",
@@ -95,7 +96,7 @@
       "tipo": "hack",
       "titulo": "Welcome and presentation of the challenges",
       "etiqueta": "Opening",
-      "detalle": "Reina · Zoom"
+      "detalle": "Reina Camacho Toro · Zoom"
     },
     {
       "fecha": "2026-11-27",
@@ -103,94 +104,77 @@
       "fin": 13,
       "tipo": "hack",
       "titulo": "Team formation and challenge selection",
-      "etiqueta": "Teams"
-    },
-    {
-      "fecha": "2026-11-27",
-      "inicio": 14,
-      "fin": 15,
-      "tipo": "talk",
-      "titulo": "Responsive AI",
-      "etiqueta": "Talk · to be defined",
-      "detalle": "Carlos Cámara"
+      "etiqueta": "Teams",
+      "detalle": "Discord and Zoom"
     },
     {
       "fecha": "2026-11-28",
       "inicio": 8,
       "fin": 9,
       "tipo": "hack",
-      "titulo": "Debriefing, Q&A and announcements"
+      "titulo": "Debriefing, Q&A and announcements",
+      "detalle": "Discord"
     },
     {
       "fecha": "2026-11-28",
-      "inicio": 11,
-      "fin": 12,
+      "inicio": 10,
+      "fin": 11,
       "tipo": "talk",
-      "titulo": "Riva · OLS",
-      "etiqueta": "Talk"
+      "titulo": "“But it works on my computer!”",
+      "etiqueta": "Workshop",
+      "detalle": "How to make our data analyses reproducible. Riva Quiroga · Zoom"
     },
     {
       "fecha": "2026-11-28",
-      "inicio": 14,
-      "fin": 15,
+      "inicio": 15,
+      "fin": 16,
       "tipo": "talk",
       "titulo": "From the lab to industry: hydrogen, CO₂ and data-driven decisions",
       "etiqueta": "Talk",
-      "detalle": "Dalia León Chaparro"
+      "detalle": "Dalia León Chaparro · Zoom"
     },
     {
       "fecha": "2026-11-28",
       "inicio": 19,
       "fin": 20,
       "tipo": "hack",
-      "titulo": "Debriefing, Q&A and announcements"
+      "titulo": "Debriefing, Q&A and announcements",
+      "detalle": "Discord"
     },
     {
       "fecha": "2026-11-29",
       "inicio": 8,
       "fin": 9,
       "tipo": "hack",
-      "titulo": "Debriefing, Q&A and announcements"
+      "titulo": "Debriefing, Q&A and announcements",
+      "detalle": "Discord"
     },
     {
       "fecha": "2026-11-29",
       "inicio": 11,
       "fin": 12,
       "tipo": "dead",
-      "titulo": "Solutions due",
+      "titulo": "Final submission of solutions",
       "etiqueta": "Deadline",
-      "detalle": "By 12:00"
+      "detalle": "Deadline: 12:00 · Form"
     },
     {
       "fecha": "2026-11-29",
       "inicio": 13,
-      "fin": 15,
-      "tipo": "hack",
-      "titulo": "Presentation of the solutions to the challenges",
-      "etiqueta": "Presentations"
-    },
-    {
-      "fecha": "2026-11-29",
-      "inicio": 15,
       "fin": 17,
       "tipo": "hack",
       "titulo": "Presentation of the solutions to the challenges",
-      "etiqueta": "Presentations"
+      "etiqueta": "Presentations",
+      "detalle": "Zoom"
     },
     {
       "fecha": "2026-11-29",
       "inicio": 17,
       "fin": 18,
       "tipo": "hack",
-      "titulo": "Winning teams announced",
-      "etiqueta": "Closing"
-    },
-    {
-      "fecha": "2026-11-29",
-      "inicio": 18,
-      "fin": 19,
-      "tipo": "fin",
-      "titulo": "End"
+      "titulo": "Winning teams announced and official closing",
+      "etiqueta": "Closing",
+      "detalle": "Zoom"
     }
   ]
 }

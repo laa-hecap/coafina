@@ -64,6 +64,9 @@ p{margin:0}
 .tool:hover{border-color:var(--sea);box-shadow:0 2px 0 var(--sea)}
 .tool b{font-size:clamp(1rem,1.5vw,1.35rem);font-weight:600;line-height:1.2}
 .tool span{font-size:clamp(.8rem,1vw,.95rem);color:var(--muted);overflow-wrap:anywhere}
+.tools.lots{grid-template-columns:repeat(3,1fr)}
+.tool b i,.chip i{font-style:normal;font-family:var(--body);font-size:.62em;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--sun);color:var(--ink);border-radius:999px;padding:.12em .55em;margin-left:.5em;vertical-align:.15em;white-space:nowrap}
+.tool.new{border-color:#E6C562}
 /* botones */
 .btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
 .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:.4rem;font-size:clamp(.95rem,1.2vw,1.1rem)}
@@ -97,7 +100,8 @@ p{margin:0}
   .qr{align-self:center}
   .bar .back span{display:none}
 }
-@media (max-width:480px){.tools.many,.tools.two{grid-template-columns:1fr}}
+@media (max-width:820px){.tools.lots{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.tools.many,.tools.two,.tools.lots{grid-template-columns:1fr}}
 @media print{
   @page{size:landscape;margin:0}
   body{overflow:visible}
@@ -136,22 +140,22 @@ p{margin:0}
     <p class="lead">La idea es que tantas personas como sea posible tengan una caja de herramientas lo suficientemente amplia para trabajar durante el hackathon y, en general, para sus estudios o su trabajo.</p>
   </div>
 </section>
-<section class="slide" aria-label="El paseo: trece paradas">
+<section class="slide" aria-label="El paseo">
   <p class="eyebrow">El paseo</p>
-  <h2>Trece paradas</h2>
-  <div class="chips"><a class="chip sea" href="#5"><b>1</b><span>Ideación y colaboración</span></a><a class="chip coral" href="#6"><b>2</b><span>Código, versionamiento y documentación</span></a><a class="chip sun" href="#7"><b>3</b><span>Entornos reproducibles de notebooks</span></a><a class="chip ink" href="#8"><b>4</b><span>Datos abiertos y APIs sencillas</span></a><a class="chip sea" href="#9"><b>5</b><span>Wikidata y Wikimedia</span></a><a class="chip coral" href="#10"><b>6</b><span>Visualización y prototipado sin ser dev web</span></a><a class="chip sun" href="#11"><b>7</b><span>Diseño, multimedia y 3D</span></a><a class="chip ink" href="#12"><b>8</b><span>Publicación, trazabilidad y licencias</span></a><a class="chip sea" href="#13"><b>9</b><span>Automatización CI/CD y contenedores</span></a><a class="chip coral" href="#14"><b>10</b><span>OCR y digitalización</span></a><a class="chip sun" href="#15"><b>11</b><span>Google y LLMs</span></a><a class="chip ink" href="#16"><b>12</b><span>Blogs y difusión</span></a><a class="chip sea" href="#17"><b>13</b><span>Limpieza y validación de datos</span></a></div>
+  <h2>Diecisiete paradas</h2>
+  <div class="chips"><a class="chip sea" href="#5"><b>1</b><span>Ideación y colaboración</span></a><a class="chip coral" href="#6"><b>2</b><span>Código, versionamiento y documentación</span></a><a class="chip sun" href="#7"><b>3</b><span>Entornos reproducibles de notebooks</span></a><a class="chip ink" href="#8"><b>4</b><span>Datos abiertos y APIs sencillas</span></a><a class="chip sea" href="#9"><b>5</b><span>Wikidata y Wikimedia</span></a><a class="chip coral" href="#10"><b>6</b><span>Visualización y prototipado sin ser dev web</span></a><a class="chip sun" href="#11"><b>7</b><span>Diseño, multimedia y 3D</span></a><a class="chip ink" href="#12"><b>8</b><span>Publicación, trazabilidad y licencias</span></a><a class="chip sea" href="#13"><b>9</b><span>Automatización CI/CD y contenedores</span></a><a class="chip coral" href="#14"><b>10</b><span>OCR y digitalización</span></a><a class="chip sun" href="#15"><b>11</b><span>Google y LLMs</span></a><a class="chip ink" href="#16"><b>12</b><span>Blogs y difusión</span></a><a class="chip sea" href="#17"><b>13</b><span>Limpieza y validación de datos</span></a><a class="chip coral" href="#18"><b>14</b><span>Mapas, sonido y 3D en la web <i>nuevo</i></span></a><a class="chip sun" href="#19"><b>15</b><span>Despliegue: publica tu demo <i>nuevo</i></span></a><a class="chip ink" href="#20"><b>16</b><span>Accesibilidad <i>nuevo</i></span></a><a class="chip sea" href="#21"><b>17</b><span>Aprender y seguir creciendo <i>nuevo</i></span></a></div>
 </section>
 <section class="slide cat" aria-label="Parada 1: Ideación y colaboración">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sea">1</span> Parada 1 de 13</p>
+    <p class="eyebrow"><span class="num sea">1</span> Parada 1 de 17</p>
     <h2>Ideación y colaboración</h2>
     <p class="lead">Herramientas para definir el proyecto en equipo. Escritura de documentos (Google Docs), la creación de diagramas de flujo (Diagrams.net) y el diseño colaborativo de la interfaz de usuario (Penpot, FigJam).</p><p class="aside">Claro está, hay opciones de código abierto…</p>
   </div>
-  <ul class="tools many"><li><a class="tool" href="https://docs.google.com/" target="_blank" rel="noopener"><b>Google Docs</b><span>docs.google.com ↗</span></a></li><li><a class="tool" href="https://sheets.google.com/" target="_blank" rel="noopener"><b>Google Sheets</b><span>sheets.google.com ↗</span></a></li><li><a class="tool" href="https://docs.google.com/presentation/" target="_blank" rel="noopener"><b>Google Slides</b><span>docs.google.com ↗</span></a></li><li><a class="tool" href="https://sites.google.com/" target="_blank" rel="noopener"><b>Google Sites</b><span>sites.google.com ↗</span></a></li><li><a class="tool" href="https://app.diagrams.net/" target="_blank" rel="noopener"><b>Diagrams.net (draw.io)</b><span>app.diagrams.net ↗</span></a></li><li><a class="tool" href="https://excalidraw.com/" target="_blank" rel="noopener"><b>Excalidraw</b><span>excalidraw.com ↗</span></a></li><li><a class="tool" href="https://www.figma.com/figjam/" target="_blank" rel="noopener"><b>FigJam</b><span>figma.com ↗</span></a></li><li><a class="tool" href="https://penpot.app/" target="_blank" rel="noopener"><b>Penpot (código abierto)</b><span>penpot.app ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams" target="_blank" rel="noopener"><b>Mermaid en GitHub</b><span>docs.github.com ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://docs.google.com/" target="_blank" rel="noopener"><b>Google Docs</b><span>docs.google.com ↗</span></a></li><li><a class="tool" href="https://sheets.google.com/" target="_blank" rel="noopener"><b>Google Sheets</b><span>sheets.google.com ↗</span></a></li><li><a class="tool" href="https://docs.google.com/presentation/" target="_blank" rel="noopener"><b>Google Slides</b><span>docs.google.com ↗</span></a></li><li><a class="tool" href="https://sites.google.com/" target="_blank" rel="noopener"><b>Google Sites</b><span>sites.google.com ↗</span></a></li><li><a class="tool" href="https://app.diagrams.net/" target="_blank" rel="noopener"><b>Diagrams.net (draw.io)</b><span>app.diagrams.net ↗</span></a></li><li><a class="tool" href="https://excalidraw.com/" target="_blank" rel="noopener"><b>Excalidraw</b><span>excalidraw.com ↗</span></a></li><li><a class="tool" href="https://www.figma.com/figjam/" target="_blank" rel="noopener"><b>FigJam</b><span>figma.com ↗</span></a></li><li><a class="tool" href="https://penpot.app/" target="_blank" rel="noopener"><b>Penpot (código abierto)</b><span>penpot.app ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams" target="_blank" rel="noopener"><b>Mermaid en GitHub</b><span>docs.github.com ↗</span></a></li><li><a class="tool new" href="https://cryptpad.org/" target="_blank" rel="noopener"><b>CryptPad (código abierto, cifrado)<i>nuevo</i></b><span>cryptpad.org ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 2: Código, versionamiento y documentación">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num coral">2</span> Parada 2 de 13</p>
+    <p class="eyebrow"><span class="num coral">2</span> Parada 2 de 17</p>
     <h2>Código, versionamiento y documentación</h2>
     <p class="lead">El núcleo técnico del proyecto. Usa GitHub para guardar el código y controlar sus cambios, Markdown para documentarlo, y GitHub Pages y Actions para publicarlo y automatizar tareas.</p>
   </div>
@@ -159,55 +163,55 @@ p{margin:0}
 </section>
 <section class="slide cat" aria-label="Parada 3: Entornos reproducibles de notebooks">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sun">3</span> Parada 3 de 13</p>
+    <p class="eyebrow"><span class="num sun">3</span> Parada 3 de 17</p>
     <h2>Entornos reproducibles de notebooks</h2>
     <p class="lead">El laboratorio de análisis de datos. Incluye notebooks en la nube (Colab), entornos de desarrollo completos (Codespaces) y herramientas (MyBinder) para garantizar la reproducibilidad del análisis.</p>
   </div>
-  <ul class="tools many"><li><a class="tool" href="https://colab.research.google.com/" target="_blank" rel="noopener"><b>Google Colab</b><span>colab.research.google.com ↗</span></a></li><li><a class="tool" href="https://jupyter.org/" target="_blank" rel="noopener"><b>Jupyter</b><span>jupyter.org ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/codespaces" target="_blank" rel="noopener"><b>GitHub Codespaces</b><span>docs.github.com ↗</span></a></li><li><a class="tool" href="https://mybinder.org/" target="_blank" rel="noopener"><b>MyBinder</b><span>mybinder.org ↗</span></a></li><li><a class="tool" href="https://nbviewer.org/" target="_blank" rel="noopener"><b>nbviewer</b><span>nbviewer.org ↗</span></a></li><li><a class="tool" href="https://jupyter.org/try" target="_blank" rel="noopener"><b>JupyterLite</b><span>jupyter.org ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://colab.research.google.com/" target="_blank" rel="noopener"><b>Google Colab</b><span>colab.research.google.com ↗</span></a></li><li><a class="tool" href="https://jupyter.org/" target="_blank" rel="noopener"><b>Jupyter</b><span>jupyter.org ↗</span></a></li><li><a class="tool" href="https://docs.github.com/en/codespaces" target="_blank" rel="noopener"><b>GitHub Codespaces</b><span>docs.github.com ↗</span></a></li><li><a class="tool" href="https://mybinder.org/" target="_blank" rel="noopener"><b>MyBinder</b><span>mybinder.org ↗</span></a></li><li><a class="tool" href="https://nbviewer.org/" target="_blank" rel="noopener"><b>nbviewer</b><span>nbviewer.org ↗</span></a></li><li><a class="tool" href="https://jupyter.org/try" target="_blank" rel="noopener"><b>JupyterLite</b><span>jupyter.org ↗</span></a></li><li><a class="tool new" href="https://www.kaggle.com/code" target="_blank" rel="noopener"><b>Kaggle Notebooks<i>nuevo</i></b><span>kaggle.com ↗</span></a></li><li><a class="tool new" href="https://marimo.io/" target="_blank" rel="noopener"><b>marimo<i>nuevo</i></b><span>marimo.io ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 4: Datos abiertos y APIs sencillas">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num ink">4</span> Parada 4 de 13</p>
+    <p class="eyebrow"><span class="num ink">4</span> Parada 4 de 17</p>
     <h2>Datos abiertos y APIs sencillas</h2>
     <p class="lead">Fuentes de datos listas para consumir. APIs para obtener indicadores socioeconómicos (World Bank), datos geoespaciales (OSM) y datos cívicos de portales de gobierno (México, Chile, Colombia).</p>
   </div>
-  <ul class="tools many"><li><a class="tool" href="https://data.worldbank.org/developers" target="_blank" rel="noopener"><b>World Bank API</b><span>data.worldbank.org ↗</span></a></li><li><a class="tool" href="https://dev.overpass-api.de/overpass-doc/en/" target="_blank" rel="noopener"><b>Overpass (OSM)</b><span>dev.overpass-api.de ↗</span></a></li><li><a class="tool" href="https://api.nasa.gov/" target="_blank" rel="noopener"><b>NASA APIs</b><span>api.nasa.gov ↗</span></a></li><li><a class="tool" href="https://openweathermap.org/api" target="_blank" rel="noopener"><b>OpenWeather API</b><span>openweathermap.org ↗</span></a></li><li><a class="tool" href="https://datos.gob.mx/" target="_blank" rel="noopener"><b>Datos Abiertos México</b><span>datos.gob.mx ↗</span></a></li><li><a class="tool" href="https://datos.gob.cl/" target="_blank" rel="noopener"><b>Datos Abiertos Chile</b><span>datos.gob.cl ↗</span></a></li><li><a class="tool" href="https://datos.gov.co/" target="_blank" rel="noopener"><b>Datos Abiertos Colombia</b><span>datos.gov.co ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://data.worldbank.org/developers" target="_blank" rel="noopener"><b>World Bank API</b><span>data.worldbank.org ↗</span></a></li><li><a class="tool" href="https://dev.overpass-api.de/overpass-doc/en/" target="_blank" rel="noopener"><b>Overpass (OSM)</b><span>dev.overpass-api.de ↗</span></a></li><li><a class="tool" href="https://api.nasa.gov/" target="_blank" rel="noopener"><b>NASA APIs</b><span>api.nasa.gov ↗</span></a></li><li><a class="tool" href="https://openweathermap.org/api" target="_blank" rel="noopener"><b>OpenWeather API</b><span>openweathermap.org ↗</span></a></li><li><a class="tool" href="https://datos.gob.mx/" target="_blank" rel="noopener"><b>Datos Abiertos México</b><span>datos.gob.mx ↗</span></a></li><li><a class="tool" href="https://datos.gob.cl/" target="_blank" rel="noopener"><b>Datos Abiertos Chile</b><span>datos.gob.cl ↗</span></a></li><li><a class="tool" href="https://datos.gov.co/" target="_blank" rel="noopener"><b>Datos Abiertos Colombia</b><span>datos.gov.co ↗</span></a></li><li><a class="tool new" href="https://statistics.cepal.org/portal/cepalstat/" target="_blank" rel="noopener"><b>CEPALSTAT (CEPAL)<i>nuevo</i></b><span>statistics.cepal.org ↗</span></a></li><li><a class="tool new" href="https://ourworldindata.org/" target="_blank" rel="noopener"><b>Our World in Data<i>nuevo</i></b><span>ourworldindata.org ↗</span></a></li><li><a class="tool new" href="https://data.humdata.org/" target="_blank" rel="noopener"><b>Humanitarian Data Exchange<i>nuevo</i></b><span>data.humdata.org ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 5: Wikidata y Wikimedia">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sea">5</span> Parada 5 de 13</p>
+    <p class="eyebrow"><span class="num sea">5</span> Parada 5 de 17</p>
     <h2>Wikidata y Wikimedia</h2>
     <p class="lead">Acceso a la base de conocimiento estructurada más grande del mundo. Usa SPARQL (Wikidata) para datos relacionales complejos y la API de Commons para obtener imágenes y medios libres.</p>
   </div>
-  <ul class="tools"><li><a class="tool" href="https://query.wikidata.org/" target="_blank" rel="noopener"><b>Wikidata Query Service</b><span>query.wikidata.org ↗</span></a></li><li><a class="tool" href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank" rel="noopener"><b>MediaWiki API</b><span>mediawiki.org ↗</span></a></li><li><a class="tool" href="https://www.mediawiki.org/wiki/API:Imageinfo" target="_blank" rel="noopener"><b>Commons (imageinfo)</b><span>mediawiki.org ↗</span></a></li><li><a class="tool" href="https://commons.wikimedia.org/" target="_blank" rel="noopener"><b>Wikimedia Commons</b><span>commons.wikimedia.org ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://query.wikidata.org/" target="_blank" rel="noopener"><b>Wikidata Query Service</b><span>query.wikidata.org ↗</span></a></li><li><a class="tool" href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank" rel="noopener"><b>MediaWiki API</b><span>mediawiki.org ↗</span></a></li><li><a class="tool" href="https://www.mediawiki.org/wiki/API:Imageinfo" target="_blank" rel="noopener"><b>Commons (imageinfo)</b><span>mediawiki.org ↗</span></a></li><li><a class="tool" href="https://commons.wikimedia.org/" target="_blank" rel="noopener"><b>Wikimedia Commons</b><span>commons.wikimedia.org ↗</span></a></li><li><a class="tool new" href="https://query.wikidata.org/querybuilder/" target="_blank" rel="noopener"><b>Wikidata Query Builder<i>nuevo</i></b><span>query.wikidata.org ↗</span></a></li><li><a class="tool new" href="https://wikitech.wikimedia.org/wiki/PAWS" target="_blank" rel="noopener"><b>PAWS: notebooks de Wikimedia<i>nuevo</i></b><span>wikitech.wikimedia.org ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 6: Visualización y prototipado sin ser dev web">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num coral">6</span> Parada 6 de 13</p>
+    <p class="eyebrow"><span class="num coral">6</span> Parada 6 de 17</p>
     <h2>Visualización y prototipado sin ser dev web</h2>
     <p class="lead">Herramientas para crear aplicaciones web interactivas rápidamente. Convierte scripts de Python en dashboards (Streamlit) o crea mapas personalizados y reportes (uMap, Looker Studio).</p>
   </div>
-  <ul class="tools"><li><a class="tool" href="https://docs.streamlit.io/get-started" target="_blank" rel="noopener"><b>Streamlit</b><span>docs.streamlit.io ↗</span></a></li><li><a class="tool" href="https://docs.streamlit.io/get-started/installation/community-cloud" target="_blank" rel="noopener"><b>Streamlit: ejemplo con Codespaces</b><span>docs.streamlit.io ↗</span></a></li><li><a class="tool" href="https://umap.openstreetmap.fr/en/" target="_blank" rel="noopener"><b>uMap (OSM)</b><span>umap.openstreetmap.fr ↗</span></a></li><li><a class="tool" href="https://cloud.google.com/looker-studio" target="_blank" rel="noopener"><b>Looker Studio</b><span>cloud.google.com ↗</span></a></li></ul>
+  <ul class="tools"><li><a class="tool" href="https://docs.streamlit.io/get-started" target="_blank" rel="noopener"><b>Streamlit</b><span>docs.streamlit.io ↗</span></a></li><li><a class="tool" href="https://docs.streamlit.io/get-started/installation/community-cloud" target="_blank" rel="noopener"><b>Streamlit: ejemplo con Codespaces</b><span>docs.streamlit.io ↗</span></a></li><li><a class="tool" href="https://umap.openstreetmap.fr/en/" target="_blank" rel="noopener"><b>uMap (OSM)</b><span>umap.openstreetmap.fr ↗</span></a></li><li><a class="tool" href="https://cloud.google.com/looker-studio" target="_blank" rel="noopener"><b>Looker Studio</b><span>cloud.google.com ↗</span></a></li><li><a class="tool new" href="https://www.gradio.app/" target="_blank" rel="noopener"><b>Gradio<i>nuevo</i></b><span>gradio.app ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 7: Diseño, multimedia y 3D">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sun">7</span> Parada 7 de 13</p>
+    <p class="eyebrow"><span class="num sun">7</span> Parada 7 de 17</p>
     <h2>Diseño, multimedia y 3D</h2>
     <p class="lead">El stack creativo de código abierto. Incluye diseño 3D y renders (Blender), grabación de la demo (OBS Studio) y diseño gráfico vectorial o ráster (Inkscape, GIMP, Krita).</p>
   </div>
-  <ul class="tools many"><li><a class="tool" href="https://penpot.app/" target="_blank" rel="noopener"><b>Penpot</b><span>penpot.app ↗</span></a></li><li><a class="tool" href="https://www.blender.org/download/" target="_blank" rel="noopener"><b>Blender</b><span>blender.org ↗</span></a></li><li><a class="tool" href="https://obsproject.com/" target="_blank" rel="noopener"><b>OBS Studio</b><span>obsproject.com ↗</span></a></li><li><a class="tool" href="https://inkscape.org/" target="_blank" rel="noopener"><b>Inkscape</b><span>inkscape.org ↗</span></a></li><li><a class="tool" href="https://www.gimp.org/" target="_blank" rel="noopener"><b>GIMP</b><span>gimp.org ↗</span></a></li><li><a class="tool" href="https://krita.org/" target="_blank" rel="noopener"><b>Krita</b><span>krita.org ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://penpot.app/" target="_blank" rel="noopener"><b>Penpot</b><span>penpot.app ↗</span></a></li><li><a class="tool" href="https://www.blender.org/download/" target="_blank" rel="noopener"><b>Blender</b><span>blender.org ↗</span></a></li><li><a class="tool" href="https://obsproject.com/" target="_blank" rel="noopener"><b>OBS Studio</b><span>obsproject.com ↗</span></a></li><li><a class="tool" href="https://inkscape.org/" target="_blank" rel="noopener"><b>Inkscape</b><span>inkscape.org ↗</span></a></li><li><a class="tool" href="https://www.gimp.org/" target="_blank" rel="noopener"><b>GIMP</b><span>gimp.org ↗</span></a></li><li><a class="tool" href="https://krita.org/" target="_blank" rel="noopener"><b>Krita</b><span>krita.org ↗</span></a></li><li><a class="tool new" href="https://getartcraft.com/" target="_blank" rel="noopener"><b>ArtCraft<i>nuevo</i></b><span>getartcraft.com ↗</span></a></li><li><a class="tool new" href="https://www.audacityteam.org/" target="_blank" rel="noopener"><b>Audacity<i>nuevo</i></b><span>audacityteam.org ↗</span></a></li><li><a class="tool new" href="https://kdenlive.org/" target="_blank" rel="noopener"><b>Kdenlive<i>nuevo</i></b><span>kdenlive.org ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 8: Publicación, trazabilidad y licencias">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num ink">8</span> Parada 8 de 13</p>
+    <p class="eyebrow"><span class="num ink">8</span> Parada 8 de 17</p>
     <h2>Publicación, trazabilidad y licencias</h2>
     <p class="lead">El módulo de ciencia abierta. Asegura el crédito de autor (ORCID), obtiene un DOI citable (Zenodo) y aplica la licencia legal correcta (Creative Commons, ODbL).</p>
   </div>
-  <ul class="tools many"><li><a class="tool" href="https://help.zenodo.org/docs/github/enable-repository/" target="_blank" rel="noopener"><b>Zenodo ↔ GitHub</b><span>help.zenodo.org ↗</span></a></li><li><a class="tool" href="https://zenodo.org/" target="_blank" rel="noopener"><b>Zenodo</b><span>zenodo.org ↗</span></a></li><li><a class="tool" href="https://orcid.org/register" target="_blank" rel="noopener"><b>ORCID (registro)</b><span>orcid.org ↗</span></a></li><li><a class="tool" href="https://chooser-beta.creativecommons.org/" target="_blank" rel="noopener"><b>Creative Commons Chooser</b><span>chooser-beta.creativecommons.org ↗</span></a></li><li><a class="tool" href="https://opendatacommons.org/licenses/" target="_blank" rel="noopener"><b>Open Data Commons (ODbL, ODC-BY, PDDL)</b><span>opendatacommons.org ↗</span></a></li><li><a class="tool" href="https://citation-file-format.github.io/" target="_blank" rel="noopener"><b>CITATION.cff</b><span>citation-file-format.github.io ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://help.zenodo.org/docs/github/enable-repository/" target="_blank" rel="noopener"><b>Zenodo ↔ GitHub</b><span>help.zenodo.org ↗</span></a></li><li><a class="tool" href="https://zenodo.org/" target="_blank" rel="noopener"><b>Zenodo</b><span>zenodo.org ↗</span></a></li><li><a class="tool" href="https://orcid.org/register" target="_blank" rel="noopener"><b>ORCID (registro)</b><span>orcid.org ↗</span></a></li><li><a class="tool" href="https://chooser-beta.creativecommons.org/" target="_blank" rel="noopener"><b>Creative Commons Chooser</b><span>chooser-beta.creativecommons.org ↗</span></a></li><li><a class="tool" href="https://opendatacommons.org/licenses/" target="_blank" rel="noopener"><b>Open Data Commons (ODbL, ODC-BY, PDDL)</b><span>opendatacommons.org ↗</span></a></li><li><a class="tool" href="https://citation-file-format.github.io/" target="_blank" rel="noopener"><b>CITATION.cff</b><span>citation-file-format.github.io ↗</span></a></li><li><a class="tool new" href="https://choosealicense.com/" target="_blank" rel="noopener"><b>Choose a License<i>nuevo</i></b><span>choosealicense.com ↗</span></a></li><li><a class="tool new" href="https://www.softwareheritage.org/" target="_blank" rel="noopener"><b>Software Heritage<i>nuevo</i></b><span>softwareheritage.org ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 9: Automatización CI/CD y contenedores">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sea">9</span> Parada 9 de 13</p>
+    <p class="eyebrow"><span class="num sea">9</span> Parada 9 de 17</p>
     <h2>Automatización CI/CD y contenedores</h2>
     <p class="lead">Prácticas avanzadas de DevOps. Usa GitHub Actions para automatizar pruebas y despliegues, y Docker o Podman para empaquetar la aplicación y garantizar que funcione en cualquier lugar.</p>
   </div>
@@ -215,23 +219,23 @@ p{margin:0}
 </section>
 <section class="slide cat" aria-label="Parada 10: OCR y digitalización">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num coral">10</span> Parada 10 de 13</p>
+    <p class="eyebrow"><span class="num coral">10</span> Parada 10 de 17</p>
     <h2>OCR y digitalización</h2>
     <p class="lead">Digitalización de datos no estructurados. Utiliza Tesseract (OCR) y pytesseract para extraer texto de imágenes o PDF escaneados y convertirlos en datos analizables.</p>
   </div>
-  <ul class="tools"><li><a class="tool" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener"><b>Tesseract OCR</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://pypi.org/project/pytesseract/" target="_blank" rel="noopener"><b>pytesseract</b><span>pypi.org ↗</span></a></li></ul>
+  <ul class="tools"><li><a class="tool" href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener"><b>Tesseract OCR</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://pypi.org/project/pytesseract/" target="_blank" rel="noopener"><b>pytesseract</b><span>pypi.org ↗</span></a></li><li><a class="tool new" href="https://ocrmypdf.readthedocs.io/" target="_blank" rel="noopener"><b>OCRmyPDF<i>nuevo</i></b><span>ocrmypdf.readthedocs.io ↗</span></a></li><li><a class="tool new" href="https://kraken.re/" target="_blank" rel="noopener"><b>Kraken<i>nuevo</i></b><span>kraken.re ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 11: Google y LLMs">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sun">11</span> Parada 11 de 13</p>
+    <p class="eyebrow"><span class="num sun">11</span> Parada 11 de 17</p>
     <h2>Google y LLMs</h2>
     <p class="lead">Uso de IA generativa como copiloto. Incluye la API de Gemini (AI Studio) para asistir en el código o el análisis, y NotebookLM para consultar sobre tus propios documentos.</p>
   </div>
-  <ul class="tools"><li><a class="tool" href="https://ai.google.dev/aistudio" target="_blank" rel="noopener"><b>Google AI Studio (Gemini)</b><span>ai.google.dev ↗</span></a></li><li><a class="tool" href="https://ai.google.dev/api" target="_blank" rel="noopener"><b>Gemini API Reference</b><span>ai.google.dev ↗</span></a></li><li><a class="tool" href="https://notebooklm.google/" target="_blank" rel="noopener"><b>NotebookLM</b><span>notebooklm.google ↗</span></a></li><li><a class="tool" href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener"><b>Colab (introducción)</b><span>colab.research.google.com ↗</span></a></li></ul>
+  <ul class="tools many"><li><a class="tool" href="https://ai.google.dev/aistudio" target="_blank" rel="noopener"><b>Google AI Studio (Gemini)</b><span>ai.google.dev ↗</span></a></li><li><a class="tool" href="https://ai.google.dev/api" target="_blank" rel="noopener"><b>Gemini API Reference</b><span>ai.google.dev ↗</span></a></li><li><a class="tool" href="https://notebooklm.google/" target="_blank" rel="noopener"><b>NotebookLM</b><span>notebooklm.google ↗</span></a></li><li><a class="tool" href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank" rel="noopener"><b>Colab (introducción)</b><span>colab.research.google.com ↗</span></a></li><li><a class="tool new" href="https://huggingface.co/" target="_blank" rel="noopener"><b>Hugging Face<i>nuevo</i></b><span>huggingface.co ↗</span></a></li><li><a class="tool new" href="https://ollama.com/" target="_blank" rel="noopener"><b>Ollama<i>nuevo</i></b><span>ollama.com ↗</span></a></li></ul>
 </section>
 <section class="slide cat" aria-label="Parada 12: Blogs y difusión">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num ink">12</span> Parada 12 de 13</p>
+    <p class="eyebrow"><span class="num ink">12</span> Parada 12 de 17</p>
     <h2>Blogs y difusión</h2>
     <p class="lead">Plataformas para contar la historia de tu proyecto. Incluye generadores de sitios estáticos para documentación (MkDocs, Quarto) y plataformas de blogging (Ghost, Blogger).</p>
   </div>
@@ -239,11 +243,52 @@ p{margin:0}
 </section>
 <section class="slide cat" aria-label="Parada 13: Limpieza y validación de datos">
   <div class="cat-text">
-    <p class="eyebrow"><span class="num sea">13</span> Parada 13 de 13</p>
+    <p class="eyebrow"><span class="num sea">13</span> Parada 13 de 17</p>
     <h2>Limpieza y validación de datos</h2>
     <p class="lead">Herramientas para asegurar la calidad de los datos. Incluye limpieza interactiva de datos «sucios» (OpenRefine) y validación de la estructura (Frictionless Data).</p>
   </div>
-  <ul class="tools"><li><a class="tool" href="https://openrefine.org/" target="_blank" rel="noopener"><b>OpenRefine</b><span>openrefine.org ↗</span></a></li><li><a class="tool" href="https://csvkit.readthedocs.io/" target="_blank" rel="noopener"><b>csvkit</b><span>csvkit.readthedocs.io ↗</span></a></li><li><a class="tool" href="https://framework.frictionlessdata.io/" target="_blank" rel="noopener"><b>Frictionless Data</b><span>framework.frictionlessdata.io ↗</span></a></li></ul>
+  <ul class="tools"><li><a class="tool" href="https://openrefine.org/" target="_blank" rel="noopener"><b>OpenRefine</b><span>openrefine.org ↗</span></a></li><li><a class="tool" href="https://csvkit.readthedocs.io/" target="_blank" rel="noopener"><b>csvkit</b><span>csvkit.readthedocs.io ↗</span></a></li><li><a class="tool" href="https://framework.frictionlessdata.io/" target="_blank" rel="noopener"><b>Frictionless Data</b><span>framework.frictionlessdata.io ↗</span></a></li><li><a class="tool new" href="https://duckdb.org/" target="_blank" rel="noopener"><b>DuckDB<i>nuevo</i></b><span>duckdb.org ↗</span></a></li><li><a class="tool new" href="https://datasette.io/" target="_blank" rel="noopener"><b>Datasette<i>nuevo</i></b><span>datasette.io ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 14: Mapas, sonido y 3D en la web">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num coral">14</span> Parada 14 de 17</p>
+    <h2>Mapas, sonido y 3D en la web</h2>
+    <p class="lead">Bibliotecas para que tu prototipo se vea, se escuche y se explore. Mapas interactivos (Leaflet, MapLibre, kepler.gl), análisis geoespacial de escritorio (QGIS), sonido en el navegador (Tone.js) y escenas 3D (Three.js).</p>
+  </div>
+  <ul class="tools many"><li><a class="tool new" href="https://leafletjs.com/" target="_blank" rel="noopener"><b>Leaflet<i>nuevo</i></b><span>leafletjs.com ↗</span></a></li><li><a class="tool new" href="https://maplibre.org/" target="_blank" rel="noopener"><b>MapLibre GL JS<i>nuevo</i></b><span>maplibre.org ↗</span></a></li><li><a class="tool new" href="https://kepler.gl/" target="_blank" rel="noopener"><b>kepler.gl<i>nuevo</i></b><span>kepler.gl ↗</span></a></li><li><a class="tool new" href="https://qgis.org/" target="_blank" rel="noopener"><b>QGIS<i>nuevo</i></b><span>qgis.org ↗</span></a></li><li><a class="tool new" href="https://tonejs.github.io/" target="_blank" rel="noopener"><b>Tone.js<i>nuevo</i></b><span>tonejs.github.io ↗</span></a></li><li><a class="tool new" href="https://threejs.org/" target="_blank" rel="noopener"><b>Three.js<i>nuevo</i></b><span>threejs.org ↗</span></a></li><li><a class="tool new" href="https://p5js.org/" target="_blank" rel="noopener"><b>p5.js<i>nuevo</i></b><span>p5js.org ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 15: Despliegue: publica tu demo">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sun">15</span> Parada 15 de 17</p>
+    <h2>Despliegue: publica tu demo</h2>
+    <p class="lead">Dónde poner tu prototipo para que el jurado lo abra con un enlace. Sitios estáticos (GitHub Pages, Netlify), aplicaciones y bases de datos (Render) y demos de Python (Streamlit Community Cloud, Hugging Face Spaces).</p><p class="aside">Revisa las condiciones del plan gratuito de cada servicio.</p>
+  </div>
+  <ul class="tools"><li><a class="tool new" href="https://pages.github.com/" target="_blank" rel="noopener"><b>GitHub Pages<i>nuevo</i></b><span>pages.github.com ↗</span></a></li><li><a class="tool new" href="https://render.com/articles/should-i-use-render" target="_blank" rel="noopener"><b>Render: ¿me sirve?<i>nuevo</i></b><span>render.com ↗</span></a></li><li><a class="tool new" href="https://www.netlify.com/" target="_blank" rel="noopener"><b>Netlify<i>nuevo</i></b><span>netlify.com ↗</span></a></li><li><a class="tool new" href="https://streamlit.io/cloud" target="_blank" rel="noopener"><b>Streamlit Community Cloud<i>nuevo</i></b><span>streamlit.io ↗</span></a></li><li><a class="tool new" href="https://huggingface.co/spaces" target="_blank" rel="noopener"><b>Hugging Face Spaces<i>nuevo</i></b><span>huggingface.co ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 16: Accesibilidad">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num ink">16</span> Parada 16 de 17</p>
+    <h2>Accesibilidad</h2>
+    <p class="lead">Herramientas para comprobar que cualquier persona pueda usar tu solución. Revisión automática de páginas (WAVE, Lighthouse), contraste de colores (WebAIM) y un lector de pantalla gratuito para probarla de verdad (NVDA).</p>
+  </div>
+  <ul class="tools"><li><a class="tool new" href="https://wave.webaim.org/" target="_blank" rel="noopener"><b>WAVE<i>nuevo</i></b><span>wave.webaim.org ↗</span></a></li><li><a class="tool new" href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener"><b>WebAIM: contraste de colores<i>nuevo</i></b><span>webaim.org ↗</span></a></li><li><a class="tool new" href="https://developer.chrome.com/docs/lighthouse" target="_blank" rel="noopener"><b>Lighthouse<i>nuevo</i></b><span>developer.chrome.com ↗</span></a></li><li><a class="tool new" href="https://www.nvaccess.org/" target="_blank" rel="noopener"><b>NVDA (lector de pantalla)<i>nuevo</i></b><span>nvaccess.org ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Parada 17: Aprender y seguir creciendo">
+  <div class="cat-text">
+    <p class="eyebrow"><span class="num sea">17</span> Parada 17 de 17</p>
+    <h2>Aprender y seguir creciendo</h2>
+    <p class="lead">Para después del hackathon (y para tu carrera). Lecciones abiertas de programación y datos en español (The Carpentries, freeCodeCamp), una guía de ciencia reproducible (The Turing Way) y cursos cortos con práctica (Kaggle Learn, GitHub Skills).</p>
+  </div>
+  <ul class="tools many"><li><a class="tool new" href="https://swcarpentry.github.io/shell-novice-es/" target="_blank" rel="noopener"><b>La terminal de Unix (Software Carpentry)<i>nuevo</i></b><span>swcarpentry.github.io ↗</span></a></li><li><a class="tool new" href="https://swcarpentry.github.io/git-novice-es/" target="_blank" rel="noopener"><b>Git (Software Carpentry)<i>nuevo</i></b><span>swcarpentry.github.io ↗</span></a></li><li><a class="tool new" href="https://swcarpentry.github.io/r-novice-gapminder-es/" target="_blank" rel="noopener"><b>R para análisis de datos (Software Carpentry)<i>nuevo</i></b><span>swcarpentry.github.io ↗</span></a></li><li><a class="tool new" href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener"><b>freeCodeCamp en español<i>nuevo</i></b><span>freecodecamp.org ↗</span></a></li><li><a class="tool new" href="https://book.the-turing-way.org/" target="_blank" rel="noopener"><b>The Turing Way<i>nuevo</i></b><span>book.the-turing-way.org ↗</span></a></li><li><a class="tool new" href="https://www.kaggle.com/learn" target="_blank" rel="noopener"><b>Kaggle Learn<i>nuevo</i></b><span>kaggle.com ↗</span></a></li><li><a class="tool new" href="https://github.com/skills" target="_blank" rel="noopener"><b>GitHub Skills<i>nuevo</i></b><span>github.com ↗</span></a></li><li><a class="tool new" href="https://education.github.com/pack" target="_blank" rel="noopener"><b>GitHub Student Developer Pack<i>nuevo</i></b><span>education.github.com ↗</span></a></li></ul>
+</section>
+<section class="slide cat" aria-label="Los datos de los once retos">
+  <div class="cat-text">
+    <p class="eyebrow">Este año</p>
+    <h2>Los datos de los once retos</h2>
+    <p class="lead">Cada reto de 2026 parte de datos abiertos reales. Aquí está la puerta de entrada de cada uno; el detalle, las licencias y los tamaños están en la sección de retos del sitio.</p>
+    <p class="btns"><a class="btn" href="index.html#retos">Ver los retos</a></p>
+  </div>
+  <ul class="tools lots"><li><a class="tool" href="https://earthquake.usgs.gov/data/comcat/" target="_blank" rel="noopener"><b>Reto 01 · USGS ComCat: sismos de 2025</b><span>earthquake.usgs.gov ↗</span></a></li><li><a class="tool" href="https://query.wikidata.org/" target="_blank" rel="noopener"><b>Reto 02 · Wikidata Query Service</b><span>query.wikidata.org ↗</span></a></li><li><a class="tool" href="https://archivo.redhistoriave.org/pieza/26-abril-1845-n276" target="_blank" rel="noopener"><b>Reto 03 · El Venezolano (1845), Red de Historia</b><span>archivo.redhistoriave.org ↗</span></a></li><li><a class="tool" href="https://github.com/venezuela-org/donate/tree/main/data" target="_blank" rel="noopener"><b>Reto 04 · 600 kits para crear: datos públicos</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://doi.org/10.6084/m9.figshare.9890531" target="_blank" rel="noopener"><b>Reto 05 · BasinATLAS (con GeoNames y GHSL)</b><span>doi.org ↗</span></a></li><li><a class="tool" href="https://www.gbif.org/country/VE" target="_blank" rel="noopener"><b>Reto 06 · GBIF: biodiversidad de Venezuela</b><span>gbif.org ↗</span></a></li><li><a class="tool" href="https://github.com/rmartinezra/Datos-Simulaciones-Hackathon-CoAfina" target="_blank" rel="noopener"><b>Reto 07 · Cascadas simuladas con CORSIKA</b><span>github.com ↗</span></a></li><li><a class="tool" href="https://w.wiki/QwUw" target="_blank" rel="noopener"><b>Reto 08 · Colección Reinhart en Wikidata</b><span>w.wiki ↗</span></a></li><li><a class="tool" href="https://luna.alf4.org" target="_blank" rel="noopener"><b>Reto 09 · Radar Cultural (beta)</b><span>luna.alf4.org ↗</span></a></li><li><a class="tool" href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview" target="_blank" rel="noopener"><b>Reto 10 · ERA5, Copernicus</b><span>cds.climate.copernicus.eu ↗</span></a></li><li><a class="tool" href="https://gea.esac.esa.int/archive/" target="_blank" rel="noopener"><b>Reto 11 · Gaia Archive (ESA)</b><span>gea.esac.esa.int ↗</span></a></li></ul>
 </section>
 <section class="slide" aria-label="Más recursos en el sitio">
   <div class="narrow">
