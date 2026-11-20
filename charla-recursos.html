@@ -281,7 +281,7 @@ p{margin:0}
   </div>
   <ul class="tools many"><li><a class="tool new" href="https://swcarpentry.github.io/shell-novice-es/" target="_blank" rel="noopener"><b>La terminal de Unix (Software Carpentry)<i>nuevo</i></b><span>swcarpentry.github.io ↗</span></a></li><li><a class="tool new" href="https://swcarpentry.github.io/git-novice-es/" target="_blank" rel="noopener"><b>Git (Software Carpentry)<i>nuevo</i></b><span>swcarpentry.github.io ↗</span></a></li><li><a class="tool new" href="https://swcarpentry.github.io/r-novice-gapminder-es/" target="_blank" rel="noopener"><b>R para análisis de datos (Software Carpentry)<i>nuevo</i></b><span>swcarpentry.github.io ↗</span></a></li><li><a class="tool new" href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener"><b>freeCodeCamp en español<i>nuevo</i></b><span>freecodecamp.org ↗</span></a></li><li><a class="tool new" href="https://book.the-turing-way.org/" target="_blank" rel="noopener"><b>The Turing Way<i>nuevo</i></b><span>book.the-turing-way.org ↗</span></a></li><li><a class="tool new" href="https://www.kaggle.com/learn" target="_blank" rel="noopener"><b>Kaggle Learn<i>nuevo</i></b><span>kaggle.com ↗</span></a></li><li><a class="tool new" href="https://github.com/skills" target="_blank" rel="noopener"><b>GitHub Skills<i>nuevo</i></b><span>github.com ↗</span></a></li><li><a class="tool new" href="https://education.github.com/pack" target="_blank" rel="noopener"><b>GitHub Student Developer Pack<i>nuevo</i></b><span>education.github.com ↗</span></a></li></ul>
 </section>
-<section class="slide cat" aria-label="Los datos de los once retos">
+<section class="slide cat" aria-label="Los datos de los once retos" data-desde="2026-11-27T12:00:00Z">
   <div class="cat-text">
     <p class="eyebrow">Este año</p>
     <h2>Los datos de los once retos</h2>
@@ -332,6 +332,8 @@ p{margin:0}
 </nav>
 <script>
 (function(){
+  /* Las diapositivas con data-desde se muestran a partir de esa fecha (UTC); antes se retiran. */
+  document.querySelectorAll('.slide[data-desde]').forEach(s=>{ if (Date.parse(s.dataset.desde) > Date.now()) s.remove(); });
   const deck=document.getElementById('deck'), slides=[...deck.children];
   const prev=document.getElementById('prev'), next=document.getElementById('next'), count=document.getElementById('count'), bar=document.getElementById('prog');
   let cur=0, settle=0;

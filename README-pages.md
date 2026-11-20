@@ -9,6 +9,7 @@ En la siguiente tabla está cada cosa que suele cambiar y el archivo donde se ca
 | Quiero… | Archivo |
 |---|---|
 | Abrir o cerrar la convocatoria de retos o la de hackers | `convocatorias.json` |
+| Mostrar los retos a partir de una fecha | `convocatorias.json` (`retosVisiblesDesde`) |
 | Actualizar el cronograma | `cronograma.json` y `cronograma.en.json` |
 | Añadir o corregir un reto | `retos.json` y `retos.en.json` |
 | Añadir un recurso para hackers | `README.md` y `README.en.md` |
@@ -86,6 +87,32 @@ El interruptor muestra u oculta lo que ya está en las páginas. Los textos y en
 - **Pusiste `true` y el sitio sigue mostrando la convocatoria cerrada.** Casi siempre es un detalle de escritura en el archivo: `true` y `false` van en minúsculas y sin comillas, cada línea termina en coma salvo la última, y las llaves `{ }` abren y cierran el archivo. Cuando el archivo tiene un error, el sitio muestra las dos convocatorias cerradas, que es la opción segura.
 - **Todavía ves la versión anterior.** Espera un par de minutos y recarga la página sin caché (Cmd+Shift+R en Mac, Ctrl+F5 en Windows).
 - **Dudas sobre qué página editar.** Basta con cambiar `convocatorias.json`: las dos páginas leen ese archivo.
+
+## Mostrar los retos a partir de una fecha
+
+En `convocatorias.json` hay una tercera línea, `retosVisiblesDesde`, con la fecha y la hora a partir de las cuales el sitio muestra los retos:
+
+```json
+"retosVisiblesDesde": "2026-11-27T12:00:00Z"
+```
+
+Antes de ese momento, la sección «Retos 2026» muestra un aviso de que los retos se revelan el viernes 27, la primera puerta dice «Los retos, el viernes 27» y el segundo botón del encabezado dice «Retos: el viernes 27». Al llegar la hora, el sitio muestra los retos por sí solo, también en las páginas que ya estén abiertas, sin publicar nada ese día.
+
+La hora se escribe en UTC, con el formato `AAAA-MM-DDTHH:MM:SSZ`. En la siguiente tabla está la hora local de `2026-11-27T12:00:00Z` en varias ciudades.
+
+| Lugar | Hora local |
+|---|---|
+| Ciudad de México | viernes 27, 06:00 |
+| Bogotá, Lima y Quito | viernes 27, 07:00 |
+| Caracas y La Paz | viernes 27, 08:00 |
+| Buenos Aires, Santiago y São Paulo | viernes 27, 09:00 |
+| Ginebra | viernes 27, 13:00 |
+
+- **Para revelarlos en otro momento,** cambia la fecha. Por ejemplo, `2026-11-27T14:00:00Z` es el viernes a las 09:00 en Bogotá, la hora de la bienvenida.
+- **Para mostrarlos ya,** deja el valor vacío: `"retosVisiblesDesde": ""`.
+- **Las diapositivas del taller** (`charla-recursos.html`) llevan la misma fecha en la diapositiva «Los datos de los once retos», en el atributo `data-desde`. Si cambias la fecha del sitio, cámbiala también allí.
+
+Esto oculta los retos en el sitio. Los archivos `retos.json`, `retos.en.json` y la carpeta `retos/` siguen en el repositorio, que es público, y la hora se toma del reloj de cada visitante.
 
 ## Publicar
 

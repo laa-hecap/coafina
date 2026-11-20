@@ -131,4 +131,6 @@ Las convocatorias de retos y de hackers se abren y se cierran en [`convocatorias
 
 Cambia `false` por `true` para abrir una convocatoria, o `true` por `false` para cerrarla. Guarda el cambio («Commit changes») y el sitio se actualiza en uno o dos minutos, en español y en inglés. Los patrocinios están siempre abiertos.
 
+El mismo archivo tiene `retosVisiblesDesde`, la fecha y hora (en UTC) desde la que el sitio muestra los retos; antes muestra un aviso.
+
 La guía completa, con lo que cambia en cada parte del sitio, está en [README-pages.md](README-pages.md#el-interruptor-de-las-convocatorias).

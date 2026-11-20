@@ -119,4 +119,6 @@ The call for challenges and the registration for hackers are switched in [`convo
 
 `retos` is the call for challenges and `hackers` is participant registration. Change `false` to `true` to open one, or `true` to `false` to close it. Commit the change and the site updates in a minute or two, in Spanish and English. Sponsorship is always open.
 
+The same file has `retosVisiblesDesde`, the date and time (in UTC) from which the site shows the challenges; before that it shows a notice.
+
 The full guide, with what changes in each part of the site, is in [README-pages.md](README-pages.md#el-interruptor-de-las-convocatorias) (in Spanish).

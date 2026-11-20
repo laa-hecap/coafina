@@ -1,5 +1,6 @@
 {
-  "_ayuda": "Estado de las convocatorias. true = abierta, false = cerrada. Al cambiar un valor, el sitio muestra u oculta, en español y en inglés, los botones, el banner, las notas y la puerta de esa convocatoria. Los patrocinios están siempre abiertos y no dependen de este archivo.",
+  "_ayuda": "Estado del sitio. 'retos' y 'hackers': true = convocatoria abierta, false = cerrada. 'retosVisiblesDesde': fecha y hora, en UTC, a partir de la cual el sitio muestra los retos; antes muestra un aviso. Para mostrarlos siempre, borra esa línea o déjala en \"\". Los patrocinios están siempre abiertos y no dependen de este archivo.",
   "retos": false,
-  "hackers": false
+  "hackers": false,
+  "retosVisiblesDesde": "2026-11-27T12:00:00Z"
 }

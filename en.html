@@ -273,7 +273,7 @@ footer p{max-width:none;margin:0}
       <div class="hero-days" aria-hidden="true"><b>27</b><b>28</b><b>29</b></div>
       <p class="hero-date"><span><span class="vh">27, 28 and 29 </span>November 2026</span><span class="hero-count" id="hero-count" hidden></span></p>
     </div>
-    <p class="hero-cta"><a class="btn" href="#cronograma">See the schedule</a><a class="btn alt" href="#retos">See the challenges</a></p>
+    <p class="hero-cta"><a class="btn" href="#cronograma">See the schedule</a><a class="btn alt" href="#retos" data-retos="on" hidden>See the challenges</a><a class="btn alt" href="#retos" data-retos="off">Challenges: Friday 27</a></p>
     <p class="hero-note">This is CoAfina’s action page: how to take part and where to find us. Full details about this edition are on the <a data-href="website" href="#">official CoAfina website</a>.</p>
   </div>
   <video class="equipo" autoplay muted loop playsinline poster="hackathon-2026.png" aria-label="Hackathon 2026: CoAfina’s five characters">
@@ -309,11 +309,17 @@ footer p{max-width:none;margin:0}
     <p>Organizations, research groups and professionals who want a team to tackle their problem using open data.</p>
     <span class="go">How to propose a challenge</span>
   </a>
-  <a class="door retadores" href="#retos" data-closed="retos">
+  <a class="door retadores" href="#retos" data-closed="retos" data-retos="on" hidden>
     <small>This edition's challenges</small>
     <span class="h">Meet the challenges</span>
     <p>Eleven challenges in science, education, heritage and civic technology, proposed by organisations in Latin America and Europe.</p>
     <span class="go">See the challenges</span>
+  </a>
+  <a class="door retadores" href="#retos" data-closed="retos" data-retos="off">
+    <small>This edition's challenges</small>
+    <span class="h">Challenges on Friday 27</span>
+    <p>The eleven challenges are revealed when the hackathon starts. Until then, get your tools ready and find your team.</p>
+    <span class="go">When they are revealed</span>
   </a>
   <a class="door hackers" href="#participa" data-open="hackers" hidden>
     <small>I am a student</small>
@@ -403,11 +409,17 @@ footer p{max-width:none;margin:0}
 
 <section class="wrap" id="retos">
   <h2>2026 challenges</h2>
-  <p class="retos-intro">Eleven challenges in science, education, heritage and civic technology, proposed by our team and organizations across Latin America and Europe. There is room for coders, researchers, designers, educators and people with local knowledge.</p>
-  <div id="retos-list"><p class="note">Loading challenges…</p></div>
-  <div class="reto-cta" data-open="retos" hidden>
-    <p>Have a problem that open data could help solve?</p>
-    <a class="btn" data-href="formChallenge" href="#">Submit my challenge</a>
+  <div data-retos="off">
+    <p class="retos-intro">This edition's eleven challenges are revealed on Friday 27 November, when the hackathon starts. They will appear here that day with their data, deliverable and blueprint.</p>
+    <p class="note">In the meantime, check the <a href="#cronograma">schedule</a> and the <a href="#recursos">resources for hackers</a>.</p>
+  </div>
+  <div data-retos="on" hidden>
+    <p class="retos-intro">Eleven challenges in science, education, heritage and civic technology, proposed by our team and organizations across Latin America and Europe. There is room for coders, researchers, designers, educators and people with local knowledge.</p>
+    <div id="retos-list"><p class="note">Loading challenges…</p></div>
+    <div class="reto-cta" data-open="retos" hidden>
+      <p>Have a problem that open data could help solve?</p>
+      <a class="btn" data-href="formChallenge" href="#">Submit my challenge</a>
+    </div>
   </div>
 </section>
 
@@ -651,13 +663,22 @@ footer p{max-width:none;margin:0}
 })();
 </script>
 <script>
-/* Convocatorias abiertas o cerradas: se leen de convocatorias.json (true = abierta). Sin ese archivo, se muestran cerradas. */
+/* Estado del sitio, leído de convocatorias.json:
+   - retos / hackers: true = convocatoria abierta. Sin el archivo, se muestran cerradas.
+   - retosVisiblesDesde: fecha y hora (UTC) desde la que se muestran los retos. Sin esa línea, se muestran siempre. */
 (async function(){
-  let st = {retos:false, hackers:false};
-  try { const r = await fetch('convocatorias.json', {cache:'no-cache'}); if (r.ok) { const j = await r.json(); st = {retos: j.retos === true, hackers: j.hackers === true}; } } catch (e) {}
+  let st = {retos:false, hackers:false}, desde = NaN;
+  try { const r = await fetch('convocatorias.json', {cache:'no-cache'}); if (r.ok) { const j = await r.json(); st = {retos: j.retos === true, hackers: j.hackers === true}; desde = Date.parse(j.retosVisiblesDesde || ''); } } catch (e) {}
   st.alguna = st.retos || st.hackers;
-  document.querySelectorAll('[data-open]').forEach(e => { e.hidden = !st[e.dataset.open]; });
-  document.querySelectorAll('[data-closed]').forEach(e => { e.hidden = !!st[e.dataset.closed]; });
+  const aplicar = () => {
+    const ver = !(desde > Date.now());          // sin fecha válida, los retos se muestran
+    document.querySelectorAll('[data-open],[data-closed],[data-retos]').forEach(e => {
+      const d = e.dataset;
+      e.hidden = !((!d.open || st[d.open]) && (!d.closed || !st[d.closed]) && (!d.retos || (d.retos === 'on') === ver));
+    });
+    return ver;
+  };
+  if (!aplicar()) { const falta = desde - Date.now(); if (falta < 2147483647) setTimeout(aplicar, falta + 500); }   // se muestran solos al llegar la hora
 })();
 </script>
 </body>
