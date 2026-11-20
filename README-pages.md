@@ -112,6 +112,8 @@ La hora se escribe en UTC, con el formato `AAAA-MM-DDTHH:MM:SSZ`. En la siguient
 - **Para mostrarlos ya,** deja el valor vacío: `"retosVisiblesDesde": ""`.
 - **Las diapositivas del taller** (`charla-recursos.html`) llevan la misma fecha en la diapositiva «Los datos de los once retos», en el atributo `data-desde`. Si cambias la fecha del sitio, cámbiala también allí.
 
+Hasta esa fecha el sitio tampoco enlaza al repositorio de GitHub: se ocultan la frase sobre el README en «Recursos para hackers», el icono de GitHub en «Síguenos», la mención del código en el pie de página y el botón «README en GitHub» de las diapositivas. Todo vuelve a mostrarse en la misma fecha.
+
 Esto oculta los retos en el sitio. Los archivos `retos.json`, `retos.en.json` y la carpeta `retos/` siguen en el repositorio, que es público, y la hora se toma del reloj de cada visitante.
 
 ## Publicar

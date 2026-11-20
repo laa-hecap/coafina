@@ -296,7 +296,7 @@ p{margin:0}
     <h2>La lista sigue en el sitio de CoAfina</h2>
     <p class="lead">En la página del hackathon hay más herramientas gratuitas o de código abierto para alojar, analizar, visualizar y desplegar tu solución. La lista vive en el README del repositorio.</p>
     <p class="lead">¿Falta una herramienta? Abre un <em>pull request</em> o propónla en Discord.</p>
-    <p class="btns"><a class="btn" href="index.html#recursos">Ver los recursos del sitio</a><a class="btn ghost" href="https://github.com/laa-hecap/coafina/blob/main/README.md" target="_blank" rel="noopener">README en GitHub ↗</a></p>
+    <p class="btns"><a class="btn" href="index.html#recursos">Ver los recursos del sitio</a><a class="btn ghost" data-desde="2026-11-27T12:00:00Z" href="https://github.com/laa-hecap/coafina/blob/main/README.md" target="_blank" rel="noopener">README en GitHub ↗</a></p>
   </div>
 </section>
 <section class="slide" aria-label="Espacios de comunicación">
@@ -332,8 +332,8 @@ p{margin:0}
 </nav>
 <script>
 (function(){
-  /* Las diapositivas con data-desde se muestran a partir de esa fecha (UTC); antes se retiran. */
-  document.querySelectorAll('.slide[data-desde]').forEach(s=>{ if (Date.parse(s.dataset.desde) > Date.now()) s.remove(); });
+  /* Las diapositivas y los enlaces con data-desde se muestran a partir de esa fecha (UTC); antes se retiran. */
+  document.querySelectorAll('[data-desde]').forEach(s=>{ if (Date.parse(s.dataset.desde) > Date.now()) s.remove(); });
   const deck=document.getElementById('deck'), slides=[...deck.children];
   const prev=document.getElementById('prev'), next=document.getElementById('next'), count=document.getElementById('count'), bar=document.getElementById('prog');
   let cur=0, settle=0;
