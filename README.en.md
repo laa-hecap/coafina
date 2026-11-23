@@ -69,11 +69,16 @@ Tools and resources for hosting, analyzing, visualizing and sharing your project
 - [Google Docs](https://www.google.com/docs/about/): Create, edit and share documents online.
 - [CryptPad](https://cryptpad.org/): Open-source collaborative suite with encryption.
 
-## Open Data
+## Open and Linked Data
 - [CEPALSTAT](https://statistics.cepal.org/portal/cepalstat/): Statistics for Latin America and the Caribbean, with an API.
 - [Our World in Data](https://ourworldindata.org/): Open data and charts on global topics.
 - [Humanitarian Data Exchange](https://data.humdata.org/): Open humanitarian data by country.
 - [Wikidata Query Builder](https://query.wikidata.org/querybuilder/): Query Wikidata without writing SPARQL.
+- [Linked Open Data (eCH-0205)](https://www.ech.ch/de/ech/ech-0205/1.0): An introduction to linked data and how to publish it, with Wikidata examples and use cases. By Beat Estermann and the Swiss linked data community.
+- [5-star Open Data](https://5stardata.info/en/): Tim Berners-Lee's scheme for publishing open data, with an example for each level.
+- [Linked Data, Tim Berners-Lee's note](https://www.w3.org/DesignIssues/LinkedData.html): The four principles of linked data, from the original source.
+- [Introduction to Wikidata](https://www.wikidata.org/wiki/Wikidata:Introduction): What Wikidata is and how its data is organised.
+- [Wikidata SPARQL tutorial](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial): Learn to query Wikidata step by step.
 
 ## Maps, Sound and 3D
 - [Leaflet](https://leafletjs.com/): JavaScript library for interactive maps.

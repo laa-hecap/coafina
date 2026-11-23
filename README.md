@@ -73,11 +73,16 @@ Aquí encontrarás de todo: desde plataformas para alojar tu proyecto hasta herr
 - [Google Docs](https://www.google.com/docs/about/): Herramienta para crear, editar y compartir documentos en línea.
 - [CryptPad](https://cryptpad.org/): Suite colaborativa de código abierto con cifrado.
 
-## 🗂️ Datos Abiertos
+## 🗂️ Datos Abiertos y Enlazados
 - [CEPALSTAT](https://statistics.cepal.org/portal/cepalstat/): Estadísticas de América Latina y el Caribe, con API.
 - [Our World in Data](https://ourworldindata.org/): Datos y gráficos abiertos sobre temas globales.
 - [Humanitarian Data Exchange](https://data.humdata.org/): Datos humanitarios abiertos por país.
 - [Wikidata Query Builder](https://query.wikidata.org/querybuilder/): Consulta Wikidata sin escribir SPARQL.
+- [Linked Open Data (eCH-0205)](https://www.ech.ch/de/ech/ech-0205/1.0): Introducción a los datos enlazados y a su publicación, con ejemplos de Wikidata y casos de uso. De Beat Estermann y la comunidad suiza de datos enlazados; en inglés.
+- [Datos abiertos de 5 estrellas](https://5stardata.info/es/): El esquema de Tim Berners-Lee para publicar datos abiertos, con un ejemplo de cada nivel.
+- [Linked Data, la nota de Tim Berners-Lee](https://www.w3.org/DesignIssues/LinkedData.html): Los cuatro principios de los datos enlazados, en su fuente original; en inglés.
+- [Introducción a Wikidata](https://www.wikidata.org/wiki/Wikidata:Introduction): Qué es Wikidata y cómo se organizan sus datos; elige español en la lista de idiomas.
+- [Tutorial de SPARQL de Wikidata](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial): Aprende a consultar Wikidata paso a paso; elige español en la lista de idiomas.
 
 ## 🗺️ Mapas, Sonido y 3D
 - [Leaflet](https://leafletjs.com/): Biblioteca JS para mapas interactivos.
