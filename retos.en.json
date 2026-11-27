@@ -155,7 +155,8 @@
     "plano": "retos/reto-04-plano.png",
     "altPlano": "Del kit al impacto blueprint: deliveries, public map, authorized photographs, restricted jury and privacy",
     "color": "#E8664A",
-    "presentacion": "reto-04.html"
+    "presentacion": "reto-04.html",
+    "aviso": "Teams that take this challenge will receive a private folder with a curated selection of 50 of the drawings received. It is for working during the hackathon: the drawings are not published or shared outside the team."
   },
   {
     "n": "05",

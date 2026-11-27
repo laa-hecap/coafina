@@ -155,7 +155,8 @@
     "plano": "retos/reto-04-plano.png",
     "altPlano": "Plano del reto Del kit al impacto: entregas, mapa público, fotografías autorizadas, jurado restringido y privacidad",
     "color": "#E8664A",
-    "presentacion": "reto-04.html"
+    "presentacion": "reto-04.html",
+    "aviso": "Los equipos que tomen este reto recibirán una carpeta privada con una selección curada de 50 dibujos recibidos. Es para trabajar durante el hackatón: los dibujos no se publican ni se comparten fuera del equipo."
   },
   {
     "n": "05",
