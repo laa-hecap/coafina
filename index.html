@@ -240,6 +240,12 @@ footer p{max-width:none;margin:0}
 .charla p{margin:0;max-width:62ch;color:var(--muted)}
 .charla .charla-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sea)}
 [hidden]{display:none!important}
+
+/* Presentaciones de los retos */
+.pres-retos{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem .7rem;margin:0 0 1.6rem;padding:1rem 1.2rem;background:#fff;border:1px solid var(--line);border-radius:.8rem}
+.pres-retos p{margin:0 .4rem 0 0;font-weight:600;max-width:none}
+.pres-retos a{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;padding:.55rem .95rem;border-radius:.4rem}
+.pres-retos a:hover{background:var(--sea)}
 </style>
 </head>
 <body>
@@ -413,6 +419,7 @@ footer p{max-width:none;margin:0}
   </div>
   <div data-retos="on" hidden>
     <p class="retos-intro">Once retos de ciencia, educación, patrimonio y tecnología cívica, propuestos por nuestro equipo y por organizaciones de América Latina y Europa. Hay lugar para quienes programan, investigan, diseñan, enseñan y conocen sus comunidades.</p>
+    <div class="pres-retos"><p>Diapositivas de cada reto, con sus datos:</p><a href="reto-01.html">Reto 01 · Clúster Sur</a><a href="reto-02.html">Reto 02 · Mapa vivo</a><a href="reto-03.html">Reto 03 · Archivo Abierto</a><a href="reto-04.html">Reto 04 · Del kit al impacto</a></div>
     <div id="retos-list"><p class="note">Cargando los retos…</p></div>
     <div class="reto-cta" data-open="retos" hidden>
       <p>¿Tienes un problema que pueda resolverse con datos abiertos?</p>
@@ -597,6 +604,7 @@ footer p{max-width:none;margin:0}
           (x.coleccion ? '<p class="datos">Colección propuesta: <a href="' + esc(x.coleccion.url) + '" target="_blank" rel="noopener">' + esc(x.coleccion.nombre) + '</a>. ' + esc(x.coleccion.nota) + '</p>' : '') +
           (x.recurso ? '<p class="datos">Para profundizar: <a href="' + esc(x.recurso.url) + '" target="_blank" rel="noopener">' + esc(x.recurso.nombre) + '</a>. ' + esc(x.recurso.nota) + '</p>' : '') +
           '<div class="acts">' +
+            (x.presentacion ? '<a class="btn" href="' + esc(x.presentacion) + '">Ver la presentación</a>' : '') +
             (x.plano ? '<button class="btn light" type="button" data-plano="' + esc(x.plano) + '" data-alt="' + esc(x.altPlano) + '">Ver el plano del reto</button>' : '') +
             (discord ? '<a class="btn" href="' + esc(discord) + '" target="_blank" rel="noopener">Preguntar en Discord</a>' : '') +
           '</div>' +

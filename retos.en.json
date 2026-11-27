@@ -25,7 +25,8 @@
       "nombre": "OpenQuake Engine: guided risk example",
       "url": "https://docs.openquake.org/oq-engine/master/manual/getting-started/risk-quickstart.html",
       "nota": "Optional extension using prepared models; the USGS CSV is not a direct input for this example, and task recovery is demonstrated separately."
-    }
+    },
+    "presentacion": "reto-01.html"
   },
   {
     "n": "02",
@@ -77,7 +78,8 @@
     "alt": "People with maps, books and laptops mark museums and planetariums on a map of Latin America, with incomplete records to fill in",
     "plano": "retos/reto-02-plano.png",
     "altPlano": "Mapa vivo blueprint: query, verify, visualize and connect",
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "presentacion": "reto-02.html"
   },
   {
     "n": "03",
@@ -126,7 +128,8 @@
       "nombre": "Red Historia Venezuela · El Venezolano, 26 April 1845",
       "url": "https://archivo.redhistoriave.org/pieza/26-abril-1845-n276",
       "nota": "Permission to republish images and derivatives remains to be confirmed."
-    }
+    },
+    "presentacion": "reto-03.html"
   },
   {
     "n": "04",
@@ -151,7 +154,8 @@
     "alt": "University volunteers prepare art kits and review aggregate indicators and a general map, without showing children",
     "plano": "retos/reto-04-plano.png",
     "altPlano": "Del kit al impacto blueprint: deliveries, public map, authorized photographs, restricted jury and privacy",
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "presentacion": "reto-04.html"
   },
   {
     "n": "05",

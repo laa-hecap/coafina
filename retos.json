@@ -25,7 +25,8 @@
       "nombre": "OpenQuake Engine: ejemplo guiado de riesgo",
       "url": "https://docs.openquake.org/oq-engine/master/manual/getting-started/risk-quickstart.html",
       "nota": "Extensión opcional con modelos preparados; el CSV del USGS no es entrada directa de este ejemplo y la recuperación de tareas se demuestra por separado."
-    }
+    },
+    "presentacion": "reto-01.html"
   },
   {
     "n": "02",
@@ -77,7 +78,8 @@
     "alt": "Personas con mapas, libros y laptops marcan museos y planetarios en un mapa de América Latina, con fichas incompletas por completar",
     "plano": "retos/reto-02-plano.png",
     "altPlano": "Plano del reto Mapa vivo: consultar, verificar, visualizar y conectar",
-    "color": "var(--sun)"
+    "color": "var(--sun)",
+    "presentacion": "reto-02.html"
   },
   {
     "n": "03",
@@ -126,7 +128,8 @@
       "nombre": "Red de Historia Venezuela · El Venezolano, 26 de abril de 1845",
       "url": "https://archivo.redhistoriave.org/pieza/26-abril-1845-n276",
       "nota": "Permiso para republicar imágenes y derivados pendiente de confirmar."
-    }
+    },
+    "presentacion": "reto-03.html"
   },
   {
     "n": "04",
@@ -151,7 +154,8 @@
     "alt": "Voluntariado universitario prepara kits de arte y revisa indicadores agregados y un mapa general, sin mostrar niñas ni niños",
     "plano": "retos/reto-04-plano.png",
     "altPlano": "Plano del reto Del kit al impacto: entregas, mapa público, fotografías autorizadas, jurado restringido y privacidad",
-    "color": "#E8664A"
+    "color": "#E8664A",
+    "presentacion": "reto-04.html"
   },
   {
     "n": "05",

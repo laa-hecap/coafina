@@ -15,6 +15,7 @@ En la siguiente tabla está cada cosa que suele cambiar y el archivo donde se ca
 | Añadir un recurso para hackers | `README.md` y `README.en.md` |
 | Cambiar fechas, formularios, Discord o redes | Bloque de configuración al final de `index.html` y `en.html` |
 | Cambiar las diapositivas del taller | `charla-recursos.html` |
+| Cambiar la presentación de un reto | `reto-01.html` a `reto-04.html` |
 
 ## El interruptor de las convocatorias
 
@@ -145,6 +146,16 @@ Las piezas gráficas conservan los plazos originales. El aviso sobre el banner y
 `index.html` es la versión en español y `en.html` la versión en inglés. Ambas conservan el diseño original, con fondo marfil (`#FFFCF5`) y enlaces Español / English en la cabecera. Los textos de las piezas gráficas originales permanecen en español; los textos HTML y alternativos de la versión inglesa están traducidos.
 
 La versión inglesa carga `retos.en.json` y `README.en.md`; comparten las mismas imágenes, planos y destinos de los formularios. Al actualizar un reto, un enlace, una fecha o un recurso, actualiza ambas versiones. Las fechas de cada HTML usan cadenas del idioma correspondiente; no hay traducción automática ni cierre por reloj de la convocatoria de retos.
+
+## Presentaciones de los retos
+
+`reto-01.html`, `reto-02.html`, `reto-03.html` y `reto-04.html` son las diapositivas de los cuatro primeros retos, con el mismo formato que las del taller. Se abren desde el botón «Ver la presentación» de cada tarjeta y desde la fila «Presentaciones de los retos», al inicio de la sección de retos. Para enlazar la presentación de otro reto, añade `"presentacion": "archivo.html"` a su entrada en `retos.json` y `retos.en.json`.
+
+La presentación del reto 01 dibuja los sismos de 2025 con datos del USGS. Primero busca una copia local en `retos/sismos-2025.geojson`; si ese archivo no está, pide los datos al USGS en el momento. Para dejar la copia local en el repositorio:
+
+```bash
+curl -L -o retos/sismos-2025.geojson "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-01-01&endtime=2025-12-31&minmagnitude=4.5&minlatitude=-56&maxlatitude=33&minlongitude=-118&maxlongitude=-34&orderby=time-asc"
+```
 
 ## Cronograma
 

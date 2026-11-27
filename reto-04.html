@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reto 04 · Del kit al impacto · CoAfina 2026</title>
+<meta name="description" content="Presentación del reto 04 del hackathon CoAfina 2026: Del kit al impacto.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#143642;--sea:#0E8082;--sun:#F2C14E;--coral:#C7462C;--cream:#FFFCF5;--mist:#E9EFF1;--line:#C9D6DA;--muted:#4A6572;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);overflow:hidden;line-height:1.45}
+a{color:var(--sea)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.deck{height:100vh;height:100dvh;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.deck::-webkit-scrollbar{display:none}
+@media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}}
+.slide{flex:0 0 100vw;height:100%;scroll-snap-align:start;scroll-snap-stop:always;overflow-y:auto;display:flex;flex-direction:column;justify-content:center;gap:clamp(.6rem,1.4vw,1.2rem);
+  padding:clamp(1.4rem,4vw,4rem) clamp(1.3rem,6vw,6.5rem) clamp(4.8rem,7vw,6rem);background:var(--cream)}
+.slide.dark{background:var(--ink);color:var(--cream)}
+h1,h2{font-family:var(--display);font-weight:800;line-height:1.03;letter-spacing:-.015em;margin:0}
+h1,h2.big{font-size:clamp(2.2rem,6.2vw,5.4rem)}
+h1 span{font-weight:300}
+h2{font-size:clamp(1.8rem,4.3vw,3.5rem)}
+p{margin:0}
+.eyebrow{font-size:clamp(.82rem,1.15vw,1.05rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);display:flex;align-items:center;gap:.7rem}
+.dark .eyebrow{color:var(--sun)}
+.lead{font-size:clamp(1.08rem,1.85vw,1.6rem);line-height:1.38;color:var(--muted);max-width:44ch}
+.dark .lead{color:#D5E4E6}
+.dark .lead b{color:var(--cream)}
+.aside{font-size:clamp(.95rem,1.3vw,1.15rem);color:var(--sea);font-weight:600}
+.narrow{display:flex;flex-direction:column;gap:clamp(.8rem,1.6vw,1.4rem);max-width:60rem}
+.narrow .lead{max-width:52ch}
+/* portada */
+.cover{flex-direction:row;align-items:center;gap:clamp(1rem,4vw,4rem)}
+.cover-text{flex:1;display:flex;flex-direction:column;gap:clamp(.8rem,1.6vw,1.4rem)}
+.cover .logo{height:clamp(2.6rem,5vw,4.4rem);width:auto;align-self:flex-start}
+.cover .who{font-size:clamp(1.05rem,1.7vw,1.5rem);color:var(--muted)}
+.cover .who b{color:var(--ink)}
+.cover .hint{font-size:clamp(.85rem,1.05vw,1rem);color:var(--muted)}
+.cover .sticker{width:clamp(180px,30vw,460px);height:auto;flex:none}
+/* índice */
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:clamp(.5rem,1vw,.9rem);margin-top:clamp(.4rem,1vw,1rem)}
+.chip{display:flex;align-items:center;gap:.8rem;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:.65rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;font-size:clamp(.95rem,1.25vw,1.15rem);line-height:1.2}
+.chip:hover{border-color:var(--sea)}
+.chip b,.num{flex:none;display:inline-grid;place-items:center;width:2.1em;height:2.1em;border-radius:50%;font-family:var(--display);font-weight:800}
+.sea b,.num.sea{background:var(--sea);color:#fff}
+.coral b,.num.coral{background:var(--coral);color:#fff}
+.sun b,.num.sun{background:var(--sun);color:var(--ink)}
+.ink b,.num.ink{background:var(--ink);color:var(--cream)}
+.num{font-size:1.15em;letter-spacing:0}
+/* paradas */
+.cat{flex-direction:row;align-items:center;gap:clamp(1.2rem,4vw,4.5rem)}
+.cat-text{flex:5;display:flex;flex-direction:column;gap:clamp(.7rem,1.4vw,1.3rem);min-width:0}
+.tools{flex:6;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:clamp(.45rem,.9vw,.8rem);min-width:0}
+.tools.many,.tools.two{grid-template-columns:1fr 1fr}
+.tool{display:flex;flex-direction:column;gap:.1rem;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:clamp(.55rem,1vw,.9rem) clamp(.8rem,1.3vw,1.2rem);text-decoration:none;color:var(--ink);height:100%}
+.tool:hover{border-color:var(--sea);box-shadow:0 2px 0 var(--sea)}
+.tool b{font-size:clamp(1rem,1.5vw,1.35rem);font-weight:600;line-height:1.2}
+.tool span{font-size:clamp(.8rem,1vw,.95rem);color:var(--muted);overflow-wrap:anywhere}
+.tools.lots{grid-template-columns:repeat(3,1fr)}
+.tool b i,.chip i{font-style:normal;font-family:var(--body);font-size:.62em;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--sun);color:var(--ink);border-radius:999px;padding:.12em .55em;margin-left:.5em;vertical-align:.15em;white-space:nowrap}
+.tool.new{border-color:#E6C562}
+.fig{justify-content:center}
+.fig-box{width:100%;max-width:1180px;margin:clamp(.4rem,1.2vw,1rem) 0}
+.fig svg{display:block;width:100%;height:auto;max-height:47vh}
+.fig svg text{font-family:var(--body);fill:var(--ink)}
+.fig svg a{cursor:pointer}
+.fig svg a:hover circle{fill:var(--sun)}
+.s-num{font-family:var(--display)!important;font-weight:800;font-size:22px;fill:#4A6572!important}
+.s-t{font-family:var(--display)!important;font-weight:800;font-size:17.5px}
+.s-t2{font-weight:600;font-size:16.5px}
+.s-s{font-size:13px;fill:#4A6572}
+.s-p{font-family:var(--display)!important;font-weight:800;font-size:13.5px}
+.s-big{font-family:var(--display)!important;font-weight:800;font-size:28px}
+.s-star{font-size:19px;letter-spacing:2px}
+.s-lab{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;fill:#0E8082!important}
+.cap{font-size:clamp(.85rem,1.05vw,1rem);color:var(--muted);max-width:70ch}
+.cz{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.6rem,1.4vw,1.2rem)}
+.cz-card{background:#FFFCF5;border:1px solid var(--line);border-radius:.9rem;padding:clamp(.9rem,2vw,1.6rem) clamp(.8rem,1.5vw,1.3rem);display:flex;flex-direction:column;gap:.5rem}
+.cz-ej{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,2.6vw,2.3rem);line-height:1.1}
+.cz-n{font-family:var(--display);font-weight:800;font-size:clamp(1.1rem,1.6vw,1.4rem);color:var(--ink)}
+.cz-v{font-weight:700;font-size:clamp(.9rem,1.15vw,1.05rem)}
+.cz-v.malo{color:var(--coral)}
+.cz-v.bien{color:var(--sea)}
+@media (max-width:820px){.cz{grid-template-columns:1fr 1fr}.fig svg{max-height:none}}
+/* botones */
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:.8rem 1.3rem;border-radius:.4rem;font-size:clamp(.95rem,1.2vw,1.1rem)}
+.btn:hover{background:var(--sea)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.discord{background:#5865F2}
+.btn.light{background:var(--sun);color:var(--ink)}
+.btn.ghost.light{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream)}
+/* cierre */
+.end{flex-direction:row;align-items:center;gap:clamp(1rem,4vw,4rem)}
+.end-text{flex:1;display:flex;flex-direction:column;gap:clamp(.8rem,1.6vw,1.4rem)}
+.qr{flex:none;background:#fff;border-radius:1.2rem;padding:clamp(.9rem,1.8vw,1.6rem);display:flex;flex-direction:column;align-items:center;gap:.6rem;color:var(--ink);font-weight:600;font-size:clamp(.85rem,1.1vw,1rem)}
+.qr img{width:clamp(140px,19vw,260px);height:auto;display:block}
+/* barra de navegación */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:center;gap:1rem;padding:.55rem clamp(1rem,3vw,2.5rem);background:rgba(255,252,245,.94);border-top:1px solid var(--line);font-size:.92rem}
+.bar a{color:var(--ink);font-weight:600;text-decoration:none;white-space:nowrap}
+.bar a:hover{text-decoration:underline}
+.prog{flex:1;height:4px;background:var(--mist);border-radius:2px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--sea);transition:width .25s}
+.count{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.bar button{font:inherit;font-weight:700;width:2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.bar button:hover:not(:disabled){border-color:var(--sea);color:var(--sea)}
+.bar button:disabled{opacity:.35;cursor:default}
+@media (max-width:820px){
+  .cover,.cat,.end{flex-direction:column;align-items:flex-start;justify-content:flex-start}
+  .slide{justify-content:flex-start}
+  .cover-text,.end-text{flex:none}
+  .cover .sticker{width:min(60%,240px);align-self:center}
+  .tools,.cat-text{flex:none;width:100%}
+  .tools.many{grid-template-columns:1fr 1fr}
+  .qr{align-self:center}
+  .bar .back span{display:none}
+}
+@media (max-width:820px){.tools.lots{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.tools.many,.tools.two,.tools.lots{grid-template-columns:1fr}}
+@media print{
+  @page{size:landscape;margin:0}
+  body{overflow:visible}
+  .deck{display:block;height:auto;overflow:visible}
+  .slide{width:100%;height:100vh;break-after:page;page-break-after:always;overflow:hidden}
+  .bar{display:none}
+  .dark,.num,.chip b,.btn{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* ===== presentaciones de los retos ===== */
+.cover .ilus{width:clamp(200px,34vw,520px);height:auto;flex:none;border-radius:1.1rem;box-shadow:0 10px 30px rgba(20,54,66,.18)}
+.cover .quien{font-size:clamp(1rem,1.5vw,1.3rem);color:var(--muted)}
+.cover .quien b{color:var(--ink);font-weight:600}
+.frase{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.015em;max-width:22ch}
+.nota{font-size:clamp(.9rem,1.15vw,1.05rem);color:var(--muted);max-width:66ch}
+.dos{display:grid;grid-template-columns:5fr 6fr;gap:clamp(1.2rem,4vw,4rem);align-items:center}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.7rem,1.5vw,1.3rem);margin-top:clamp(.4rem,1vw,.9rem)}
+.card{background:#fff;border:1px solid var(--line);border-radius:.9rem;padding:clamp(.9rem,1.6vw,1.4rem);display:flex;flex-direction:column;gap:.45rem}
+.card h3{font-family:var(--display);font-weight:800;font-size:clamp(1.1rem,1.7vw,1.5rem);margin:0;line-height:1.15}
+.card p{font-size:clamp(.95rem,1.25vw,1.15rem);color:var(--muted);line-height:1.35}
+.card .n{font-family:var(--display);font-weight:800;width:2em;height:2em;border-radius:50%;display:grid;place-items:center;background:var(--sea);color:#fff}
+.card:nth-child(2) .n{background:var(--coral)} .card:nth-child(3) .n{background:var(--sun);color:var(--ink)}
+.general{font-size:clamp(1.1rem,1.9vw,1.6rem);line-height:1.35;max-width:60ch;border-left:.35rem solid var(--sun);padding-left:1rem}
+.filas{display:grid;gap:clamp(.5rem,1vw,.8rem);margin-top:.4rem}
+.fila{display:grid;grid-template-columns:minmax(8rem,1.1fr) 2.4fr 2.6fr;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:clamp(.6rem,1.1vw,1rem) clamp(.8rem,1.4vw,1.2rem);align-items:center}
+.fila b{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.5vw,1.3rem)}
+.fila span{font-size:clamp(.9rem,1.2vw,1.1rem);color:var(--muted);line-height:1.3}
+.fila span.o{color:var(--ink);font-weight:600}
+.fila.h{background:none;border:0;padding-top:0;padding-bottom:0}.fila.h span{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sea)}
+.pill{display:inline-block;background:var(--mist);border-radius:.7rem;padding:.6rem 1rem;font-size:clamp(.9rem,1.15vw,1.05rem);font-weight:600;max-width:80ch}
+.srcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:clamp(.6rem,1.2vw,1rem)}
+.src{background:#fff;border:1px solid var(--line);border-radius:.9rem;padding:clamp(.8rem,1.4vw,1.2rem);display:flex;flex-direction:column;gap:.4rem;text-decoration:none;color:var(--ink)}
+a.src:hover{border-color:var(--sea);box-shadow:0 2px 0 var(--sea)}
+.src b{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.45vw,1.25rem);line-height:1.15}
+.src .u{font-size:clamp(.78rem,.95vw,.9rem);color:var(--sea);overflow-wrap:anywhere;font-weight:600}
+.src p{font-size:clamp(.88rem,1.1vw,1rem);color:var(--muted);line-height:1.3}
+.src .m{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto}
+.src .m i{font-style:normal;font-size:.76rem;font-weight:700;background:var(--mist);border-radius:999px;padding:.18rem .6rem}
+.src .m i.ok{background:#DDF0E6;color:#17603A}
+.crit{display:grid;gap:clamp(.45rem,.9vw,.75rem);max-width:70rem}
+.lista{display:grid;gap:clamp(.45rem,.9vw,.7rem);max-width:66rem;margin:0;padding:0}
+.lista li{list-style:none;display:grid;grid-template-columns:2.2rem minmax(11rem,1.1fr) 3fr;gap:.9rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:clamp(.5rem,.95vw,.85rem) clamp(.8rem,1.3vw,1.1rem)}
+.lista li i{font-style:normal;width:2rem;height:2rem;border-radius:50%;background:var(--sea);color:#fff;display:grid;place-items:center;font-weight:800}
+.lista b{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.45vw,1.25rem)}
+.lista span{font-size:clamp(.9rem,1.15vw,1.05rem);color:var(--muted)}
+.seis{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.55rem,1.1vw,.95rem)}
+.seis .card{padding:clamp(.7rem,1.2vw,1.05rem)}.seis .card h3{font-size:clamp(1rem,1.4vw,1.2rem)}.seis .card p{font-size:clamp(.86rem,1.08vw,1rem)}
+@media (max-width:820px){.lista li{grid-template-columns:2.2rem 1fr}.lista li span{grid-column:2}.seis{grid-template-columns:1fr}}
+.crit li{list-style:none;display:grid;grid-template-columns:minmax(11rem,1.2fr) 3fr;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:clamp(.55rem,1vw,.9rem) clamp(.8rem,1.3vw,1.1rem);align-items:center}
+.crit b{font-family:var(--display);font-weight:800;font-size:clamp(.98rem,1.4vw,1.22rem)}
+.crit span{font-size:clamp(.9rem,1.15vw,1.05rem);color:var(--muted)}
+.plano{align-items:center}.plano img{max-width:100%;max-height:74vh;width:auto;height:auto;border-radius:.8rem;border:1px solid var(--line);background:#fff}
+.chipsp{display:flex;flex-wrap:wrap;gap:.5rem}
+.chipsp span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4rem .95rem;font-weight:600;font-size:clamp(.92rem,1.2vw,1.1rem)}
+.ctl{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.ctl button{font:inherit;font-weight:700;background:var(--ink);color:#fff;border:0;border-radius:.5rem;padding:.6rem 1.1rem;cursor:pointer}
+.ctl button:hover{background:var(--sea)}
+.ctl input[type=range]{flex:1;min-width:8rem;accent-color:var(--sea)}
+.ctl .lab{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.5vw,1.3rem);min-width:11ch}
+/* aparición escalonada al entrar en la diapositiva */
+.st > *{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.on .st > *{opacity:1;transform:none}
+.on .st > *:nth-child(2){transition-delay:.15s}.on .st > *:nth-child(3){transition-delay:.3s}.on .st > *:nth-child(4){transition-delay:.45s}.on .st > *:nth-child(5){transition-delay:.6s}.on .st > *:nth-child(6){transition-delay:.75s}.on .st > *:nth-child(7){transition-delay:.9s}
+@media (prefers-reduced-motion:reduce){.st > *{opacity:1;transform:none;transition:none}}
+@media print{.st > *{opacity:1!important;transform:none!important}}
+/* reto 01: mapa */
+.mapa{flex-direction:row;align-items:center;gap:clamp(1rem,3vw,3rem)}
+.mapa-txt{flex:5;display:flex;flex-direction:column;gap:clamp(.6rem,1.2vw,1rem);min-width:0}
+.mapa-lz{flex:5;display:flex;flex-direction:column;align-items:center;gap:.5rem;min-width:0}
+.mapa-lz canvas{width:100%;max-width:min(100%,calc(74vh*0.943));aspect-ratio:600/636;background:#DCEBED;border-radius:1rem;border:1px solid var(--line)}
+.ley{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.82rem;color:var(--muted);justify-content:center}
+.ley i{display:inline-block;width:.75rem;height:.75rem;border-radius:50%;margin-right:.35rem;vertical-align:-.05rem}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.stat{background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:.6rem .9rem}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,2.4vw,2.1rem);line-height:1.1}
+.stat span{font-size:clamp(.8rem,1vw,.95rem);color:var(--muted)}
+/* reto 01: clúster */
+.cl{display:grid;grid-template-columns:minmax(12rem,1fr) 2.6fr minmax(11rem,1fr);gap:clamp(.8rem,2vw,2rem);align-items:center}
+.pcs{display:grid;gap:.8rem}
+.pc{background:#fff;border:2px solid var(--line);border-radius:.9rem;padding:.8rem 1rem;transition:all .4s}
+.pc b{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.5vw,1.3rem);display:block}
+.pc span{font-size:.9rem;color:var(--muted)}
+.pc.a{border-color:var(--sea)}.pc.b{border-color:var(--coral)}
+.pc.off{background:#EEF1F2;border-color:#B9C4C8;border-style:dashed;opacity:.75}.pc.off b{text-decoration:line-through}
+.tasks{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+.tk{aspect-ratio:1.25;border-radius:.6rem;background:#fff;border:1.5px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;font-size:clamp(.8rem,1.1vw,1rem);position:relative;overflow:hidden;transition:background .35s,border-color .35s,color .35s}
+.tk small{font-weight:600;font-size:.72em;color:var(--muted)}
+.tk.wa{border-color:var(--sea);background:#E1F1F1}.tk.wb{border-color:var(--coral);background:#FBE6E0}
+.tk.da{background:var(--sea);border-color:var(--sea);color:#fff}.tk.db{background:var(--coral);border-color:var(--coral);color:#fff}
+.tk.da small,.tk.db small{color:#fff;opacity:.9}
+.tk.rec{outline:3px solid var(--sun);outline-offset:1px}
+.res{background:var(--ink);color:var(--cream);border-radius:.9rem;padding:1rem;display:grid;gap:.5rem;text-align:center}
+.res b{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,2.3vw,2rem)}
+.res span{font-size:.85rem;color:#D5E4E6}
+.res .ok{background:var(--sun);color:var(--ink);border-radius:.6rem;padding:.4rem;font-weight:800;opacity:0;transition:opacity .5s}
+.res .ok.v{opacity:1}
+/* reto 02 */
+.code{background:#0F2A33;color:#E6F1F2;border-radius:.9rem;padding:clamp(.8rem,1.5vw,1.3rem);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:clamp(.74rem,1.08vw,1.02rem);line-height:1.5;white-space:pre-wrap;overflow:auto;margin:0}
+.code .c{color:#8FB8BE}
+.lug{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.6rem,1.4vw,1.2rem)}
+.lg{background:#fff;border:2px solid var(--line);border-radius:.9rem;padding:1rem;display:flex;flex-direction:column;gap:.5rem;transition:all .5s;opacity:.55}
+.lg b{font-family:var(--display);font-weight:800;font-size:clamp(1.05rem,1.6vw,1.4rem)}
+.lg .tg{display:flex;flex-wrap:wrap;gap:.3rem}
+.lg .tg i{font-style:normal;font-size:.8rem;font-weight:700;background:var(--mist);border-radius:999px;padding:.2rem .65rem;transition:all .4s}
+.lg .tg i.nuevo{background:var(--sun);opacity:0;transform:scale(.6)}
+.lg .v{font-weight:800;font-size:.95rem;color:var(--muted)}
+.lg.si{opacity:1;border-color:var(--sea)}.lg.si .v{color:var(--sea)}
+.lg.no{opacity:1;border-color:var(--coral);border-style:dashed}.lg.no .v{color:var(--coral)}
+.lg.mej .tg i.nuevo{opacity:1;transform:none}
+/* reto 03 */
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.5rem,1.2vw,1rem);align-items:stretch}
+.pp{background:#fff;border:1px solid var(--line);border-radius:.9rem;padding:.9rem;display:flex;flex-direction:column;gap:.6rem;opacity:.25;transform:scale(.97);transition:all .5s}
+.pp.v{opacity:1;transform:none}
+.pp h3{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.5vw,1.3rem);margin:0}
+.pp p{font-size:clamp(.85rem,1.05vw,1rem);color:var(--muted);line-height:1.3}
+.hoja{background:#F3EBD8;border-radius:.4rem;padding:.6rem;display:grid;gap:.28rem;flex:1;align-content:start;min-height:6.5rem}
+.hoja i{display:block;height:.42rem;border-radius:2px;background:#8C7B5A;opacity:.55}
+.hoja.txt{background:#F7F9FA}.hoja.txt i{background:#143642;opacity:.5}.hoja.txt i.e{background:var(--coral);opacity:.9}
+.hoja.ok i{background:#143642;opacity:.75}.hoja.ok i.e{background:var(--sea);opacity:1}
+.ideas{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;flex:1}
+.ideas span{background:var(--sun);border-radius:.5rem;display:grid;place-items:center;font-weight:800;font-size:clamp(.8rem,1.05vw,.98rem);padding:.4rem;text-align:center}
+.ideas span:nth-child(2){background:#BEE0E1}.ideas span:nth-child(3){background:#F6CFC5}.ideas span:nth-child(4){background:#DCE5E8}
+/* reto 04 */
+.ent{display:grid;gap:.7rem}
+.en{display:grid;grid-template-columns:minmax(9.5rem,1fr) 3fr auto;gap:.9rem;align-items:center}
+.en .q{font-weight:700;font-size:clamp(.92rem,1.2vw,1.1rem);line-height:1.2}.en .q small{display:block;font-weight:400;color:var(--muted)}
+.en .trk{height:clamp(1.5rem,2.6vw,2.2rem);background:var(--mist);border-radius:.5rem;overflow:hidden}
+.en .trk i{display:block;height:100%;width:0;border-radius:.5rem;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.on .en .trk i{width:var(--w)}
+.en:nth-child(1) .trk i{background:var(--sea)}.en:nth-child(2) .trk i{background:var(--coral);transition-delay:.5s}.en:nth-child(3) .trk i{background:var(--sun);transition-delay:1s}.en.tot .trk i{background:var(--ink);transition-delay:1.5s}
+.en .v{font-family:var(--display);font-weight:800;font-size:clamp(1.2rem,2vw,1.8rem);min-width:3.2ch;text-align:right}
+.pres{display:flex;height:clamp(2rem,3.4vw,2.8rem);border-radius:.6rem;overflow:hidden;width:100%}
+.pres i{display:grid;place-items:center;font-style:normal;font-weight:800;font-size:clamp(.8rem,1.1vw,1rem);color:#fff;width:0;transition:width 1s ease;white-space:nowrap;overflow:hidden}
+.on .pres i{width:var(--w)}
+.foto{width:100%;height:auto;border-radius:1rem;border:1px solid var(--line);display:block}
+.plano img.afiche{max-height:62vh;width:auto;max-width:100%;border-radius:1rem;border:1px solid var(--line);display:block;margin:0 auto}
+.demo{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+.dm{background:#fff;border:1px dashed #9FB3B9;border-radius:.8rem;padding:.7rem;text-align:center;display:grid;gap:.2rem}
+.dm .s{font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.1}.dm b{font-size:clamp(.82rem,1.05vw,.98rem);line-height:1.2}.dm small{color:var(--muted);font-size:.78rem}
+.peso{display:grid;gap:.45rem;max-width:66rem}
+.ps{display:grid;grid-template-columns:minmax(13rem,1.5fr) 3fr 5ch;gap:.9rem;align-items:center;font-weight:600;font-size:clamp(.92rem,1.2vw,1.1rem)}
+.ps .trk{height:1.35rem;background:var(--mist);border-radius:.4rem;overflow:hidden}.ps .trk i{display:block;height:100%;width:0;background:var(--sea);border-radius:.4rem;transition:width 1s ease}
+.on .ps .trk i{width:var(--w)}.ps:first-child .trk i{background:var(--coral)}
+.ps b{font-family:var(--display);font-weight:800;text-align:right;white-space:nowrap}
+@media (max-width:820px){.dos,.cl,.mapa{display:flex;flex-direction:column;align-items:stretch}.tres,.lug,.pipe{grid-template-columns:1fr}.fila,.crit li,.en,.ps{grid-template-columns:1fr}.demo{grid-template-columns:1fr 1fr}.cover .ilus{width:min(70%,300px);align-self:center}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main class="deck" id="deck">
+<section class="slide cover" aria-label="Portada">
+  <div class="cover-text">
+    <img class="logo" src="logo.png" alt="CoAfina, datos abiertos en América Latina">
+    <p class="eyebrow">Reto 04 · Hackathon CoAfina 2026</p>
+    <h1>Del kit al impacto</h1>
+    <p class="lead">Datos abiertos para ampliar una iniciativa educativa</p>
+    <p class="quien"><b>Estefanía Sánchez y Arturo Sánchez</b><br>Creative Commons Venezuela y Centro de Estudiantes de Física de la UCV</p>
+  </div>
+  <img class="ilus" src="retos/reto-04-ilustracion.jpg" alt="Voluntariado universitario prepara kits de arte y revisa indicadores agregados y un mapa general, sin mostrar niñas ni niños">
+</section>
+<section class="slide " aria-label="El reto en una frase">
+  <div class="narrow st">
+    <p class="eyebrow">El reto en una frase</p>
+    <p class="frase">Mostrar qué llegó, qué falta y qué aprendimos, cuidando a los niños</p>
+    <p class="lead" style="max-width:60ch">Se prepararon 600 kits educativos en Caracas y La Guaira; al 10 de octubre se habían entregado 509 y recibido 60 dibujos. El equipo crea un panel móvil con el balance, un mapa para localidades verificadas y un prototipo de jurado con ejemplos sintéticos.</p>
+    <p class="nota">* Recibir un dibujo no implica permiso para publicarlo: imágenes y dibujos solo se muestran con autorización.</p>
+  </div>
+</section>
+<section class="slide " aria-label="Objetivos">
+  <p class="eyebrow">Qué buscamos</p>
+  <h2>Objetivos</h2>
+  <p class="general">Mostrar con datos abiertos qué se logró con los 600 kits (qué llegó, qué falta y qué aprendimos) y dejar una forma sencilla y segura de repetirlo, cuidando siempre la privacidad de los niños.</p>
+  <div class="tres st"><div class="card"><span class="n">1</span><h3>Cuadrar las cifras</h3><p>Panel móvil con kits preparados, entregados y pendientes.</p></div><div class="card"><span class="n">2</span><h3>Ubicar con cuidado</h3><p>Mapa listo para localidades de entrega verificadas.</p></div><div class="card"><span class="n">3</span><h3>Valorar con criterio</h3><p>Prototipo de jurado humano con rúbrica y dibujos anónimos.</p></div></div>
+</section>
+<section class="slide " aria-label="Qué se entrega">
+  <p class="eyebrow">Qué se entrega</p>
+  <h2>El producto</h2>
+  <div class="filas st"><div class="fila h"><span>Parte</span><span>Con qué</span><span>Qué queda</span></div><div class="fila"><b>Panel</b><span>Inventario, entregas y balance con fuente y fecha</span><span class="o">Panel público móvil con informe exportable</span></div><div class="fila"><b>Mapa</b><span>Localidades de entrega verificadas, a una escala segura</span><span class="o">Mapa preparado para incorporar esas localidades</span></div><div class="fila"><b>Jurado</b><span>Selección de diez kits ampliados</span><span class="o">Prototipo separado, con rúbrica y ejemplos sintéticos</span></div></div>
+  <p><span class="pill">Las entregas individuales y el jurado se demuestran con datos sintéticos hasta contar con permisos.</span></p>
+</section>
+<section class="slide " aria-label="Qué pasó con los 600 kits">
+  <p class="eyebrow">Datos reales del proyecto</p>
+  <h2>Qué pasó con los 600 kits</h2>
+  <div class="ent">
+    <div class="en"><span class="q">La Guaira<small>3 de octubre</small></span><div class="trk"><i style="--w:54.2%"></i></div><span class="v" data-count="325">325</span></div>
+    <div class="en"><span class="q">Caracas<small>8 de octubre</small></span><div class="trk"><i style="--w:30.7%"></i></div><span class="v" data-count="184">184</span></div>
+    <div class="en"><span class="q">Caraballeda<small>14 de noviembre</small></span><div class="trk"><i style="--w:15.2%"></i></div><span class="v" data-count="91">91</span></div>
+    <div class="en tot"><span class="q">Total entregado<small>de 600 kits armados</small></span><div class="trk"><i style="--w:100%"></i></div><span class="v" data-count="600">600</span></div>
+  </div>
+  <p><span class="pill">El paquete del reto es el corte del 10 de octubre: 509 entregados y 91 pendientes. Los últimos 91 llegaron después.</span></p>
+  <p class="cap">Fuente: estado publicado el 15 de noviembre de 2026 en <a href="https://github.com/venezuela-org/donate" target="_blank" rel="noopener">el repositorio del proyecto ↗</a>.</p>
+</section>
+<section class="slide " aria-label="El kit y el dinero">
+  <p class="eyebrow">Datos reales del proyecto</p>
+  <h2>El kit y el dinero</h2>
+  <div class="dos">
+    <div><img class="foto" src="retos/reto-04-kit.jpg" alt="Un kit real: cartuchera amarilla, caja de doce lápices de colores, lápices de grafito, sacapuntas y borrador sobre un bloc de dibujo"><p class="cap" style="margin-top:.5rem">Un kit real. Foto de «600 kits para crear», Creative Commons Venezuela.</p></div>
+    <div class="narrow">
+      <div class="chipsp st"><span><b>1</b> bloc de dibujo</span><span><b>12</b> lápices de colores</span><span><b>4</b> lápices HB</span><span><b>1</b> sacapuntas</span><span><b>1</b> borrador</span><span><b>1</b> cartuchera impermeable, hecha en el país</span><span><b>1</b> bolsa</span></div>
+      <p class="lead"><b style="color:var(--ink)">US$ 2.800</b> recaudados. Así se repartieron:</p>
+      <div class="pres"><i style="--w:84%;background:var(--sea)">84 % compras</i><i style="--w:5%;background:var(--coral)">5</i><i style="--w:2%;background:var(--muted)"></i><i style="--w:9%;background:var(--ink)">9</i></div>
+      <p class="cap">84 % compras · 5 % comisiones y cambio · 2 % logística · 9 % reservado para premios. Son porcentajes publicados, sin auditoría.</p>
+    </div>
+  </div>
+</section>
+<section class="slide " aria-label="Los dibujos">
+  <p class="eyebrow">Lo más delicado</p>
+  <h2>Más de 60 dibujos recibidos</h2>
+  <div class="dos">
+    <div class="narrow">
+      <p class="frase" style="font-size:clamp(1.4rem,2.8vw,2.4rem)">Recibir un dibujo no es tener permiso para publicarlo.</p>
+      <p class="lead">Cada dibujo llega con un código QR, sin nombres. Publicarlo requiere una autorización aparte, y por eso hoy la galería pública solo tiene ejemplos de prueba.</p>
+      <p class="btns"><a class="btn" href="https://venezuela-org.github.io/donate/gallery.html" target="_blank" rel="noopener">Ver la galería de prueba ↗</a></p>
+    </div>
+    <div><div class="demo st"><div class="dm"><span class="s">🌳</span><b>Un lugar para crecer</b><small>6–8 años · Caracas</small></div><div class="dm"><span class="s">🏘️</span><b>Mi comunidad</b><small>9–12 años · La Guaira</small></div><div class="dm"><span class="s">🚀</span><b>Viaje a las estrellas</b><small>6–8 años · Caracas</small></div><div class="dm"><span class="s">🦋</span><b>Colores que vuelan</b><small>4–5 años · Caracas</small></div><div class="dm"><span class="s">🐠</span><b>El mar que cuidamos</b><small>9–12 años · La Guaira</small></div><div class="dm"><span class="s">🤝</span><b>Juntos construimos</b><small>13+ años · Caracas</small></div><div class="dm"><span class="s">🌈</span><b>La ciudad del futuro</b><small>9–12 años · Caracas</small></div><div class="dm"><span class="s">💛</span><b>Una idea feliz</b><small>6–8 años · La Guaira</small></div></div><p class="cap" style="margin-top:.6rem">Las ocho fichas de prueba de la galería: títulos y símbolos inventados, sin dibujos reales.</p></div>
+  </div>
+</section>
+<section class="slide plano" aria-label="El primer ciclo, en un afiche">
+  <a href="https://venezuela-org.github.io/donate/" target="_blank" rel="noopener"><img class="afiche" src="retos/reto-04-estado-600.jpg" alt="Afiche «¡600 kits entregados!» con las cifras del primer ciclo: materiales, entregas en La Guaira, Caracas y Caraballeda, y balance general"></a>
+  <p class="cap">Afiche de estado de «600 kits para crear», Creative Commons Venezuela. Tócalo para abrir el sitio del proyecto.</p>
+</section>
+<section class="slide " aria-label="Los datos">
+  <p class="eyebrow">Con qué se trabaja</p>
+  <h2>Los datos</h2>
+  <p class="lead" style="max-width:70ch">Los enlaces marcados «Comprobado» se revisaron el 27 de noviembre de 2026.</p>
+  <div class="srcs st"><a class="src" href="https://github.com/venezuela-org/donate/tree/main/data" target="_blank" rel="noopener"><b>600 kits para crear: datos públicos</b><span class="u">github.com/venezuela-org/donate/tree/main/data ↗</span><p>Totales con fecha de corte, presupuesto en porcentajes, composición del kit y plantilla de entregas.</p><span class="m"><i>CC0</i><i>CSV y Markdown, pocos KB</i><i class=ok>Comprobado</i></span></a><a class="src" href="https://github.com/venezuela-org/donate/blob/main/docs/informe-impacto-600-kits-primer-ciclo.pdf" target="_blank" rel="noopener"><b>Informe de impacto del primer ciclo</b><span class="u">github.com/venezuela-org/donate/blob/main/docs/informe-impacto-600-kits-primer-ciclo.pdf ↗</span><p>El informe final en español, de diez páginas.</p><span class="m"><i>CC Venezuela</i><i>PDF</i><i class=ok>Comprobado</i></span></a><a class="src" href="https://venezuela-org.github.io/donate/" target="_blank" rel="noopener"><b>Sitio del proyecto</b><span class="u">venezuela-org.github.io/donate ↗</span><p>La página pública, bilingüe, con la cronología y el estado.</p><span class="m"><i>CC Venezuela</i><i>Página web</i></span></a><a class="src" href="https://www.openstreetmap.org/" target="_blank" rel="noopener"><b>OpenStreetMap y Wikidata</b><span class="u">openstreetmap.org ↗</span><p>Localidades y contexto público para el mapa opcional.</p><span class="m"><i>ODbL y CC0</i><i>GeoJSON o CSV</i></span></a></div>
+  <p><span class="pill">Nombres, rostros, domicilios, contactos y consentimientos quedan fuera del paquete público.</span></p>
+</section>
+<section class="slide " aria-label="Criterios">
+  <p class="eyebrow">Cómo se valora</p>
+  <h2>Criterios y pesos</h2>
+  <div class="peso"><div class="ps"><span>Privacidad y protección de menores</span><div class="trk"><i style="--w:100%"></i></div><b>25 %</b></div><div class="ps"><span>Utilidad para el equipo local</span><div class="trk"><i style="--w:80%"></i></div><b>20 %</b></div><div class="ps"><span>Uso de datos abiertos</span><div class="trk"><i style="--w:60%"></i></div><b>15 %</b></div><div class="ps"><span>Trazabilidad y reproducibilidad</span><div class="trk"><i style="--w:60%"></i></div><b>15 %</b></div><div class="ps"><span>Accesibilidad y experiencia de uso</span><div class="trk"><i style="--w:40%"></i></div><b>10 %</b></div><div class="ps"><span>Reutilización en otra tanda</span><div class="trk"><i style="--w:40%"></i></div><b>10 %</b></div><div class="ps"><span>Documentación y calidad técnica</span><div class="trk"><i style="--w:20%"></i></div><b>5 %</b></div></div>
+  <p><span class="pill">La privacidad y la protección de los niños es lo que más pesa.</span></p>
+</section>
+<section class="slide plano" aria-label="Plano del reto">
+  <p class="eyebrow" style="align-self:flex-start">El reto en una hoja</p>
+  <img src="retos/reto-04-plano.png" alt="Plano del reto Del kit al impacto: entregas, mapa público, fotografías autorizadas, jurado restringido y privacidad">
+</section>
+<section class="slide " aria-label="Tu papel">
+  <div class="narrow st">
+    <p class="eyebrow">Para quién es</p>
+    <h2>Hay un lugar para ti</h2>
+    <p class="lead" style="max-width:56ch">El reto necesita más que programación. Estos perfiles tienen trabajo desde el primer día:</p>
+    <div class="chipsp"><span>Educación</span><span>Trabajo comunitario</span><span>Periodismo</span><span>Diseño y accesibilidad</span><span>Datos y código</span><span>Archivos</span></div>
+    <p class="lead"><b style="color:var(--ink)">Contacto: Estefanía Sánchez y Arturo Sánchez · en Discord: artfisica (Arturo)</b></p>
+  </div>
+</section>
+<section class="slide dark end" aria-label="Cierre">
+  <div class="end-text">
+    <p class="eyebrow">Reto 04 · Del kit al impacto</p>
+    <h2 class="big">¡Gracias!</h2>
+    <p class="lead">¿Preguntas? En Discord: <b>artfisica</b></p>
+    <p class="btns"><a class="btn light" href="index.html#retos">Ver todos los retos</a><a class="btn ghost light" href="index.html#cronograma">Ver el cronograma</a></p>
+  </div>
+  <div class="qr"><img src="data:image/png;base64,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" alt="Código QR que lleva a laconga.redclara.net/hackathon"><span>laconga.redclara.net/hackathon</span></div>
+</section>
+</main>
+<nav class="bar" aria-label="Navegación de las diapositivas">
+  <a class="back" href="index.html#retos">← <span>Retos de CoAfina</span></a>
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+  <span class="count" id="count" aria-live="polite"></span>
+  <button id="prev" type="button" aria-label="Diapositiva anterior">‹</button>
+  <button id="next" type="button" aria-label="Diapositiva siguiente">›</button>
+  <button id="full" type="button" aria-label="Pantalla completa">⛶</button>
+</nav>
+<script>
+/* Al entrar en una diapositiva: aparición escalonada y animación propia, si la tiene */
+(function(){
+  const ANIM={};
+  window.ANIM=ANIM;
+  document.addEventListener('slide',e=>{ const el=e.detail.el; if(!el) return; el.classList.add('on'); const a=el.dataset.anim; if(a&&ANIM[a]) ANIM[a](el); });
+  const first=document.querySelector('.slide'); if(first) first.classList.add('on');
+})();
+/* Números que suben al entrar en la diapositiva */
+(function(){ document.addEventListener('slide',e=>{ const el=e.detail.el; if(!el||el._c) return; const cs=el.querySelectorAll('[data-count]'); if(!cs.length) return; el._c=1;
+  cs.forEach((c,i)=>{ const n=+c.dataset.count, t0=performance.now()+i*500; c.textContent='0'; (function f(ts){ const p=Math.max(0,Math.min(1,(ts-t0)/1100)); c.textContent=Math.round(n*p*(2-p)).toLocaleString('es-ES'); if(p<1) requestAnimationFrame(f); })(performance.now()); }); }); })();
+
+
+</script>
+<script>
+(function(){
+  /* Las diapositivas y los enlaces con data-desde se muestran a partir de esa fecha (UTC); antes se retiran. */
+  document.querySelectorAll('[data-desde]').forEach(s=>{ if (Date.parse(s.dataset.desde) > Date.now()) s.remove(); });
+  const deck=document.getElementById('deck'), slides=[...deck.children];
+  const prev=document.getElementById('prev'), next=document.getElementById('next'), count=document.getElementById('count'), bar=document.getElementById('prog');
+  let cur=0, settle=0;
+  const update=()=>{ count.textContent=(cur+1)+' / '+slides.length; bar.style.width=((cur+1)/slides.length*100)+'%';
+    prev.disabled=cur===0; next.disabled=cur===slides.length-1; history.replaceState(null,'','#'+(cur+1)); document.dispatchEvent(new CustomEvent('slide',{detail:{i:cur,el:slides[cur]}})); };
+  const go=(i,instant)=>{ i=Math.max(0,Math.min(slides.length-1,i)); cur=i; settle=Date.now()+(instant?150:700); update(); deck.scrollTo({left:slides[i].offsetLeft,behavior:instant?'instant':'smooth'}); };
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting && Date.now()>settle){ cur=slides.indexOf(e.target); update(); } }),{root:deck,threshold:.6});
+  slides.forEach(s=>io.observe(s));
+  prev.addEventListener('click',()=>go(cur-1)); next.addEventListener('click',()=>go(cur+1));
+  document.getElementById('full').addEventListener('click',()=>{ document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen(); });
+  document.addEventListener('keydown',e=>{ if(e.metaKey||e.ctrlKey||e.altKey) return;
+    if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){ if(e.key===' '||e.key==='Enter'){ if(document.activeElement&&['A','BUTTON'].includes(document.activeElement.tagName)) return; } e.preventDefault(); go(cur+1); }
+    else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); go(cur-1); }
+    else if(e.key==='Home'){ e.preventDefault(); go(0); } else if(e.key==='End'){ e.preventDefault(); go(slides.length-1); }
+    else if(e.key==='f'||e.key==='F'){ document.getElementById('full').click(); } });
+  const fromHash=instant=>{ const n=parseInt(location.hash.slice(1),10); if(n>=1&&n<=slides.length) go(n-1,instant); };
+  document.addEventListener('click',e=>{ const a=e.target.closest('a[href^="#"]'); if(!a) return; const n=parseInt(a.getAttribute('href').slice(1),10); if(n){ e.preventDefault(); go(n-1); } });
+  window.addEventListener('hashchange',()=>fromHash(false));
+  window.addEventListener('resize',()=>go(cur,true));
+  fromHash(true); update();
+})();
+</script>
+</body>
+</html>
